@@ -24,9 +24,9 @@ function Hero({ scrollYProgress }: any) {
           "[mask-image:linear-gradient(to_top_left,white,transparent,transparent)]",
         )}
       />
-      <div className="h-56 w-56 rounded-full border-4 border-green bg-[url('/Me3.jpeg')] bg-cover bg-no-repeat md:-mt-14 md:h-72 md:w-72"></div>
+      <div className="h-56 w-56 rounded-full border-4 border-green bg-[url('/Me2.jpg')] bg-cover bg-no-repeat md:-mt-14 md:h-72 md:w-72"></div>
 
-      <div className="flex flex-col gap-2 py-6 text-center">
+      <div className="flex flex-col gap-1 py-6 text-center md:gap-2">
         <motion.h1 className="flex overflow-hidden text-4xl font-black sm:text-5xl md:text-7xl">
           <motion.span
             className="flex overflow-hidden"
@@ -40,7 +40,11 @@ function Hero({ scrollYProgress }: any) {
             }}
           >
             {" "}
-            Hello! I&apos;m{" "}
+            Hello!
+            <span className="pr-2" style={{ color: "gold" }}>
+              &#128075;{" "}
+            </span>{" "}
+            I&apos;m{" "}
             <TextFlip className="ml-2 text-4xl text-green sm:text-5xl md:text-7xl lg:ml-4">
               Joshua
             </TextFlip>{" "}
@@ -63,7 +67,7 @@ function Hero({ scrollYProgress }: any) {
           </motion.span>
         </motion.h1>
         <motion.p
-          className="overflow-hidden text-sm font-medium text-backgroundb/90 md:text-2xl"
+          className="overflow-hidden text-sm font-normal text-backgroundb/90 sm:text-lg md:text-2xl"
           initial={{ y: "100%", opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{

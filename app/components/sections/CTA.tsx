@@ -36,7 +36,7 @@ function CTA() {
             <Link target="_blank" href={`https://www.$.com/`}>
               <div className="pl-3 text-black/80">
                 <h6 className="text-lg">Email </h6>
-                <h6 className="text-black/70">JohnDoe49@email.com</h6>
+                <h6 className="text-black/70">Joshuads@gmail.com</h6>
               </div>
             </Link>
           </div>

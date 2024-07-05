@@ -6,7 +6,7 @@ import { TextFlip } from "./magicui/TextFlip";
 export const Footer = () => {
   return (
     <footer
-      className="border-t border-black/40 bg-backgroundw lg:pt-2"
+      className="border-t border-black/20 bg-backgroundw lg:pt-2"
       aria-label="footer"
     >
       <div className="flex items-center justify-between px-6 pb-1 pt-4 md:px-4 lg:px-20">

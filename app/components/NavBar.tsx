@@ -78,9 +78,11 @@ export default function NavBar() {
         animate={hidden ? "hidden" : "visible"}
         transition={{ duration: 0.6, ease: easeInOut }}
       >
-        <Link href={"/"} className="flex flex-col justify-center text-center">
-          <h4 className="pl-2 text-xl font-semibold sm:text-2xl">John Doe</h4>
-          <span className="text-redbg -mt-1 text-xs opacity-90">Portfolio</span>
+        <Link
+          href={"/"}
+          className="flex flex-col justify-center py-2 text-center"
+        >
+          <h4 className="pl-2 text-xl font-semibold sm:text-2xl">JDs</h4>
         </Link>
 
         <motion.div

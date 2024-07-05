@@ -11,7 +11,7 @@ function ButtonLink({ text, handleButton, active }: any) {
         className={
           text == "Close"
             ? "relative -mr-2 w-20 rounded-3xl bg-backgroundb py-1 text-xl font-medium text-backgroundw"
-            : "relative rounded-3xl text-xl font-medium text-backgroundw"
+            : "relative rounded-3xl pt-[2px] text-xl font-medium text-backgroundw"
         }
       >
         <TextFlip className="text-xl font-bold">{text}</TextFlip>
