@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from "react";
 import Bounded from "../Bounded";
 import Image from "next/image";
-import { useTransform, motion } from "framer-motion";
+import { useTransform, motion, easeIn } from "framer-motion";
 import GridPattern from "../magicui/grid-pattern";
 import { cn } from "@/app/utils/cn";
 import { TextFlip } from "../magicui/TextFlip";
@@ -24,7 +24,13 @@ function Hero({ scrollYProgress }: any) {
           "[mask-image:linear-gradient(to_top_left,white,transparent,transparent)]",
         )}
       />
-      <div className="h-56 w-56 rounded-full border-4 border-green bg-[url('/Me2.jpg')] bg-cover bg-no-repeat md:-mt-14 md:h-72 md:w-72"></div>
+      <motion.div
+        className="h-56 w-56 rounded-full border-4 border-green bg-[url('/Me2.jpg')] bg-cover bg-no-repeat md:-mt-14 md:h-72 md:w-72"
+        initial={{ filter: "blur(2px)" }}
+        whileInView={{ filter: "blur(0px)" }}
+        viewport={{ once: true }}
+        transition={{ ease: "easeIn" }}
+      />
 
       <div className="flex flex-col gap-1 py-6 text-center md:gap-2">
         <motion.h1 className="flex overflow-hidden text-4xl font-black sm:text-5xl md:text-7xl">
@@ -32,8 +38,9 @@ function Hero({ scrollYProgress }: any) {
             className="flex overflow-hidden"
             initial={{ y: "100%", opacity: 0.8 }}
             whileInView={{ y: 0, opacity: 1, paddingBottom: "6px" }}
+            viewport={{ once: true }}
             transition={{
-              delay: 0.5,
+              delay: 0.2,
               duration: 0.6,
               type: "tween",
               ease: [0.76, 0.1, 0.34, 1],
@@ -50,13 +57,14 @@ function Hero({ scrollYProgress }: any) {
             </TextFlip>{" "}
           </motion.span>
         </motion.h1>
-        <motion.h1 className="overflow-hidden text-3xl font-bold text-black/90 sm:text-4xl md:text-6xl">
+        <motion.h1 className="overflow-hidden text-[2rem] font-bold text-black/90 sm:text-4xl md:text-6xl">
           <motion.span
             className="inline-block overflow-hidden"
             initial={{ y: "100%", opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
             transition={{
-              delay: 1,
+              delay: 0.5,
               duration: 0.6,
               type: "tween",
               ease: [0.76, 0.1, 0.34, 1],
@@ -66,18 +74,22 @@ function Hero({ scrollYProgress }: any) {
             A Web Developer
           </motion.span>
         </motion.h1>
-        <motion.p
-          className="overflow-hidden text-sm font-normal text-backgroundb/90 sm:text-lg md:text-2xl"
-          initial={{ y: "100%", opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{
-            delay: 1.4,
-            duration: 0.6,
-            type: "tween",
-            ease: [0.76, 0.1, 0.34, 1],
-          }}
-        >
-          I like to build things for the web!
+        <motion.p className="overflow-hidden text-sm font-normal text-backgroundb/90 sm:text-lg md:text-2xl">
+          <motion.span
+            className="inline-block overflow-hidden"
+            initial={{ y: "100%", opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{
+              delay: 0.8,
+              duration: 0.6,
+              type: "tween",
+              ease: [0.76, 0.1, 0.34, 1],
+            }}
+          >
+            {" "}
+            I like to build things for the web!
+          </motion.span>
         </motion.p>
       </div>
     </motion.div>

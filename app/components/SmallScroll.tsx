@@ -54,12 +54,14 @@ function SmallScroll({
             muted
             loop
             style={{ objectFit: "fill" }}
-            className="h-[70%] w-[85%] rounded-md shadow-2xl shadow-black sm:h-[80%]"
+            className="h-[65%] w-[85%] rounded-md shadow-2xl shadow-black sm:h-[80%]"
           >
             <source src={vid} type="video/mp4" />
           </video>
         </div>
-        <h6 className="pt-6 text-sm text-white/20 md:pt-8">{type}</h6>
+        <h6 className="pt-6 text-sm text-white/40 max-sm:pl-1 md:pt-8">
+          {type}
+        </h6>
         <div className="flex items-end justify-between pt-1 sm:pr-6 md:pr-14">
           <h4 className="text-3xl font-semibold text-white/80 md:text-4xl">
             {called}
@@ -79,7 +81,7 @@ function SmallScroll({
                 alt="Github Logo"
                 src="/github.svg"
                 width={50}
-                height={50}
+                height={60}
                 className="h-10 hover:scale-[1.05]"
               />
             </Link>

@@ -18,14 +18,14 @@ const menu = {
     width: "270px",
     height: "380px",
     top: "15px",
-    right: "20px",
+    right: "12px",
     transition: { duration: 0.75, type: "tween", ease: [0.76, 0, 0.24, 1] },
   },
   closed: {
     width: "100px",
     height: "40px",
     top: "15px",
-    right: "20px",
+    right: "12px",
     transition: {
       duration: 0.75,
       delay: 0.35,
@@ -86,7 +86,7 @@ export default function NavBar() {
         </Link>
 
         <motion.div
-          className="fixed right-4 top-2 z-20 cursor-pointer rounded-3xl bg-green text-center"
+          className="fixed right-1 top-2 z-20 cursor-pointer rounded-3xl bg-green text-center"
           variants={menu}
           animate={active ? "open" : "closed"}
         >
@@ -102,7 +102,7 @@ export default function NavBar() {
                   duration: 0.6,
                   ease: "easeIn",
                 }}
-                className="left-2 pt-20 text-white"
+                className="left-2 pt-14 text-white sm:pt-20"
               >
                 <motion.ul className="text-left text-4xl font-medium">
                   <li className="py-2 pl-8">
