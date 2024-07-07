@@ -113,15 +113,15 @@ export default function NavBar() {
                     </Link>
                   </li>
                   <li className="py-2 pl-8">
-                    <Link href={"/about"}>
+                    <Link href={"#Services"}>
                       {" "}
                       <TextFlip className="font-bold leading-[0.95]">
-                        About
+                        Services
                       </TextFlip>
                     </Link>
                   </li>
                   <li className="py-2 pl-8">
-                    <Link href={"/"}>
+                    <Link href={"#Works"}>
                       {" "}
                       <TextFlip className="font-bold leading-[0.95]">
                         Works
@@ -129,7 +129,7 @@ export default function NavBar() {
                     </Link>
                   </li>
                   <li className="py-2 pl-8">
-                    <Link href={"/"}>
+                    <Link href={"#CTA"}>
                       {" "}
                       <TextFlip className="font-bold leading-[0.95]">
                         Contact

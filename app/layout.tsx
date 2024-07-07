@@ -6,6 +6,7 @@ import NavBar from "./components/NavBar";
 import { Footer } from "./components/Footer";
 import { useEffect } from "react";
 import Lenis from "lenis";
+import Initial from "./components/Initial";
 
 export default function RootLayout({
   children,
@@ -30,7 +31,7 @@ export default function RootLayout({
           type="text/css"
           href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
         />
-
+        <Initial />
         <NavBar />
         {children}
         <Footer />

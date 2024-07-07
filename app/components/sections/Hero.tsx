@@ -6,12 +6,14 @@ import { useTransform, motion, easeIn } from "framer-motion";
 import GridPattern from "../magicui/grid-pattern";
 import { cn } from "@/app/utils/cn";
 import { TextFlip } from "../magicui/TextFlip";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 
 function Hero({ scrollYProgress }: any) {
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.5]);
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
   return (
     <motion.div
+      id="Home"
       style={{ scale, opacity }}
       className="sticky top-16 flex h-screen w-full flex-col items-center justify-start bg-backgroundw text-backgroundb max-md:pt-16 md:justify-center"
     >
@@ -24,8 +26,9 @@ function Hero({ scrollYProgress }: any) {
           "[mask-image:linear-gradient(to_top_left,white,transparent,transparent)]",
         )}
       />
+      {/***/}
       <motion.div
-        className="h-56 w-56 rounded-full border-4 border-green bg-[url('/Me2.jpg')] bg-cover bg-no-repeat md:-mt-14 md:h-72 md:w-72"
+        className="h-56 w-56 rounded-full border-4 border-green bg-[url('/Me2.jpg')] bg-cover bg-no-repeat md:-mt-20 md:h-64 md:w-64"
         initial={{ filter: "blur(2px)" }}
         whileInView={{ filter: "blur(0px)" }}
         viewport={{ once: true }}
@@ -57,7 +60,7 @@ function Hero({ scrollYProgress }: any) {
             </TextFlip>{" "}
           </motion.span>
         </motion.h1>
-        <motion.h1 className="overflow-hidden text-[2rem] font-bold text-black/90 sm:text-4xl md:text-6xl">
+        <motion.h1 className="overflow-hidden text-[2rem] font-bold text-backgroundb/95 max-sm:leading-none sm:text-4xl md:text-6xl">
           <motion.span
             className="inline-block overflow-hidden"
             initial={{ y: "100%", opacity: 0 }}
@@ -74,7 +77,7 @@ function Hero({ scrollYProgress }: any) {
             A Web Developer
           </motion.span>
         </motion.h1>
-        <motion.p className="overflow-hidden text-sm font-normal text-backgroundb/90 sm:text-lg md:text-2xl">
+        <motion.p className="overflow-hidden text-sm text-backgroundb/90 sm:text-lg md:text-2xl md:font-medium">
           <motion.span
             className="inline-block overflow-hidden"
             initial={{ y: "100%", opacity: 0 }}
@@ -88,9 +91,22 @@ function Hero({ scrollYProgress }: any) {
             }}
           >
             {" "}
-            I like to build things for the web!
+            I like building things for the web!
           </motion.span>
         </motion.p>
+        <motion.button
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{
+            delay: 1.2,
+            duration: 1,
+          }}
+          viewport={{ once: true }}
+          id="btn"
+          className="flex w-28 items-center justify-center gap-1 self-center rounded-3xl border border-green py-2 pl-1 text-sm font-medium text-backgroundb/90 hover:scale-95 sm:w-32 sm:text-lg"
+        >
+          {"Let's Talk "} <ArrowRight />
+        </motion.button>
       </div>
     </motion.div>
   );
@@ -100,25 +116,20 @@ export default Hero;
 
 {
   /**
-   * <Image
-          src="/Me2.jpeg"
-          alt="portfolio Image"
-          width={200}
-          height={300}
-          className="h-[80%] w-[80%] rounded-full border-4 border-red-800 object-cover hover:border-green"
-        />
-   <div className="flex flex-col gap-2 py-6 text-center">
-        <h1 className="flex text-4xl font-black md:pb-2 md:text-7xl">
-          Hello! <span style={{ color: "gold" }}>&#128075; </span> I&apos;m{" "}
-          <TextFlip className="ml-2 text-4xl text-green sm:text-5xl md:text-7xl lg:ml-4">
-            Joshua
-          </TextFlip>{" "}
-        </h1>
-        <h1 className="pb-1 text-4xl font-bold md:pb-4 md:text-7xl">
-          A Web Developer{" "}
-        </h1>
-        <p className="text-base text-backgroundb text-opacity-70 md:text-2xl">
-          I like to build things for the web!
-        </p>
-      </div> */
+   *      <motion.button
+          className="text-md w-28 self-center rounded-3xl border border-green py-2 sm:w-32 sm:text-lg"
+          initial={{ backgroundColor: "#F7F7F7", textDecorationColor: "blue" }}
+          whileHover={{
+            backgroundColor: "#00806E",
+            color: "#F7F7F7",
+            borderColor: "white",
+          }}
+          transition={{
+            duration: 0.4,
+            ease: [0.76, 0.1, 0.34, 1],
+            type: "tween",
+          }}
+        >
+          <TextFlip className="font-medium">Let&apos;s Talk</TextFlip>
+        </motion.button> */
 }

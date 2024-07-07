@@ -33,7 +33,10 @@ function SmallScroll({
 }: Props) {
   return (
     <Bounded className="">
-      <div className="relative flex w-full flex-col max-sm:-mt-10">
+      <div
+        className="relative flex w-full flex-col max-sm:-mt-10"
+        id="Services"
+      >
         <h1 className="pb-4 pt-2 text-4xl font-bold text-green sm:pb-6 sm:text-5xl md:text-5xl">
           {title}
         </h1>

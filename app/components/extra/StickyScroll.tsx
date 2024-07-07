@@ -71,7 +71,7 @@ const features = [
 
 const StickyScroll = () => {
   return (
-    <section className="relative bg-backgroundb px-4">
+    <section id="Works" className="relative bg-backgroundb px-4">
       <div className="absolute inset-0 bg-black bg-[url('/noise-light.png')] opacity-15" />
       <Bounded className="-mb-16 lg:-mb-20">
         <TextRevealByWord

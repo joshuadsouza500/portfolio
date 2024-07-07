@@ -3,3 +3,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#btn {
+  transition: all 0.3s ease-in-out;
+
+  background: linear-gradient(to top, #00806e 50%, #f7f7f7 50%);
+  background-size: 100% 200%;
+  background-position: top;
+  overflow: hidden;
+}
+
+#btn:hover {
+  color: #f1f1f1;
+
+  background-position: bottom;
+}
