@@ -69,11 +69,11 @@ function SmallScroll({
           <h4 className="text-3xl font-semibold text-white/80 md:text-4xl">
             {called}
           </h4>
-          <div className="flex gap-2">
+          <div className="flex gap-1">
             <Link
               href={live}
               target="_blank"
-              style={{ color: "gray", fontSize: "22px", fontWeight: "400" }}
+              style={{ color: "gray", fontSize: "30px", fontWeight: "400" }}
               className="rounded-md hover:bg-white/10"
             >
               🔗
@@ -84,7 +84,7 @@ function SmallScroll({
                 alt="Github Logo"
                 src="/github.svg"
                 width={50}
-                height={60}
+                height={50}
                 className="h-10 hover:scale-[1.05]"
               />
             </Link>

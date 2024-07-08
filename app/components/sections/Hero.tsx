@@ -104,7 +104,7 @@ function Hero({ scrollYProgress }: any) {
           }}
           viewport={{ once: true }}
           id="btn"
-          className="w-28 self-center rounded-3xl border border-green py-2 pl-1 text-sm font-medium text-backgroundb/90 hover:scale-95 sm:w-32 sm:text-lg"
+          className="mt-1 w-28 self-center rounded-3xl border border-green py-2 pl-1 text-sm font-medium text-backgroundb/90 hover:scale-95 sm:w-32 sm:text-lg"
         >
           <Link
             href="#CTA"
