@@ -14,7 +14,7 @@ export default function Loader() {
           borderBottomRightRadius: "100%",
         }}
         transition={{
-          delay: 0.5,
+          delay: 0.6,
           duration: 1,
           type: "tween",
           ease: [0.76, 0.1, 0.34, 1.3], //These numbers specify easing speeds 1 is full ease. 0 is no ease//
@@ -29,7 +29,7 @@ export default function Loader() {
             borderBottomRightRadius: "100%",
           }}
           transition={{
-            delay: 0.5,
+            delay: 0.6,
             duration: 1,
             type: "tween",
             ease: [0.76, 0.1, 0.34, 1.3],

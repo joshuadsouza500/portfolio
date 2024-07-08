@@ -13,18 +13,18 @@ function CTA() {
       className="relative mx-4 mb-10 grid h-full bg-backgroundw py-20 sm:mx-6 md:grid-cols-2 lg:mx-auto lg:max-w-6xl"
     >
       <div className="pb-12 md:pb-2 md:pt-4">
-        <div className="mx-auto pb-6 md:pb-2">
+        <div className="mx-auto">
           <TextRevealByWord
             text="Get In Touch"
             Colour="text-black/90"
-            className="-mb-6 max-sm:-mb-20 max-sm:pl-2"
+            className="-mb-6 max-sm:pl-4"
           />
           <p className="hidden w-[85%] pl-4 text-left text-base text-black/70">
             Fill out the form below and let&apos;s discuss how I can help bring
             your vision to life
           </p>
         </div>
-        <div className="flex flex-col items-center justify-start gap-4 py-5 md:items-start lg:ml-4">
+        <div className="flex flex-col items-center justify-start gap-4 py-5 max-sm:-mt-14 md:items-start lg:ml-4">
           <div className="flex w-[85%] cursor-pointer rounded-md bg-white/90 px-4 py-8 shadow-xl hover:scale-[1.01] md:w-[75%] lg:w-[70%]">
             <div className="">
               <Image

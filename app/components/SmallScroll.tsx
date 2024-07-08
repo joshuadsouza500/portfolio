@@ -73,7 +73,7 @@ function SmallScroll({
             <Link
               href={live}
               target="_blank"
-              style={{ color: "gray", fontSize: "25px", fontWeight: "400" }}
+              style={{ color: "gray", fontSize: "22px", fontWeight: "400" }}
               className="rounded-md hover:bg-white/10"
             >
               🔗

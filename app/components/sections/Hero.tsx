@@ -78,7 +78,7 @@ function Hero({ scrollYProgress }: any) {
             A Web Developer
           </motion.span>
         </motion.h1>
-        <motion.p className="overflow-hidden text-sm text-backgroundb/90 sm:text-lg md:text-2xl md:font-medium">
+        <motion.p className="my-1 overflow-hidden text-sm text-backgroundb/90 sm:text-lg md:text-2xl md:font-medium">
           <motion.span
             className="inline-block overflow-hidden"
             initial={{ y: "100%", opacity: 0 }}
