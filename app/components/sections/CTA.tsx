@@ -36,10 +36,10 @@ function CTA() {
               />
             </div>
 
-            <Link target="_blank" href={`https://www.$.com/`}>
-              <div className="pl-3 text-black/80">
+            <Link target="_blank" href={`https://mailto:jdscodes04@gmail.com`}>
+              <div className="pl-3 text-black/90">
                 <h6 className="text-lg">Email </h6>
-                <h6 className="text-black/70">Joshuads@gmail.com</h6>
+                <h6 className="text-black/70">jdscodes04@gmail.com</h6>
               </div>
             </Link>
           </div>
@@ -54,8 +54,8 @@ function CTA() {
               />
             </div>
 
-            <Link target="_blank" href={`https://www.$.com/`}>
-              <div className="pl-3">
+            <Link target="_blank" href={`https://wa.me/97336158093`}>
+              <div className="pl-3 text-black/90">
                 <h6 className="text-lg">Whatsapp</h6>
                 <h6 className="text-black/70">+973 36158093</h6>
               </div>

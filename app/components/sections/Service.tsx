@@ -10,7 +10,7 @@ function Service() {
         className="absolute inset-0 rounded-t-3xl bg-black bg-[url('/noise-light.png')] opacity-15"
         id="Services"
       />
-      <TextRevealByWord text="What I Do" Colour="text-white/90" />
+      <TextRevealByWord text="What I Do" Colour="text-white/80" />
       <Features />
     </Bounded>
   );

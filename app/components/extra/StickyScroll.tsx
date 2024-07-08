@@ -77,7 +77,7 @@ const StickyScroll = () => {
         <TextRevealByWord
           text="Selected Works"
           className="pr-10 sm:-ml-6 md:-ml-10"
-          Colour="text-white/90"
+          Colour="text-white/80"
         />
       </Bounded>
       <div className="relative mx-auto hidden w-full max-w-6xl items-start gap-1 lg:flex">

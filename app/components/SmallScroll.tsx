@@ -69,7 +69,7 @@ function SmallScroll({
           <h4 className="text-3xl font-semibold text-white/80 md:text-4xl">
             {called}
           </h4>
-          <div className="flex gap-3">
+          <div className="flex gap-2">
             <Link
               href={live}
               target="_blank"

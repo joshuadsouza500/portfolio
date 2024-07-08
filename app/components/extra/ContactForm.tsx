@@ -22,7 +22,7 @@ function ContactForm() {
     });
     const result = await response.json();
     if (result.success) {
-      setResult("Form Submitted Successfully !");
+      setResult("Form Submitted Successfully!");
       e.target.reset();
     } else {
       console.log("Error", result);
@@ -71,7 +71,7 @@ function ContactForm() {
         <div className="mx-auto flex justify-center">
           <button
             type="submit"
-            className="w-28 rounded-md bg-black/90 py-2 font-medium text-backgroundw hover:scale-[0.96] hover:border-2 hover:border-black/90 hover:bg-backgroundw hover:text-black sm:w-32"
+            className="w-28 rounded-md border-2 bg-black/90 py-2 font-medium text-backgroundw hover:scale-[0.96] hover:border-black/90 hover:bg-backgroundw hover:text-black sm:w-32"
           >
             Submit
           </button>

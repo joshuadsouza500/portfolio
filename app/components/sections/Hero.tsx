@@ -7,6 +7,7 @@ import GridPattern from "../magicui/grid-pattern";
 import { cn } from "@/app/utils/cn";
 import { TextFlip } from "../magicui/TextFlip";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 
 function Hero({ scrollYProgress }: any) {
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.5]);
@@ -32,7 +33,7 @@ function Hero({ scrollYProgress }: any) {
         initial={{ filter: "blur(2px)" }}
         whileInView={{ filter: "blur(0px)" }}
         viewport={{ once: true }}
-        transition={{ ease: "easeIn" }}
+        transition={{ ease: "easeIn", delay: 3.2 }}
       />
 
       <div className="flex flex-col gap-1 py-6 text-center md:gap-2">
@@ -43,7 +44,7 @@ function Hero({ scrollYProgress }: any) {
             whileInView={{ y: 0, opacity: 1, paddingBottom: "6px" }}
             viewport={{ once: true }}
             transition={{
-              delay: 0.2,
+              delay: 3,
               duration: 0.6,
               type: "tween",
               ease: [0.76, 0.1, 0.34, 1],
@@ -67,7 +68,7 @@ function Hero({ scrollYProgress }: any) {
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{
-              delay: 0.5,
+              delay: 3.2,
               duration: 0.6,
               type: "tween",
               ease: [0.76, 0.1, 0.34, 1],
@@ -84,7 +85,7 @@ function Hero({ scrollYProgress }: any) {
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{
-              delay: 0.8,
+              delay: 3.6,
               duration: 0.6,
               type: "tween",
               ease: [0.76, 0.1, 0.34, 1],
@@ -98,14 +99,19 @@ function Hero({ scrollYProgress }: any) {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{
-            delay: 1.2,
+            delay: 4,
             duration: 1,
           }}
           viewport={{ once: true }}
           id="btn"
-          className="flex w-28 items-center justify-center gap-1 self-center rounded-3xl border border-green py-2 pl-1 text-sm font-medium text-backgroundb/90 hover:scale-95 sm:w-32 sm:text-lg"
+          className="w-28 self-center rounded-3xl border border-green py-2 pl-1 text-sm font-medium text-backgroundb/90 hover:scale-95 sm:w-32 sm:text-lg"
         >
-          {"Let's Talk "} <ArrowRight />
+          <Link
+            href="#CTA"
+            className="flex items-center justify-center gap-1 self-center"
+          >
+            {"Let's Talk "} <ArrowRight />
+          </Link>
         </motion.button>
       </div>
     </motion.div>
@@ -113,23 +119,3 @@ function Hero({ scrollYProgress }: any) {
 }
 
 export default Hero;
-
-{
-  /**
-   *      <motion.button
-          className="text-md w-28 self-center rounded-3xl border border-green py-2 sm:w-32 sm:text-lg"
-          initial={{ backgroundColor: "#F7F7F7", textDecorationColor: "blue" }}
-          whileHover={{
-            backgroundColor: "#00806E",
-            color: "#F7F7F7",
-            borderColor: "white",
-          }}
-          transition={{
-            duration: 0.4,
-            ease: [0.76, 0.1, 0.34, 1],
-            type: "tween",
-          }}
-        >
-          <TextFlip className="font-medium">Let&apos;s Talk</TextFlip>
-        </motion.button> */
-}

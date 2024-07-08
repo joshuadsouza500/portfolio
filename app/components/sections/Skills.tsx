@@ -10,7 +10,7 @@ function Skills() {
     <div className="relative rounded-2xl max-md:pt-24 md:pb-32">
       <div className="absolute inset-0 mb-6 rounded-b-3xl bg-black bg-[url('/noise-light.png')] opacity-15" />
       <Bounded className="-mb-16 lg:-mb-20">
-        <TextRevealByWord text="My Digital ToolBox" Colour="text-white/90" />
+        <TextRevealByWord text="My Digital ToolBox" Colour="text-white/80" />
       </Bounded>
       {/*  <Scroller skilldata={skilldata} />**/}
 

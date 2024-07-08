@@ -64,7 +64,7 @@ function FeatureTitle({
         <h6
           className={cn(
             "text-3xl font-semibold",
-            isInView ? "text-white/90" : "text-transparent",
+            isInView ? "text-white/80" : "text-transparent",
           )}
         >
           {called}
@@ -101,7 +101,7 @@ function FeatureTitle({
         <h6
           className={cn(
             "rounded-2xl px-3",
-            isInView ? "border-2 border-white/60" : "",
+            isInView ? "border-2 border-white/40" : "",
           )}
         >
           {tool1}

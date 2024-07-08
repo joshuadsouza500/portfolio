@@ -4,7 +4,7 @@ function Features() {
   return (
     <section className="">
       <div
-        className="sticky mx-auto border-t border-y-white/20 px-4 pb-10 pt-6 text-white/70 lg:w-[85%]"
+        className="sticky mx-auto border-t border-y-white/20 px-4 pb-10 pt-6 text-white/60 lg:w-[85%]"
         style={{ top: `calc(20vh + 0em)`, marginBottom: "17.25em" }}
       >
         <h1 className="pb-6 text-[2rem] font-semibold tracking-tight md:pb-8 md:text-5xl">
@@ -27,7 +27,7 @@ function Features() {
       </div>
 
       <div
-        className="sticky mx-auto border-t border-y-white/20 bg-backgroundb px-4 pb-10 pt-6 text-white/70 lg:w-[85%] lg:pb-6"
+        className="sticky mx-auto border-t border-y-white/20 bg-backgroundb px-4 pb-10 pt-6 text-white/60 lg:w-[85%] lg:pb-6"
         style={{ top: `calc(20vh + 5.75em)`, marginBottom: "11.75em" }}
       >
         <div className="absolute inset-0 bg-black bg-[url('/noise-light.png')] opacity-15" />
@@ -50,7 +50,7 @@ function Features() {
         </div>
       </div>
       <div
-        className="sticky mx-auto border-t border-y-white/20 bg-backgroundb px-4 pb-10 pt-6 text-white/70 lg:w-[85%]"
+        className="sticky mx-auto border-t border-y-white/20 bg-backgroundb px-4 pb-10 pt-6 text-white/60 lg:w-[85%]"
         style={{ top: `calc(20vh + 11.5em)`, marginBottom: "5.75em" }}
       >
         <div className="absolute inset-0 bg-black bg-[url('/noise-light.png')] opacity-15" />
