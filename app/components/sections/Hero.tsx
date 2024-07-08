@@ -29,7 +29,7 @@ function Hero({ scrollYProgress }: any) {
       />
       {/***/}
       <motion.div
-        className="h-56 w-56 rounded-full border-4 border-green bg-[url('/Me2.jpg')] bg-cover bg-no-repeat md:-mt-20 md:h-64 md:w-64"
+        className="h-56 w-56 rounded-full border-4 border-green bg-[url('/me4.jpeg')] bg-cover bg-no-repeat md:-mt-20 md:h-64 md:w-64"
         initial={{ filter: "blur(2px)" }}
         whileInView={{ filter: "blur(0px)" }}
         viewport={{ once: true }}

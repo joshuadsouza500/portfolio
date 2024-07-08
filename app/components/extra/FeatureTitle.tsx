@@ -32,9 +32,9 @@ function FeatureTitle({
   tool2,
   tool3,
 }: Props) {
-  const ref = useRef<HTMLParagraphElement>(null);
+  const ref = useRef<HTMLParagraphElement>(null); //"-20% 0px -30% 0px"//
 
-  const isInView = useInView(ref, { margin: "-20% 0px -30% 0px" });
+  const isInView = useInView(ref, { margin: "-25% 0px -30% 0px" });
   const setInViewFeature = useFeatureStore((state) => state.setInViewFeature);
 
   useEffect(() => {
