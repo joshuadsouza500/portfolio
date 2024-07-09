@@ -1,6 +1,6 @@
 import React from "react";
-import Bounded from "./Bounded";
-import { cn } from "../utils/cn";
+import Bounded from "../Bounded";
+import { cn } from "@/app/utils/cn";
 import Link from "next/link";
 import Image from "next/image";
 

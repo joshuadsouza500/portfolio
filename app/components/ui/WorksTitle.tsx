@@ -1,6 +1,6 @@
 import { useInView } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
-import { useFeatureStore } from "./store";
+import { useFeatureStore } from "../extra/store";
 import { cn } from "@/app/utils/cn";
 import Link from "next/link";
 import Image from "next/image";
@@ -20,7 +20,7 @@ type Props = {
 {
   /** */
 }
-function FeatureTitle({
+function WorksTitle({
   children,
   id,
   title,
@@ -127,4 +127,4 @@ function FeatureTitle({
   );
 }
 
-export default FeatureTitle;
+export default WorksTitle;

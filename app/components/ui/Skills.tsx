@@ -2,7 +2,6 @@ import React from "react";
 import Bounded from "../Bounded";
 import { VelocityScroll } from "../magicui/scroll-based-velocity";
 
-import Scroller from "../extra/Scroller";
 import TextRevealByWord from "../magicui/text-reveal";
 
 function Skills() {

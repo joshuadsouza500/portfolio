@@ -1,11 +1,9 @@
 "use client";
 import React, { useEffect, useRef } from "react";
-import Bounded from "../Bounded";
 import { useScroll, motion, useTransform } from "framer-motion";
-import Image from "next/image";
-import Skills from "./Skills";
+import Skills from "../ui/Skills";
 
-function Works() {
+function ToolBox() {
   const container: any = useRef();
   const { scrollYProgress } = useScroll({
     target: container,
@@ -24,4 +22,4 @@ function Works() {
   );
 }
 
-export default Works;
+export default ToolBox;

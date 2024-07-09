@@ -1,10 +1,10 @@
 "use client";
 
-import FeatureTitle from "./FeatureTitle";
-import { Colors, Happy, Music, Todo } from "./FeatureCard";
+import WorksTitle from "./WorksTitle";
+import { Colors, Happy, Music, Todo } from "./WorksCard";
 import TextRevealByWord from "../magicui/text-reveal";
 import Bounded from "../Bounded";
-import SmallScroll from "../SmallScroll";
+import SmallScroll from "./SmallScroll";
 
 const features = [
   {
@@ -69,7 +69,7 @@ const features = [
   },
 ];
 
-const StickyScroll = () => {
+const WorksStickyScroll = () => {
   return (
     <section id="Works" className="relative bg-backgroundb px-4">
       <div className="absolute inset-0 bg-black bg-[url('/noise-light.png')] opacity-15" />
@@ -85,7 +85,7 @@ const StickyScroll = () => {
           <ul className="flex flex-col gap-80">
             {features.map((feature) => (
               <li className="-mb-2" key={feature.id}>
-                <FeatureTitle
+                <WorksTitle
                   id={feature.id}
                   title={feature.title}
                   type={feature.type}
@@ -131,4 +131,4 @@ const StickyScroll = () => {
   );
 };
 
-export default StickyScroll;
+export default WorksStickyScroll;

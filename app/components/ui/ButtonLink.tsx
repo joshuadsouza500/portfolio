@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import React from "react";
-import { TextFlip } from "./magicui/TextFlip";
+import { TextFlip } from "../magicui/TextFlip";
 
 function ButtonLink({ text, handleButton, active }: any) {
   return (

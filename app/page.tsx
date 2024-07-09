@@ -3,11 +3,11 @@ import React, { useEffect, useRef } from "react";
 
 import Lenis from "lenis";
 import Hero from "./components/sections/Hero";
-import Works from "./components/sections/Works";
+import ToolBox from "./components/sections/ToolBox";
 import Service from "./components/sections/Service";
 import CTA from "./components/sections/CTA";
 import { useScroll } from "framer-motion";
-import StickyScroll from "./components/extra/StickyScroll";
+import WorksStickyScroll from "./components/ui/WorksStickyScroll";
 
 export default function Home() {
   const container: any = useRef();
@@ -29,15 +29,9 @@ export default function Home() {
     <main ref={container} className="relative">
       <Hero scrollYProgress={scrollYProgress} />
       <Service />
-
-      <StickyScroll />
-
-      <Works />
+      <WorksStickyScroll />
+      <ToolBox />
       <CTA />
-      {/** 
-      
-     
-      */}
     </main>
   );
 }

@@ -1,12 +1,11 @@
 "use client";
-import React, { useEffect, useRef } from "react";
-import Bounded from "../Bounded";
-import Image from "next/image";
+import React from "react";
+
 import { useTransform, motion, easeIn } from "framer-motion";
 import GridPattern from "../magicui/grid-pattern";
 import { cn } from "@/app/utils/cn";
 import { TextFlip } from "../magicui/TextFlip";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 function Hero({ scrollYProgress }: any) {

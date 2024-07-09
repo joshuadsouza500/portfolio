@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Loader from "./Loader";
+import Loader from "./ui/Loader";
 import { AnimatePresence } from "framer-motion";
 
 export default function Initial() {

@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
-import { TextFlip } from "./magicui/TextFlip";
+
+import { TextFlip } from "../magicui/TextFlip";
 
 export const Footer = () => {
   return (

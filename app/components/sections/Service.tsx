@@ -1,7 +1,7 @@
 import React from "react";
 import Bounded from "../Bounded";
 import TextRevealByWord from "../magicui/text-reveal";
-import Features from "../Features";
+import Services from "../ui/Services";
 
 function Service() {
   return (
@@ -11,7 +11,7 @@ function Service() {
         id="Services"
       />
       <TextRevealByWord text="What I Do" Colour="text-white/80" />
-      <Features />
+      <Services />
     </Bounded>
   );
 }

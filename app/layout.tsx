@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import NavBar from "./components/NavBar";
-import { Footer } from "./components/Footer";
+import NavBar from "./components/ui/NavBar";
+import { Footer } from "./components/ui/Footer";
 import Initial from "./components/Initial";
 
 export const metadata: Metadata = {
@@ -19,6 +19,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "JoshuaDs Portfolio",
     description: "Hey, I am Joshua, a Web developer based in bahrain.",
+  },
+  twitter: {
+    title: "JoshuaDs Portfolio",
+    description: "Hey, I am Joshua, a Web developer based in bahrain.",
+    images: "/twitter-image.jpeg",
   },
 };
 

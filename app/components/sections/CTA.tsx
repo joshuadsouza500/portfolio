@@ -1,9 +1,9 @@
 "use client";
-import React, { useState } from "react";
-import Bounded from "../Bounded";
+import React from "react";
+
 import Image from "next/image";
 import Link from "next/link";
-import ContactForm from "../extra/ContactForm";
+import ContactForm from "../ui/ContactForm";
 import TextRevealByWord from "../magicui/text-reveal";
 
 function CTA() {

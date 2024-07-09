@@ -1,6 +1,6 @@
 import React from "react";
 
-function Features() {
+function Services() {
   return (
     <section className="">
       <div
@@ -76,4 +76,4 @@ function Features() {
   );
 }
 
-export default Features;
+export default Services;

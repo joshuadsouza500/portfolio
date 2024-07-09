@@ -2,7 +2,7 @@
 
 import { cn } from "@/app/utils/cn";
 import React from "react";
-import { useFeatureStore } from "./store";
+import { useFeatureStore } from "../extra/store";
 import Image from "next/image";
 
 type FeatureProps = {
@@ -43,7 +43,6 @@ export const Todo = ({ id }: CardProps) => {
       <video
         width="200"
         height="600"
-        controls
         preload="none"
         autoPlay
         muted
@@ -68,7 +67,6 @@ export const Colors = ({ id }: CardProps) => {
       <video
         width="200"
         height="600"
-        controls
         preload="none"
         autoPlay
         muted
@@ -91,7 +89,6 @@ export const Music = ({ id }: CardProps) => {
       <video
         width="200"
         height="600"
-        controls
         preload="none"
         autoPlay
         muted
@@ -116,7 +113,6 @@ export const Happy = ({ id }: CardProps) => {
       <video
         width="400"
         height="600"
-        controls
         preload="none"
         autoPlay
         muted

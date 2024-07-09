@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import Image from "next/image";
+
 import React, { ButtonHTMLAttributes, useEffect, useState } from "react";
 import {
   easeInOut,
@@ -11,7 +11,7 @@ import {
   useScroll,
 } from "framer-motion";
 import ButtonLink from "./ButtonLink";
-import { TextFlip } from "./magicui/TextFlip";
+import { TextFlip } from "../magicui/TextFlip";
 
 const menu = {
   open: {
