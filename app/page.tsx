@@ -25,6 +25,7 @@ export default function Home() {
     };
     requestAnimationFrame(raf);
   }, []);
+
   return (
     <main ref={container} className="relative">
       <Hero scrollYProgress={scrollYProgress} />

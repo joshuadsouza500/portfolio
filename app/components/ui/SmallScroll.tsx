@@ -51,7 +51,6 @@ function SmallScroll({
           <video
             width="50"
             height="50"
-            controls
             preload="none"
             autoPlay
             muted
