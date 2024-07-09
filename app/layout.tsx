@@ -23,8 +23,8 @@ export const metadata: Metadata = {
   twitter: {
     title: "JoshuaDs Portfolio",
     description: "Hey, I am Joshua, a Web developer based in bahrain.",
-    images: "/twitter-image.jpeg",
   },
+  metadataBase: new URL("https://joshuads.vercel.app"),
 };
 
 export default function RootLayout({

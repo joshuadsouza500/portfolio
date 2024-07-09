@@ -159,21 +159,21 @@ export default function NavBar() {
                   <Link
                     className="hover:scale-[1.02]"
                     target="_blank"
-                    href="https://www.instagram.com/"
+                    href="https://www.Linkedin.com/"
                   >
                     <TextFlip className="font-normal">Linkedin</TextFlip>
                   </Link>
                   <Link
                     className="hover:scale-[1.02]"
                     target="_blank"
-                    href="https://www.facebook.com/"
+                    href="https://github.com/joshuadsouza500/"
                   >
                     <TextFlip className="-ml-6 font-normal">Github</TextFlip>
                   </Link>
                   <Link
                     className="hover:scale-[1.02]"
                     target="_blank"
-                    href="https://www.youtube.com/"
+                    href="https://x.com/jdscodes04"
                   >
                     <TextFlip className="font-normal">Twitter</TextFlip>
                   </Link>

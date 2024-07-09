@@ -46,22 +46,22 @@ export const Footer = () => {
             className="flex flex-col gap-1 py-2 text-black/80 md:flex-row md:gap-2 lg:gap-4 lg:text-xl"
           >
             <li>
-              <Link href="https://wwwinstagramcom/ufc/" target="_blank">
-                <TextFlip className="font-medium">Instagram</TextFlip>
+              <Link href="https://x.com/jdscodes04" target="_blank">
+                <TextFlip className="font-medium">Twitter</TextFlip>
               </Link>
             </li>
             <li>
-              <Link href="https://wwwinstagramcom/ufc/" target="_blank">
+              <Link href="https://www.Linkedin.com/" target="_blank">
                 <TextFlip className="font-medium">Linkedin</TextFlip>
               </Link>
             </li>
             <li>
-              <Link href="https://wwwinstagramcom/ufc/" target="_blank">
+              <Link href="https://github.com/joshuadsouza500/" target="_blank">
                 <TextFlip className="font-medium">Github</TextFlip>
               </Link>
             </li>
             <li>
-              <Link href="https://wwwinstagramcom/ufc/" target="_blank">
+              <Link href={`https://wa.me/97336158093`} target="_blank">
                 <TextFlip className="font-medium">Whatsapp</TextFlip>
               </Link>
             </li>
