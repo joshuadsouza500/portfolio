@@ -6,8 +6,8 @@ import Initial from "./components/Initial";
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Joshua Ds Portfolio",
-    default: "Joshua Ds Portfolio",
+    template: "%s | JoshuaDs Portfolio",
+    default: "JoshuaDs Portfolio",
   },
   description: "Hey, I am Joshua, a Web developer based in bahrain.",
   keywords:
