@@ -58,7 +58,7 @@ function Features() {
           Web Optimization
         </h1>
 
-        <p className="pb-10 pl-1 text-base sm:w-[90%] md:text-lg lg:w-[70%]">
+        <p className="pb-8 pl-1 text-base sm:w-[90%] md:text-lg lg:w-[70%]">
           {`I optimize websites to run smoothly, load quickly, and be easily found
           by search engines and users alike, increasing your online visibility
           and boosting your website's performance.`}

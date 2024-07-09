@@ -1,30 +1,54 @@
-"use client";
-
 import type { Metadata } from "next";
 import "./globals.css";
 import NavBar from "./components/NavBar";
 import { Footer } from "./components/Footer";
-import { useEffect } from "react";
-import Lenis from "lenis";
 import Initial from "./components/Initial";
+
+export const metadata: Metadata = {
+  title: {
+    template: "%s | Joshua Ds Portfolio",
+    default: "Joshua Ds Portfolio",
+  },
+  description: "Hey, I am Joshua, a Web developer based in bahrain.",
+  keywords:
+    "Web development, portfolio, bahrain, portfolio website, animations, front-end development, freelance, SEO, Web design, Reactjs",
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: "JoshuaDs Portfolio",
+    description: "Hey, I am Joshua, a Web developer based in bahrain.",
+  },
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  useEffect(() => {
-    const lenis = new Lenis();
-    const raf = (time: any) => {
-      lenis.raf(time);
-
-      requestAnimationFrame(raf);
-    };
-    requestAnimationFrame(raf);
-  }, []);
+  {
+    /**
+    <meta
+        name="google-site-verification"
+        content="m3YkuK-Y4S-R_8lvq_jMpg2khDcoUQJKPe0TmD0r9ms"
+      />
+      
+      add under html*/
+  }
+  {
+    /**
+    verification: {
+      google: "m3YkuK-Y4S-R_8lvq_jMpg2khDcoUQJKPe0TmD0r9ms",
+    }, 
+    
+  
+    */
+  }
 
   return (
     <html lang="en">
+      <link rel="icon" href="/me5.jpeg" />
       <body className="bg-backgroundw font-poppins">
         <link
           rel="stylesheet"

@@ -46,7 +46,7 @@ function FeatureTitle({
       <h1
         className={cn(
           "text-8xl font-semibold",
-          isInView ? "text-green" : "text-white/5 opacity-50",
+          isInView ? "text-green/80" : "text-white/5 opacity-50",
         )}
       >
         {title}
