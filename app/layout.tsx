@@ -53,7 +53,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <link rel="icon" href="/mesmall.jpg" />
+      <link rel="icon" href="/Logo.svg" />
       <body className="bg-backgroundw font-poppins">
         <link
           rel="stylesheet"
