@@ -1,7 +1,7 @@
 "use client";
 
 import WorksTitle from "./WorksTitle";
-import { Colors, Happy, Music, Todo } from "./WorksCard";
+import { Photography, Restaurant, Aurora, Elevate } from "./WorksCard";
 import TextRevealByWord from "../magicui/text-reveal";
 import Bounded from "../Bounded";
 import SmallScroll from "./SmallScroll";
@@ -19,8 +19,7 @@ const features = [
     tool1: "Nextjs",
     tool2: "Cotentful",
     tool3: "Framer Motion",
-
-    card: Todo,
+    card: Photography,
   },
   {
     id: "Restaurant",
@@ -34,8 +33,7 @@ const features = [
     tool1: "Reactjs",
     tool2: "TailwindCSS",
     tool3: "Framer Motion",
-
-    card: Colors,
+    card: Restaurant,
   },
   {
     id: "Chatbot",
@@ -49,8 +47,7 @@ const features = [
     tool1: "Nextjs",
     tool2: "TailwindCSS",
     tool3: "Framer Motion",
-
-    card: Music,
+    card: Aurora,
   },
   {
     id: "Marketing Agency",
@@ -64,8 +61,7 @@ const features = [
     tool1: "Reactjs",
     tool2: "TailwindCSS",
     tool3: "Framer Motion",
-
-    card: Happy,
+    card: Elevate,
   },
 ];
 

@@ -6,8 +6,8 @@ import Initial from "./components/Initial";
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | JoshuaDs Portfolio",
-    default: "JoshuaDs Portfolio",
+    template: "%s | Joshua Dsouza",
+    default: "Joshua Dsouza",
   },
   description: "Hey, I am Joshua, a Web developer based in bahrain.",
   keywords:
@@ -17,11 +17,11 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: "JoshuaDs Portfolio",
+    title: "Joshua Dsouza",
     description: "Hey, I am Joshua, a Web developer based in bahrain.",
   },
   twitter: {
-    title: "JoshuaDs Portfolio",
+    title: "Joshua Dsouza",
     description: "Hey, I am Joshua, a Web developer based in bahrain.",
   },
   metadataBase: new URL("https://joshuads.vercel.app"),

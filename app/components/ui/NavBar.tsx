@@ -12,6 +12,7 @@ import {
 } from "framer-motion";
 import ButtonLink from "./ButtonLink";
 import { TextFlip } from "../magicui/TextFlip";
+import Image from "next/image";
 
 const menu = {
   open: {
@@ -80,9 +81,9 @@ export default function NavBar() {
       >
         <Link
           href={"/"}
-          className="flex flex-col justify-center py-2 text-center"
+          className="flex flex-col justify-center pl-2 text-center"
         >
-          <h4 className="pl-2 text-xl font-semibold sm:text-2xl">JDs</h4>
+          <div className="h-10 w-8 bg-[url('/Logo.svg')] bg-no-repeat" />
         </Link>
 
         <motion.div

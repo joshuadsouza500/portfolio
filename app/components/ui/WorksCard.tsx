@@ -3,7 +3,6 @@
 import { cn } from "@/app/utils/cn";
 import React from "react";
 import { useFeatureStore } from "../extra/store";
-import Image from "next/image";
 
 type FeatureProps = {
   color: string;
@@ -32,7 +31,7 @@ const FeatureCard = ({ color, children, id, className }: FeatureProps) => {
   );
 };
 
-export const Todo = ({ id }: CardProps) => {
+export const Photography = ({ id }: CardProps) => {
   return (
     <FeatureCard
       id={id}
@@ -56,7 +55,7 @@ export const Todo = ({ id }: CardProps) => {
   );
 };
 
-export const Colors = ({ id }: CardProps) => {
+export const Restaurant = ({ id }: CardProps) => {
   return (
     <FeatureCard
       id={id}
@@ -79,7 +78,7 @@ export const Colors = ({ id }: CardProps) => {
     </FeatureCard>
   );
 };
-export const Music = ({ id }: CardProps) => {
+export const Aurora = ({ id }: CardProps) => {
   return (
     <FeatureCard
       id={id}
@@ -102,7 +101,7 @@ export const Music = ({ id }: CardProps) => {
   );
 };
 
-export const Happy = ({ id }: CardProps) => {
+export const Elevate = ({ id }: CardProps) => {
   return (
     <FeatureCard
       id={id}
