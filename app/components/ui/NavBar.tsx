@@ -1,18 +1,15 @@
 "use client";
 import Link from "next/link";
 
-import React, { ButtonHTMLAttributes, useEffect, useState } from "react";
+import React, { useState } from "react";
 import {
   easeInOut,
   motion,
-  MotionValue,
-  motionValue,
   useMotionValueEvent,
   useScroll,
 } from "framer-motion";
 import ButtonLink from "./ButtonLink";
 import { TextFlip } from "../magicui/TextFlip";
-import Image from "next/image";
 
 const menu = {
   open: {
@@ -35,8 +32,6 @@ const menu = {
     },
   },
 };
-
-//Create mobile menu//
 
 export default function NavBar() {
   const [hidden, setHidden] = useState<boolean>(false);
@@ -85,6 +80,8 @@ export default function NavBar() {
         >
           <div className="h-10 w-8 bg-[url('/Logo.svg')] bg-no-repeat" />
         </Link>
+
+        {/**Based on active state the animate prop loads */}
 
         <motion.div
           className="fixed right-1 top-2 z-20 cursor-pointer rounded-3xl bg-green text-center"

@@ -17,9 +17,6 @@ type Props = {
   tool3: string;
 };
 
-{
-  /** */
-}
 function WorksTitle({
   children,
   id,
@@ -32,7 +29,7 @@ function WorksTitle({
   tool2,
   tool3,
 }: Props) {
-  const ref = useRef<HTMLParagraphElement>(null); //"-20% 0px -30% 0px"//
+  const ref = useRef<HTMLParagraphElement>(null); //"-20% 0px -30% 0px"//  // -20 from ttop of the screen//
 
   const isInView = useInView(ref, { margin: "-25% 0px -30% 0px" });
   const setInViewFeature = useFeatureStore((state) => state.setInViewFeature);

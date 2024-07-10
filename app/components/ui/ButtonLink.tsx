@@ -2,11 +2,12 @@
 import { motion } from "framer-motion";
 import React from "react";
 import { TextFlip } from "../magicui/TextFlip";
+import { MotionDiv } from "./Motion";
 
 function ButtonLink({ text, handleButton, active }: any) {
   return (
     <div className="absolute right-5 top-1">
-      <motion.div
+      <MotionDiv
         onClick={handleButton}
         className={
           text == "Close"
@@ -15,7 +16,7 @@ function ButtonLink({ text, handleButton, active }: any) {
         }
       >
         <TextFlip className="text-xl font-bold">{text}</TextFlip>
-      </motion.div>
+      </MotionDiv>
     </div>
   );
 }

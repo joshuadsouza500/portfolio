@@ -4,7 +4,7 @@ import React, { useState } from "react";
 function ContactForm() {
   const [result, setResult] = useState(" ");
 
-  async function onSubmit(e: any) {
+  async function onSubmit(e: React.ChangeEvent<HTMLFormElement> | any) {
     e.preventDefault();
     setResult("Sending....");
     const response = await fetch("https://api.web3forms.com/submit", {
@@ -15,7 +15,7 @@ function ContactForm() {
       },
       body: JSON.stringify({
         access_key: "e3a3a346-5ea1-479d-99f4-dfd6bc6f98d1",
-        name: e.target.name.value,
+        name: e.target.name.valueOf,
         email: e.target.email.value,
         message: e.target.message.value,
       }),

@@ -10,7 +10,7 @@ import { useScroll } from "framer-motion";
 import WorksStickyScroll from "./components/ui/WorksStickyScroll";
 
 export default function Home() {
-  const container: any = useRef();
+  const container = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: container,
     offset: ["start start", "end end"],
@@ -18,9 +18,8 @@ export default function Home() {
 
   useEffect(() => {
     const lenis = new Lenis();
-    const raf = (time: any) => {
+    const raf = (time: number) => {
       lenis.raf(time);
-
       requestAnimationFrame(raf);
     };
     requestAnimationFrame(raf);

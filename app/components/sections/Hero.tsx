@@ -1,16 +1,21 @@
 "use client";
 import React from "react";
 
-import { useTransform, motion, easeIn } from "framer-motion";
+import { useTransform, motion, MotionValue } from "framer-motion";
 import GridPattern from "../magicui/grid-pattern";
 import { cn } from "@/app/utils/cn";
 import { TextFlip } from "../magicui/TextFlip";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
-function Hero({ scrollYProgress }: any) {
+type props = {
+  scrollYProgress: MotionValue;
+};
+/*Tkes the scrollyprogress and changes the scale and opacity on scroll. And then pass the scale and opacity as style props to dynamically change*/
+function Hero({ scrollYProgress }: props) {
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.5]);
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
+
   return (
     <motion.div
       id="Home"

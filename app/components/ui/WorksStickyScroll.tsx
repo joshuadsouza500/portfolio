@@ -1,5 +1,3 @@
-"use client";
-
 import WorksTitle from "./WorksTitle";
 import { Photography, Restaurant, Aurora, Elevate } from "./WorksCard";
 import TextRevealByWord from "../magicui/text-reveal";

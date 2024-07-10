@@ -4,13 +4,15 @@ import { useScroll, motion, useTransform } from "framer-motion";
 import Skills from "../ui/Skills";
 
 function ToolBox() {
-  const container: any = useRef();
+  const container = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
     target: container,
-    offset: ["end end", "end start"],
+    offset: ["end end", "end start"], //animations starts when the end of the target touches end of the screen//
   });
 
   const scaleX = useTransform(scrollYProgress, [0, 1], [1, 0.94]);
+
+  /** Here we use the scroll y value of the ref container(screen) and change the Xsize based on scroll */
   return (
     <motion.div
       ref={container}

@@ -1,12 +1,10 @@
-"use client";
-import { motion } from "framer-motion";
-
 import React from "react";
+import { MotionDiv, Motionh1, MotionSpan } from "./Motion";
 
 export default function Loader() {
   return (
     <div>
-      <motion.div
+      <MotionDiv
         initial={{ y: 0 }}
         exit={{
           y: "-100%",
@@ -21,7 +19,7 @@ export default function Loader() {
         }}
         className="fixed left-0 top-0 z-[9999] h-full w-full bg-backgroundb"
       >
-        <motion.div
+        <MotionDiv
           initial={{ y: 0 }}
           exit={{
             y: "-100%",
@@ -42,8 +40,8 @@ export default function Loader() {
           </span>
           <section className="flex items-end justify-between">
             <div className="flex flex-col gap-1">
-              <motion.h1 className="overflow-hidden text-[2rem] font-bold leading-[0.8] text-backgroundw/55 sm:text-[3rem]">
-                <motion.span
+              <Motionh1 className="overflow-hidden text-[2rem] font-bold leading-[0.8] text-backgroundw/55 sm:text-[3rem]">
+                <MotionSpan
                   className="inline-block overflow-hidden"
                   initial={{ y: "100%", opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
@@ -58,10 +56,10 @@ export default function Loader() {
                 >
                   {" "}
                   Web Developer
-                </motion.span>
-              </motion.h1>
-              <motion.h1 className="overflow-hidden text-[2rem] font-bold leading-[0.8] text-backgroundw/55 sm:text-[3rem]">
-                <motion.span
+                </MotionSpan>
+              </Motionh1>
+              <Motionh1 className="overflow-hidden text-[2rem] font-bold leading-[0.8] text-backgroundw/55 sm:text-[3rem]">
+                <MotionSpan
                   className="inline-block overflow-hidden"
                   initial={{ y: "100%", opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
@@ -76,14 +74,14 @@ export default function Loader() {
                 >
                   {" "}
                   Based In Bahrain
-                </motion.span>
-              </motion.h1>
+                </MotionSpan>
+              </Motionh1>
             </div>
 
             <span className="hidden text-white/50 sm:block">Loading...</span>
           </section>
         </div>
-      </motion.div>
+      </MotionDiv>
     </div>
   );
 }
