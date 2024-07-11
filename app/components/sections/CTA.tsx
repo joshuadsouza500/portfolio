@@ -10,14 +10,14 @@ function CTA() {
   return (
     <div
       id="CTA"
-      className="relative mx-4 mb-10 grid h-full bg-backgroundw py-20 sm:mx-6 md:grid-cols-2 lg:mx-auto lg:max-w-6xl"
+      className="relative mx-4 mb-10 grid h-full bg-backgroundw py-20 sm:mx-6 md:grid-cols-2 lg:mx-auto lg:max-w-6xl xl:py-32"
     >
       <div className="pb-12 md:pb-2 md:pt-4">
         <div className="mx-auto">
           <TextRevealByWord
             text="Get In Touch"
             Colour="text-black/90"
-            className="-mb-6 max-sm:pl-4"
+            className="-mb-6 max-sm:pl-4 xl:-mb-10"
           />
           <p className="hidden w-[85%] pl-4 text-left text-base text-black/70">
             Fill out the form below and let&apos;s discuss how I can help bring

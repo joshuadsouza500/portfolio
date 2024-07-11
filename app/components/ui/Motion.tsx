@@ -8,5 +8,7 @@ export const MotionP = motion.p;
 export const MotionB = motion.button;
 export const MotionSection = motion.section;
 export const MotionSpan = motion.span;
+export const MotionSvg = motion.svg;
+export const MotionPath = motion.path;
 
 export const MotionNav = motion.nav;

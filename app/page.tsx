@@ -7,7 +7,7 @@ import ToolBox from "./components/sections/ToolBox";
 import Service from "./components/sections/Service";
 import CTA from "./components/sections/CTA";
 import { useScroll } from "framer-motion";
-import WorksStickyScroll from "./components/ui/WorksStickyScroll";
+import WorksStickyScroll from "./components/sections/WorksStickyScroll";
 
 export default function Home() {
   const container = useRef<HTMLDivElement>(null);

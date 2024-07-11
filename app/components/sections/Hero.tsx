@@ -33,7 +33,7 @@ function Hero({ scrollYProgress }: props) {
       />
       {/***/}
       <motion.div
-        className="h-56 w-56 rounded-full border-4 border-green bg-[url('/me5.jpeg')] bg-cover bg-no-repeat md:-mt-20 md:h-64 md:w-64"
+        className="h-56 w-56 rounded-full border-4 border-green bg-[url('/me5.jpeg')] bg-cover bg-no-repeat md:-mt-20 md:h-64 md:w-64 xl:h-72 xl:w-72"
         initial={{ filter: "blur(2px)" }}
         whileInView={{ filter: "blur(0px)" }}
         viewport={{ once: true }}
@@ -41,7 +41,7 @@ function Hero({ scrollYProgress }: props) {
       />
 
       <div className="flex flex-col gap-1 py-6 text-center md:gap-2">
-        <motion.h1 className="flex overflow-hidden text-4xl font-black sm:text-5xl md:text-7xl">
+        <motion.h1 className="flex overflow-hidden text-4xl font-black sm:text-5xl md:text-7xl xl:text-8xl">
           <motion.span
             className="flex overflow-hidden"
             initial={{ y: "100%", opacity: 0.8 }}
@@ -60,12 +60,12 @@ function Hero({ scrollYProgress }: props) {
               &#128075;{" "}
             </span>{" "}
             I&apos;m{" "}
-            <TextFlip className="ml-2 text-4xl text-green sm:text-5xl md:text-7xl lg:ml-4">
+            <TextFlip className="ml-2 text-4xl text-green sm:text-5xl md:text-7xl lg:ml-4 xl:text-8xl">
               Joshua
             </TextFlip>{" "}
           </motion.span>
         </motion.h1>
-        <motion.h1 className="overflow-hidden text-[2rem] font-bold text-backgroundb/95 max-sm:leading-none sm:text-4xl md:text-6xl">
+        <motion.h1 className="overflow-hidden text-[2rem] font-bold text-backgroundb/95 max-sm:leading-none sm:text-4xl md:text-6xl xl:text-7xl">
           <motion.span
             className="inline-block overflow-hidden"
             initial={{ y: "100%", opacity: 0 }}
@@ -82,7 +82,7 @@ function Hero({ scrollYProgress }: props) {
             A Web Developer
           </motion.span>
         </motion.h1>
-        <motion.p className="my-1 overflow-hidden text-sm text-backgroundb/90 sm:text-lg md:text-2xl md:font-medium">
+        <motion.p className="my-1 overflow-hidden text-sm text-backgroundb/90 sm:text-lg md:text-2xl md:font-medium xl:text-3xl">
           <motion.span
             className="inline-block overflow-hidden"
             initial={{ y: "100%", opacity: 0 }}

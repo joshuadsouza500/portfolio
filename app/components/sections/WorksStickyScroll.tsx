@@ -1,8 +1,8 @@
-import WorksTitle from "./WorksTitle";
-import { Photography, Restaurant, Aurora, Elevate } from "./WorksCard";
+import WorksTitle from "../ui/WorksTitle";
+import { Photography, Restaurant, Aurora, Elevate } from "../ui/WorksCard";
 import TextRevealByWord from "../magicui/text-reveal";
 import Bounded from "../Bounded";
-import SmallScroll from "./SmallScroll";
+import SmallScroll from "../ui/SmallScroll";
 
 const features = [
   {
@@ -76,7 +76,7 @@ const WorksStickyScroll = () => {
       </Bounded>
       <div className="relative mx-auto hidden w-full max-w-6xl items-start gap-1 lg:flex">
         <div className="w-10/12 py-[50vh]">
-          <ul className="flex flex-col gap-80">
+          <ul className="flex flex-col gap-80 xl:gap-96">
             {features.map((feature) => (
               <li className="-mb-2" key={feature.id}>
                 <WorksTitle
@@ -95,7 +95,7 @@ const WorksStickyScroll = () => {
           </ul>
         </div>
         <div className="sticky top-0 flex h-screen w-full items-center">
-          <div className="relative aspect-square h-[600px] w-full rounded-2xl bg-slate-200">
+          <div className="relative aspect-square h-[600px] w-full rounded-2xl bg-slate-200 2xl:h-[650px]">
             {features.map((feature) => (
               <feature.card id={feature.id} key={feature.id} />
             ))}

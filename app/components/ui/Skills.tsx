@@ -13,7 +13,7 @@ function Skills() {
       </Bounded>
       {/*  <Scroller skilldata={skilldata} />**/}
 
-      <div className="mx-2 md:mx-4">
+      <div className="mx-2 md:mx-4 xl:mx-20">
         <VelocityScroll
           text="HTML.   TAILWIND.   REACTJS. TYPESCRIPT.  NEXTJS. "
           default_velocity={2}
