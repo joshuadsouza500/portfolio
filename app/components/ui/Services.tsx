@@ -1,8 +1,12 @@
-import React from "react";
-
 function Services() {
   return (
     <section className="">
+      <p className="text-lg text-white/60">
+        I offer the expertise and insight to help you achieve your aspirations.
+        Heres why partnering with me can make a significant difference in
+        reaching your objectives and setting your brand apart in a competitive
+        market.
+      </p>
       <div
         className="sticky mx-auto border-t border-y-white/20 px-4 pb-10 pt-6 text-white/60 lg:w-[85%] xl:w-[90%]"
         style={{ top: `calc(20vh + 0em)`, marginBottom: "17.25em" }}
@@ -77,3 +81,9 @@ function Services() {
 }
 
 export default Services;
+
+{
+  /**
+  
+  */
+}

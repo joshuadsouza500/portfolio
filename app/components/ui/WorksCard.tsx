@@ -16,10 +16,11 @@ type CardProps = {
 
 const FeatureCard = ({ color, children, id, className }: FeatureProps) => {
   const inViewFeature = useFeatureStore((state) => state.inViewFeature);
+
   return (
     <div
       className={cn(
-        "absolute inset-0 h-full w-full rounded-xl transition-opacity",
+        "absolute inset-0 h-full w-full rounded-lg transition-opacity",
         color,
         className,
         inViewFeature === id ? "" : "hidden",
@@ -47,7 +48,7 @@ export const Photography = ({ id }: CardProps) => {
         muted
         loop
         style={{ objectFit: "fill" }}
-        className="h-[70%] w-[90%] rounded-lg shadow-2xl shadow-black"
+        className="h-[70%] w-[90%] rounded-md shadow-2xl shadow-black"
       >
         <source src="/Photography.mp4" type="video/mp4" />
       </video>
@@ -71,7 +72,7 @@ export const Restaurant = ({ id }: CardProps) => {
         muted
         loop
         style={{ objectFit: "fill" }}
-        className="h-[70%] w-[90%] rounded-lg shadow-2xl shadow-black"
+        className="h-[70%] w-[90%] rounded-md shadow-2xl shadow-black"
       >
         <source src="/Littlelemon.mp4" type="video/mp4" />
       </video>
@@ -93,7 +94,7 @@ export const Aurora = ({ id }: CardProps) => {
         muted
         loop
         style={{ objectFit: "fill" }}
-        className="h-[70%] w-[90%] rounded-lg shadow-2xl shadow-black"
+        className="h-[70%] w-[90%] rounded-md shadow-2xl shadow-black"
       >
         <source src="/Aurora.mp4" type="video/mp4" />
       </video>
@@ -117,7 +118,7 @@ export const Elevate = ({ id }: CardProps) => {
         muted
         loop
         style={{ objectFit: "fill" }}
-        className="h-[70%] w-[90%] rounded-lg shadow-2xl shadow-black"
+        className="h-[70%] w-[90%] rounded-md shadow-2xl shadow-black"
       >
         <source src="/Elevate.mp4" type="video/mp4" />
       </video>

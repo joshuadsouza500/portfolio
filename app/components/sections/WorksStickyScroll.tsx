@@ -7,7 +7,7 @@ import SmallScroll from "../ui/SmallScroll";
 const features = [
   {
     id: "Portfolio",
-    title: "Project 1",
+    title: "Project 01",
     type: "Photography Portfolio",
     name: "John Doe Photogrpahy",
     live: "https://photographybh.vercel.app/",
@@ -21,7 +21,7 @@ const features = [
   },
   {
     id: "Restaurant",
-    title: "Project 2",
+    title: "Project 02",
     type: "Restaurant Website",
     name: "Little Lemon Restaurant",
     live: "https://little-lemonbh.vercel.app/",
@@ -35,7 +35,7 @@ const features = [
   },
   {
     id: "Chatbot",
-    title: "Project 3",
+    title: "Project 03",
     type: "AI Chatbot",
     name: "Aurora ai",
     live: "https://aurora-ai-b.vercel.app/",
@@ -49,7 +49,7 @@ const features = [
   },
   {
     id: "Marketing Agency",
-    title: "Project 4",
+    title: "Project 04",
     type: "Marketing Agency",
     name: "Elevate-app",
     live: "https://elevate-app-bh.vercel.app/",
@@ -65,16 +65,25 @@ const features = [
 
 const WorksStickyScroll = () => {
   return (
-    <section id="Works" className="relative bg-backgroundb px-4">
+    <section id="Works" className="relative bg-backgroundb px-1">
       <div className="absolute inset-0 bg-black bg-[url('/noise-light.png')] opacity-15" />
-      <Bounded className="-mb-16 lg:-mb-20">
-        <TextRevealByWord
-          text="Selected Works"
-          className="pr-10 sm:-ml-6 md:-ml-10"
-          Colour="text-white/80"
-        />
+      <Bounded className="py-8 md:py-8">
+        <div className="grid h-fit gap-2 lg:gap-8">
+          <h2
+            style={{ lineHeight: "1.08" }}
+            className="text-5xl font-bold tracking-tight text-backgroundw/80 md:text-6xl lg:text-7xl 2xl:text-8xl"
+          >
+            Selected <br className="xl:hidden" />
+            Works/
+          </h2>
+          <p className="col-span-2 mt-2 w-[75%] place-self-end text-xs font-medium text-[#f7f7f7]/70 sm:w-[60%] sm:text-sm md:mt-10 md:pb-6 lg:ml-2 lg:w-[70%] lg:text-lg xl:w-[60%] xl:text-xl 2xl:w-[50%]">
+            Here are few of my featured project0s that showcase my skill and
+            expertise difference in reaching your objectives and setting your
+          </p>
+        </div>
       </Bounded>
-      <div className="relative mx-auto hidden w-full max-w-6xl items-start gap-1 lg:flex">
+
+      <div className="relative mx-auto hidden w-full max-w-6xl items-start gap-1 lg:flex 2xl:max-w-8xl">
         <div className="w-10/12 py-[50vh]">
           <ul className="flex flex-col gap-80 xl:gap-96">
             {features.map((feature) => (

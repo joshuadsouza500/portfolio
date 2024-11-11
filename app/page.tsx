@@ -16,22 +16,36 @@ export default function Home() {
     offset: ["start start", "end end"],
   });
 
-  useEffect(() => {
+  {
+    /**  useEffect(() => {
     const lenis = new Lenis();
     const raf = (time: number) => {
       lenis.raf(time);
       requestAnimationFrame(raf);
     };
     requestAnimationFrame(raf);
-  }, []);
+  }, []); 
+  
+  
+   <Hero scrollYProgress={scrollYProgress} />
+      <Service />
+  
+  */
+  }
 
   return (
     <main ref={container} className="relative">
-      <Hero scrollYProgress={scrollYProgress} />
-      <Service />
       <WorksStickyScroll />
       <ToolBox />
       <CTA />
     </main>
   );
+}
+
+{
+  /**
+1.HUY ADD a vire button when hovering over image and video forbig screens and for small screens on click of image go to website
+2. Naviagte on project title click  
+
+  */
 }

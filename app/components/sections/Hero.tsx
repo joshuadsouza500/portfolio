@@ -13,10 +13,41 @@ type props = {
 };
 /*Tkes the scrollyprogress and changes the scale and opacity on scroll. And then pass the scale and opacity as style props to dynamically change*/
 function Hero({ scrollYProgress }: props) {
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.5]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 0]);
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
 
   return (
+    <motion.div
+      id="Home"
+      style={{ scale, opacity }}
+      className="sticky top-16 mx-auto flex h-[90vh] w-full max-w-5xl flex-col items-center justify-center px-4 text-backgroundb max-md:pt-1 sm:h-[85vh] sm:justify-center md:gap-24 md:px-6 xl:max-w-6xl 2xl:max-w-8xl"
+    >
+      {/***/}
+
+      <div className="flex flex-col gap-1 py-4 text-left md:gap-2">
+        <motion.p className="rest overflow-hidden py-1 text-2xl font-medium tracking-[0.015em] text-backgroundb lg:text-5xl 2xl:w-[95%] 2xl:text-[56px]">
+          Hello! I’m Joshua, a web developer based in Bahrain specializing in
+          crafting modern, human-centered websites.
+        </motion.p>
+      </div>
+      <div className="-mb-56 flex w-full items-center justify-between self-start max-sm:text-sm sm:-mb-36 2xl:w-[95%]">
+        <div className="flex items-center gap-1 sm:gap-2">
+          <p className="size-2 animate-pulse rounded-full bg-[#17A21C] sm:size-3" />
+          <p className="text-[#161616]/80">Available for work</p>
+        </div>
+        <div className="flex flex-col">
+          <p className="hidden text-[#161616]/60 sm:block">Get in Touch </p>
+          <p>jdscodes04@gmail.com</p>
+        </div>
+      </div>
+    </motion.div>
+  );
+}
+
+export default Hero;
+
+{
+  /**
     <motion.div
       id="Home"
       style={{ scale, opacity }}
@@ -31,9 +62,9 @@ function Hero({ scrollYProgress }: props) {
           "[mask-image:linear-gradient(to_top_left,white,transparent,transparent)]",
         )}
       />
-      {/***/}
+   
       <motion.div
-        className="h-56 w-56 rounded-full border-4 border-green bg-[url('/me5.jpeg')] bg-cover bg-no-repeat md:-mt-20 md:h-64 md:w-64 xl:h-72 xl:w-72"
+        className="h-56 w-56 rounded-full border-4 border-green bg-[url('/me.jpeg')] bg-cover bg-no-repeat md:-mt-20 md:h-64 md:w-64 xl:h-72 xl:w-72"
         initial={{ filter: "blur(2px)" }}
         whileInView={{ filter: "blur(0px)" }}
         viewport={{ once: true }}
@@ -61,7 +92,7 @@ function Hero({ scrollYProgress }: props) {
             </span>{" "}
             I&apos;m{" "}
             <TextFlip className="ml-2 text-4xl text-green sm:text-5xl md:text-7xl lg:ml-4 xl:text-8xl">
-              Joshua
+              jo
             </TextFlip>{" "}
           </motion.span>
         </motion.h1>
@@ -118,8 +149,5 @@ function Hero({ scrollYProgress }: props) {
           </Link>
         </motion.button>
       </div>
-    </motion.div>
-  );
+    </motion.div> */
 }
-
-export default Hero;

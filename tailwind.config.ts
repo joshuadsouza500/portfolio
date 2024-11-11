@@ -10,12 +10,16 @@ const config: Config = {
     extend: {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
+        Manrope: ["Manrope", "sans-serif"],
       },
       colors: {
         backgroundw: "#F7F7F7",
         backgroundb: "#090908",
         green: "#00806E",
         text: "#BFBFB1",
+      },
+      maxWidth: {
+        "8xl": "1440px",
       },
     },
   },

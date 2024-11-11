@@ -54,13 +54,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <link rel="icon" href="/Logo.svg" />
-      <body className="bg-backgroundw font-poppins">
+      <body className="font-Manrope bg-backgroundw">
         <link
           rel="stylesheet"
           type="text/css"
           href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
         />
-        <Initial />
+        {/** <Initial /> */}
         <NavBar />
         {children}
         <Footer />

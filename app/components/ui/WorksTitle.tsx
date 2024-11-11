@@ -42,6 +42,78 @@ function WorksTitle({
     <div ref={ref} className="transition-colors">
       <h1
         className={cn(
+          "text-8xl font-medium tracking-tight transition-colors duration-150 ease-in",
+          isInView ? "text-white/80" : "text-white/5 opacity-40",
+        )}
+      >
+        {title}
+      </h1>
+
+      <h6
+        className={cn(
+          "pl-1 pt-8 text-base font-medium tracking-wide",
+          isInView ? "text-white/40" : "text-transparent",
+        )}
+      >
+        {type}
+      </h6>
+      <div className={cn("flex justify-between text-3xl font-semibold")}>
+        <h6
+          className={cn(
+            "pt-1 text-3xl font-semibold transition-colors duration-150 ease-in xl:text-4xl",
+            isInView
+              ? "cursor-pointer tracking-tight text-white/80 hover:text-white"
+              : "text-transparent",
+          )}
+        >
+          <Link href={live} target="_blank" className="">
+            {called}
+          </Link>
+        </h6>
+      </div>
+      <div
+        className={cn(
+          "flex gap-2 pt-4 text-sm",
+          isInView ? "text-white/40" : "text-transparent",
+        )}
+      >
+        <h6
+          className={cn(
+            "rounded-2xl px-3 py-1",
+            isInView ? "border border-white/40 px-4" : "",
+          )}
+        >
+          {tool1}
+        </h6>
+        <h6
+          className={cn(
+            "rounded-2xl px-3 py-1",
+            isInView ? "border border-white/40 px-4" : "",
+          )}
+        >
+          {tool2}
+        </h6>
+        <h6
+          className={cn(
+            "rounded-2xl px-3 py-1",
+            isInView ? "border border-white/40 px-4" : "",
+          )}
+        >
+          {tool3}
+        </h6>
+      </div>
+    </div>
+  );
+}
+
+export default WorksTitle;
+
+{
+  /**
+  
+   <div ref={ref} className="transition-colors">
+      <h1
+        className={cn(
           "text-8xl font-semibold",
           isInView ? "text-green/80" : "text-white/5 opacity-50",
         )}
@@ -105,23 +177,20 @@ function WorksTitle({
         </h6>
         <h6
           className={cn(
-            "rounded-2xl px-2",
-            isInView ? "border-2 border-white/60" : "",
+            "rounded-2xl px-3",
+            isInView ? "border border-white/40 px-4" : "",
           )}
         >
           {tool2}
         </h6>
         <h6
           className={cn(
-            "rounded-2xl px-2",
-            isInView ? "border-2 border-white/60" : "",
+            "rounded-2xl px-3",
+            isInView ? "border border-white/40 px-4" : "",
           )}
         >
           {tool3}
         </h6>
       </div>
-    </div>
-  );
+    </div>*/
 }
-
-export default WorksTitle;

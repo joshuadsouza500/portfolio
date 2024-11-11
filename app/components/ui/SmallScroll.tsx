@@ -34,19 +34,16 @@ function SmallScroll({
   return (
     <Bounded className="">
       <div
-        className="relative flex w-full flex-col max-sm:-mt-10"
+        className="relative flex w-full flex-col max-sm:-mt-4 md:px-4"
         id="Services"
       >
-        <h1 className="pb-4 pt-2 text-4xl font-bold text-green sm:pb-6 sm:text-5xl md:text-5xl">
-          {title}
-        </h1>
         <div
           style={{
             backgroundImage: `url(${cover})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
-          className="flex aspect-square h-[350px] items-center justify-center rounded-md sm:h-[450px] sm:max-w-[600px] md:max-w-[800px]"
+          className="flex aspect-square h-[350px] cursor-pointer items-center justify-center rounded-md sm:h-[400px] sm:max-w-[650px] md:h-[550px] md:max-w-[840px]"
         >
           <video
             width="50"
@@ -56,69 +53,65 @@ function SmallScroll({
             muted
             loop
             style={{ objectFit: "fill" }}
-            className="h-[65%] w-[85%] rounded-md shadow-2xl shadow-black sm:h-[80%]"
+            className="h-[65%] w-[85%] rounded-md shadow-xl shadow-black sm:h-[80%]"
           >
             <source src={vid} type="video/mp4" />
           </video>
         </div>
-        <h6 className="pt-6 text-sm text-white/40 max-sm:pl-1 md:pt-8">
+
+        <h6 className="pt-4 font-medium tracking-wide text-white/40 max-sm:pl-1 max-sm:text-sm">
           {type}
         </h6>
-        <div className="flex items-end justify-between pt-1 sm:pr-6 md:pr-14">
-          <h4 className="text-3xl font-semibold text-white/80 md:text-4xl">
-            {called}
-          </h4>
-          <div className="flex gap-1">
-            <Link
-              href={live}
-              target="_blank"
-              style={{ color: "gray", fontSize: "30px", fontWeight: "400" }}
-              className="rounded-md hover:bg-white/10"
-            >
-              🔗
-            </Link>
-
-            <Link href={link} target="_blank">
-              <Image
-                alt="Github Logo"
-                src="/github.svg"
-                width={50}
-                height={50}
-                className="h-10 hover:scale-[1.05]"
-              />
-            </Link>
+        <section className="items-center justify-between sm:flex md:w-[95%]">
+          {" "}
+          <div className="pt-1">
+            <h4 className="text-3xl font-semibold text-white/80 md:text-4xl">
+              {called}
+            </h4>
           </div>
-        </div>
-        <div
-          className={cn(
-            "flex gap-2 pt-4 text-sm text-white/40 max-sm:w-full max-sm:justify-start sm:text-base",
-          )}
-        >
-          <h6
+          <div
             className={cn(
-              "rounded-2xl border-2 border-white/60 px-2 py-1 md:px-4 md:py-[2px]",
+              "flex gap-2 pl-1 pt-2 text-xs text-white/60 max-sm:w-full max-sm:justify-start md:text-sm",
             )}
           >
-            {tool1}
-          </h6>
-          <h6
-            className={cn(
-              "rounded-2xl border-2 border-white/60 px-2 py-1 md:px-4 md:py-[2px]",
-            )}
-          >
-            {tool2}
-          </h6>
-          <h6
-            className={cn(
-              "px- rounded-2xl border-2 border-white/60 px-2 py-1 md:px-4 md:py-[2px]",
-            )}
-          >
-            {tool3}
-          </h6>
-        </div>
+            <h6
+              className={cn(
+                "rounded-2xl border border-white/40 px-2 py-1 md:px-3",
+              )}
+            >
+              {tool1}
+            </h6>
+            <h6
+              className={cn(
+                "rounded-2xl border border-white/40 px-2 py-1 md:px-3",
+              )}
+            >
+              {tool2}
+            </h6>
+            <h6
+              className={cn(
+                "rounded-2xl border border-white/40 px-2 py-1 md:px-3",
+              )}
+            >
+              {tool3}
+            </h6>
+          </div>
+        </section>
       </div>
     </Bounded>
   );
 }
 
 export default SmallScroll;
+
+{
+  /**
+   <Link
+              href={live}
+              target="_blank"
+              style={{ color: "gray", fontSize: "30px", fontWeight: "400" }}
+              className="rounded-md hover:bg-white/10"
+            >
+              🔗
+            </Link> */
+}
