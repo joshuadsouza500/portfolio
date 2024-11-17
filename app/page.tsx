@@ -26,17 +26,17 @@ export default function Home() {
     requestAnimationFrame(raf);
   }, []); 
   
-  
-   <Hero scrollYProgress={scrollYProgress} />
-      <Service />
-  
+   
   */
   }
 
   return (
     <main ref={container} className="relative">
+      <Hero scrollYProgress={scrollYProgress} />
+      <Service />
       <WorksStickyScroll />
       <ToolBox />
+
       <CTA />
     </main>
   );
@@ -44,7 +44,7 @@ export default function Home() {
 
 {
   /**
-1.HUY ADD a vire button when hovering over image and video forbig screens and for small screens on click of image go to website
+1.HUY ADD a view button when hovering over image and video for big screens and for small screens on click of image go to website
 2. Naviagte on project title click  
 
   */

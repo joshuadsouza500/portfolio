@@ -2,11 +2,9 @@
 import React from "react";
 
 import { useTransform, motion, MotionValue } from "framer-motion";
-import GridPattern from "../magicui/grid-pattern";
-import { cn } from "@/app/utils/cn";
-import { TextFlip } from "../magicui/TextFlip";
-import { ArrowRight } from "lucide-react";
+
 import Link from "next/link";
+import { MotionText, SlideP } from "../ui/MotionText";
 
 type props = {
   scrollYProgress: MotionValue;
@@ -20,24 +18,31 @@ function Hero({ scrollYProgress }: props) {
     <motion.div
       id="Home"
       style={{ scale, opacity }}
-      className="sticky top-16 mx-auto flex h-[90vh] w-full max-w-5xl flex-col items-center justify-center px-4 text-backgroundb max-md:pt-1 sm:h-[85vh] sm:justify-center md:gap-24 md:px-6 xl:max-w-6xl 2xl:max-w-8xl"
+      className="text-primary sticky top-16 mx-auto flex h-[90vh] w-full max-w-5xl flex-col justify-end px-4 pb-12 md:px-6 xl:max-w-6xl 2xl:max-w-8xl"
     >
-      {/***/}
+      {/** Main content  <motion.p className="rest overflow-hidden text-balance py-1 text-2xl font-medium tracking-[0.015em] text-backgroundb md:text-4xl lg:w-[95%] lg:text-5xl 2xl:text-[56px]">
+          Hello! I’m Joshua, a web developer specializing in crafting modern,
+          human-centered websites.
+        </motion.p>*/}
+      <MotionText text="Hello! I’m Joshua, a web developer" delay={0.3} />
+      <MotionText
+        text="specializing in crafting modern,"
+        delay={0.4}
+        className="lg:my-1 lg:pb-1"
+      />
+      <MotionText text="human-centered websites." delay={0.45} />
 
-      <div className="flex flex-col gap-1 py-4 text-left md:gap-2">
-        <motion.p className="rest overflow-hidden py-1 text-2xl font-medium tracking-[0.015em] text-backgroundb lg:text-5xl 2xl:w-[95%] 2xl:text-[56px]">
-          Hello! I’m Joshua, a web developer based in Bahrain specializing in
-          crafting modern, human-centered websites.
-        </motion.p>
-      </div>
-      <div className="-mb-56 flex w-full items-center justify-between self-start max-sm:text-sm sm:-mb-36 2xl:w-[95%]">
-        <div className="flex items-center gap-1 sm:gap-2">
+      {/** Footer section  <p className="text-[#161616]/80">Available for work</p>   <p className="text-[#161616]">jdscodes04@gmail.com</p>*/}
+      <div className="mt-16 flex w-full items-center justify-between self-start max-sm:text-sm md:mt-8 2xl:w-[95%]">
+        <div className="flex items-center gap-x-1 bg-red-200 sm:gap-x-2">
           <p className="size-2 animate-pulse rounded-full bg-[#17A21C] sm:size-3" />
-          <p className="text-[#161616]/80">Available for work</p>
+
+          <SlideP className={"text-[#161616]/80"} text={"Available for work"} />
         </div>
         <div className="flex flex-col">
-          <p className="hidden text-[#161616]/60 sm:block">Get in Touch </p>
-          <p>jdscodes04@gmail.com</p>
+          <p className="hidden text-[#161616]/60 md:block">Get in Touch </p>
+
+          <SlideP className={"text-[#161616]"} text={"jdscodes04@gmail.com"} />
         </div>
       </div>
     </motion.div>

@@ -5,6 +5,8 @@ import Bounded from "../Bounded";
 import { Minus, Plus } from "lucide-react";
 
 import { motion, AnimatePresence } from "framer-motion";
+import { MHeading } from "../ui/MotionText";
+import { Motionh2, MotionP } from "../ui/Motion";
 interface Service {
   id: string;
   number: string;
@@ -44,32 +46,55 @@ function Service() {
     React.useState<string>("web-development");
   return (
     <Bounded className="relative h-full rounded-t-3xl bg-backgroundb px-4">
-      <div className="relative mx-auto grid gap-2 lg:grid-cols-3 lg:gap-8">
+      <div className="absolute inset-0 bg-black bg-[url('/noise-light.png')] opacity-15" />
+      <div className="grid h-fit w-full gap-2 lg:gap-6">
+        {/* Heading Animation  <motion.h2
+          className="overflow-hidden text-5xl font-bold tracking-tight text-backgroundw/80 md:text-6xl lg:text-7xl xl:text-center 2xl:text-8xl"
+          initial={{ y: "100%", opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{
+            duration: 1.6,
+            ease: "easeOut",
+          }}
+        >
+          What I Do
+        </motion.h2> */}
+        <MHeading
+          className={
+            "overflow-hidden text-5xl font-bold tracking-tight text-backgroundw/80 md:text-6xl lg:text-7xl xl:text-center 2xl:text-8xl"
+          }
+          text={"What I Do"}
+          duration={0.6}
+        />
+
+        {/* Paragraph Animation */}
+        <span className="inline-block overflow-hidden">
+          <MotionP
+            className="col-span-2 mt-3 w-[70%] place-self-end text-balance text-xs font-medium text-[#f7f7f7]/70 sm:w-[50%] sm:text-sm md:ml-[30%] md:place-self-center lg:ml-[35%] lg:w-[50%] lg:text-lg xl:text-xl"
+            initial={{ y: "100%", opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{
+              duration: 0.6,
+            }}
+          >
+            Here’s why partnering with me can make a significant difference in
+            reaching your objectives{" "}
+            <span className="hidden md:block">
+              and setting your brand apart in a competitive market.
+            </span>
+          </MotionP>
+        </span>
+      </div>
+      <div className="relative mx-auto grid w-full gap-2 lg:grid-cols-3 lg:gap-8 xl:md:grid-cols-5">
         {/* Left Column - Sticky */}
-        <div className="col-span-1 h-fit lg:sticky lg:top-20">
-          <h2 className="text-4xl font-bold tracking-tight text-backgroundw/80 sm:text-5xl md:text-6xl">
-            What I Do
-          </h2>
-        </div>
+        <div className="col-span-1 h-fit xl:col-span-2"></div>
 
         {/* Right Column - Sticky Services */}
-        <div className="col-span-2 flex flex-col space-y-4 lg:space-y-6">
-          <p className="mr-1 mt-2 block w-[90%] self-end text-xs font-medium tracking-wide text-[#f7f7f7]/70 sm:hidden">
-            {" "}
-            Here’s why partnering with me can make a significant difference in
-            reaching your objectives and setting your brand apart in a
-            competitive market.
-          </p>
-          <p className="mt-2 hidden w-[90%] self-end text-xs font-medium text-[#f7f7f7]/70 sm:block sm:w-[60%] sm:text-sm md:mt-4 md:pb-10 lg:ml-2 lg:w-[90%] lg:text-lg">
-            I offer the expertise and insight to help you achieve your
-            aspirations. Here’s why partnering with me can make a significant
-            difference in reaching your objectives and setting your brand apart
-            in a competitive market.
-          </p>
+        <div className="col-span-2 mt-2 flex w-full flex-col space-y-4 max-lg:mx-auto sm:mt-6 md:mt-12 md:w-[80%] lg:space-y-6 xl:col-span-3 2xl:mt-16">
           {services.map((service) => (
             <div
               key={service.id}
-              className="border-b border-white/20 pb-6 pt-2 md:pb-10"
+              className="w-full border-b border-white/20 pb-6 pt-2"
             >
               <button
                 onClick={() =>
@@ -78,12 +103,21 @@ function Service() {
                 className="group flex w-full items-center justify-between"
               >
                 <div className="flex items-center gap-2 md:gap-4">
-                  <span className="text-white/60 max-sm:text-sm md:text-xl">
+                  <span className="mr-1 text-white/60 max-md:text-sm">
                     ({service.number})
                   </span>
-                  <h3 className="text-2xl font-semibold text-backgroundw/80 sm:text-3xl md:text-4xl">
+                  <Motionh2
+                    initial={{ filter: "blur(1px)", opacity: 0.2 }}
+                    whileInView={{ filter: "blur(0px)", opacity: 1 }}
+                    transition={{
+                      duration: 0.3,
+                      delay: 0.2,
+                      ease: "easeIn",
+                    }}
+                    className="text-2xl font-semibold text-backgroundw/80 sm:text-2xl md:text-3xl 2xl:text-4xl"
+                  >
                     {service.title}
-                  </h3>
+                  </Motionh2>
                 </div>
                 <div className="group-hover:text-background flex size-12 items-center justify-center text-backgroundw/80 transition-colors">
                   {openService === service.id ? (
@@ -99,11 +133,11 @@ function Service() {
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3 }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
                     className="ml-2 w-[90%] overflow-hidden sm:ml-10 md:ml-14 md:w-[85%]"
                   >
-                    <div className="pt-3 md:pt-6">
-                      <p className="text-[#f7f7f7]/60 max-md:text-sm max-sm:tracking-wide">
+                    <div className="pt-3 md:pt-5">
+                      <p className="tracking-wide text-[#f7f7f7]/60 max-md:text-sm">
                         {service.description}
                       </p>
                       {service.content && (

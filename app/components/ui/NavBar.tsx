@@ -13,16 +13,16 @@ import { TextFlip } from "../magicui/TextFlip";
 
 const menu = {
   open: {
-    width: "270px",
-    height: "380px",
-    top: "0px",
+    width: "250px",
+    height: "310px",
+    top: "2px",
     right: "2px",
     transition: { duration: 0.75, type: "tween", ease: [0.76, 0, 0.24, 1] },
   },
   closed: {
-    width: "100px",
-    height: "40px",
-    top: "0px",
+    width: "90px",
+    height: "38px",
+    top: "2px",
     right: "2px",
     transition: {
       duration: 0.75,
@@ -65,7 +65,7 @@ export default function NavBar() {
       {/*Big screen nav*/}
 
       <motion.nav
-        className="inset-x-0 top-0 z-20 mx-auto px-2 py-1 text-white backdrop-blur-sm max-md:sticky 2xl:py-2"
+        className="inset-x-0 top-0 z-20 mx-auto px-2 py-1 text-white backdrop-blur-sm max-md:sticky sm:bg-green md:bg-red-200 lg:bg-purple-400 xl:bg-red-200 2xl:py-2"
         transition={{ duration: 0.8, ease: easeInOut }}
       >
         <div className="relative mx-auto flex max-w-5xl items-center justify-between gap-4 py-2 md:px-1 xl:max-w-6xl 2xl:max-w-8xl">
@@ -107,39 +107,20 @@ export default function NavBar() {
                     duration: 0.6,
                     ease: "easeIn",
                   }}
-                  className="left-2 pt-14 text-white sm:pt-20"
+                  className="pt-14 text-white sm:pt-20"
                 >
-                  <motion.ul className="text-left text-4xl font-medium">
+                  <motion.ul className="ml-3 space-y-1 text-left text-3xl font-medium">
                     <li className="">
-                      <Link href={"/"}>
-                        <TextFlip className="font-semibold leading-[0.95]">
-                          Home
-                        </TextFlip>
-                      </Link>
+                      <Link href={"/"}>Home</Link>
                     </li>
                     <li className="">
-                      <Link href={"#Services"}>
-                        {" "}
-                        <TextFlip className="font-semibold leading-[0.95]">
-                          Services
-                        </TextFlip>
-                      </Link>
+                      <Link href={"#Services"}> Services</Link>
                     </li>
                     <li className="">
-                      <Link href={"#Works"}>
-                        {" "}
-                        <TextFlip className="font-semibold leading-[0.95]">
-                          Works
-                        </TextFlip>
-                      </Link>
+                      <Link href={"#Works"}> Works</Link>
                     </li>
                     <li className="">
-                      <Link href={"#CTA"}>
-                        {" "}
-                        <TextFlip className="font-semibold leading-[0.95]">
-                          Contact
-                        </TextFlip>
-                      </Link>
+                      <Link href={"#CTA"}> Contact</Link>
                     </li>
                   </motion.ul>
                 </motion.nav>
@@ -151,32 +132,32 @@ export default function NavBar() {
                     delay: 0.8,
                     duration: 0.4,
                   }}
-                  className="mx-2 pt-8 text-white/80"
+                  className="mx-1 pt-6 text-white/80"
                 >
-                  <ul className="grid cursor-pointer grid-cols-2 gap-1">
+                  <ul className="ml-2 grid cursor-pointer grid-cols-2 gap-1 text-left">
                     <Link
-                      className="hover:scale-[1.02]"
+                      className="hover:scale-[..98]"
                       target="_blank"
                       href="https://www.instagram.com/"
                     >
                       <TextFlip className="font-normal">Instagram</TextFlip>
                     </Link>
                     <Link
-                      className="hover:scale-[1.02]"
+                      className="hover:scale-[.98]"
                       target="_blank"
                       href="https://www.Linkedin.com/"
                     >
                       <TextFlip className="font-normal">Linkedin</TextFlip>
                     </Link>
                     <Link
-                      className="hover:scale-[1.02]"
+                      className="hover:scale-[.98]"
                       target="_blank"
                       href="https://github.com/joshuadsouza500/"
                     >
-                      <TextFlip className="-ml-6 font-normal">Github</TextFlip>
+                      <TextFlip className="font-normal">Github</TextFlip>
                     </Link>
                     <Link
-                      className="hover:scale-[1.02]"
+                      className="hover:scale-[.98]"
                       target="_blank"
                       href="https://x.com/jdscodes04"
                     >
@@ -312,28 +293,28 @@ export default function NavBar() {
               >
                 <ul className="grid cursor-pointer grid-cols-2 gap-1">
                   <Link
-                    className="hover:scale-[1.02]"
+                    className="hover:scale-[.98]"
                     target="_blank"
                     href="https://www.instagram.com/"
                   >
                     <TextFlip className="font-normal">Instagram</TextFlip>
                   </Link>
                   <Link
-                    className="hover:scale-[1.02]"
+                    className="hover:scale-[.98]"
                     target="_blank"
                     href="https://www.Linkedin.com/"
                   >
                     <TextFlip className="font-normal">Linkedin</TextFlip>
                   </Link>
                   <Link
-                    className="hover:scale-[1.02]"
+                    className="hover:scale-[.98]"
                     target="_blank"
                     href="https://github.com/joshuadsouza500/"
                   >
                     <TextFlip className="-ml-6 font-normal">Github</TextFlip>
                   </Link>
                   <Link
-                    className="hover:scale-[1.02]"
+                    className="hover:scale-[.98]"
                     target="_blank"
                     href="https://x.com/jdscodes04"
                   >

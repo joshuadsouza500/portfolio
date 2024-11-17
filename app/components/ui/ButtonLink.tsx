@@ -9,11 +9,11 @@ function ButtonLink({ text, handleButton, active }: any) {
     <div className="absolute right-5 top-1">
       <MotionDiv
         onClick={handleButton}
-        className={
+        className={`relative rounded-3xl py-1 text-xl font-medium ${
           text == "Close"
-            ? "relative -mr-2 w-20 rounded-3xl bg-backgroundw py-1 text-xl font-medium text-backgroundb"
-            : "relative rounded-3xl pt-[2px] text-xl font-medium text-backgroundw"
-        }
+            ? "-mr-2 w-20 bg-backgroundw text-backgroundb"
+            : "-mt-1 text-backgroundw"
+        } `}
       >
         <TextFlip className="text-xl font-bold">{text}</TextFlip>
       </MotionDiv>

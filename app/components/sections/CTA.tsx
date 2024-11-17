@@ -1,69 +1,61 @@
-"use client";
 import React from "react";
 
 import Image from "next/image";
 import Link from "next/link";
-import ContactForm from "../ui/ContactForm";
-import TextRevealByWord from "../magicui/text-reveal";
+
+import { ArrowUp } from "lucide-react";
+import { MotionDiv } from "../ui/Motion";
 
 function CTA() {
   return (
     <div
       id="CTA"
-      className="relative mx-4 mb-10 grid h-full bg-backgroundw py-20 sm:mx-6 md:grid-cols-2 lg:mx-auto lg:max-w-6xl xl:py-32"
+      className="relative mx-auto flex h-auto flex-col justify-center bg-backgroundw px-4 max-lg:pb-4 max-md:pt-12 md:max-w-5xl md:px-6 md:pt-16 lg:pb-6 xl:max-w-6xl 2xl:h-[60vh] 2xl:max-w-8xl 2xl:pb-2"
     >
-      <div className="pb-12 md:pb-2 md:pt-4">
-        <div className="mx-auto">
-          <TextRevealByWord
-            text="Get In Touch"
-            Colour="text-black/90"
-            className="-mb-6 max-sm:pl-4 xl:-mb-10"
-          />
-          <p className="hidden w-[85%] pl-4 text-left text-base text-black/70">
-            Fill out the form below and let&apos;s discuss how I can help bring
-            your vision to life
-          </p>
+      <div className="cursor-pointer">
+        {" "}
+        <div className="space-y-3 sm:space-y-5">
+          <h6 className="text-xl font-medium tracking-tight text-black/55 md:text-2xl lg:text-3xl">
+            Have a project in mind?
+          </h6>
+          <div className="flex items-center gap-1 sm:gap-2">
+            <p className="size-5 animate-pulse rounded-full bg-[#17A21C] duration-300 md:size-7" />
+            <MotionDiv
+              className="relative"
+              initial="rest"
+              whileHover="hover"
+              animate="rest"
+              variants={{
+                hover: { scale: ".99" },
+              }}
+              transition={{ duration: 0.6 }}
+            >
+              <h1 className="text-6xl font-medium md:text-8xl lg:text-[128px]">
+                {`Let's`} Talk
+              </h1>
+              <MotionDiv
+                className="absolute bottom-0 left-2 h-[6px] bg-backgroundb/90"
+                variants={{
+                  rest: { width: 0 },
+                  hover: { width: "100%" },
+                }}
+                transition={{ duration: 0.35 }}
+              />
+            </MotionDiv>
+          </div>
         </div>
-        <div className="flex flex-col items-center justify-start gap-4 py-5 max-sm:-mt-14 md:items-start lg:ml-4">
-          <div className="flex w-[85%] cursor-pointer rounded-md bg-white/90 px-4 py-8 shadow-xl hover:scale-[1.01] md:w-[75%] lg:w-[70%]">
-            <div className="">
-              <Image
-                src="/gmail.png"
-                alt="contact-image"
-                width={28}
-                height={28}
-                className=""
-              />
-            </div>
-
-            <Link target="_blank" href={`https://mailto:jdscodes04@gmail.com`}>
-              <div className="pl-3 text-black/90">
-                <h6 className="text-lg">Email </h6>
-                <h6 className="text-black/70">jdscodes04@gmail.com</h6>
-              </div>
+        <div className="mt-5 flex w-full items-center justify-between pt-3 md:mb-2 lg:mt-8">
+          {" "}
+          <h6 className="text-xl font-medium hover:scale-[.98] hover:text-black/80 hover:underline md:text-2xl lg:text-3xl">
+            JohnDoe@email.com
+          </h6>
+          <button className="mr-1 flex size-7 items-center justify-center rounded-full bg-black text-white hover:scale-95 md:size-11">
+            <Link href={"/"}>
+              <ArrowUp className="size-5 md:size-8" />
             </Link>
-          </div>
-          <div className="flex w-[85%] cursor-pointer rounded-md bg-white/90 px-4 py-8 shadow-xl hover:scale-[1.01] md:w-[75%] lg:w-[70%]">
-            <div className="">
-              <Image
-                src="/whatsapp.png"
-                alt="contact-image"
-                width={28}
-                height={28}
-                className=""
-              />
-            </div>
-
-            <Link target="_blank" href={`https://wa.me/97336158093`}>
-              <div className="pl-3 text-black/90">
-                <h6 className="text-lg">Whatsapp</h6>
-                <h6 className="text-black/70">+973 36158093</h6>
-              </div>
-            </Link>
-          </div>
+          </button>
         </div>
       </div>
-      <ContactForm />
     </div>
   );
 }

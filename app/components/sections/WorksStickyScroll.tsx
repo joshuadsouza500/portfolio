@@ -67,18 +67,18 @@ const WorksStickyScroll = () => {
   return (
     <section id="Works" className="relative bg-backgroundb px-1">
       <div className="absolute inset-0 bg-black bg-[url('/noise-light.png')] opacity-15" />
-      <Bounded className="py-8 md:py-8">
-        <div className="grid h-fit gap-2 lg:gap-8">
+      <Bounded className="px-2 py-8 md:mb-8 md:py-4 lg:py-8 xl:py-14 2xl:mb-0">
+        <div className="grid h-fit w-full gap-2 lg:gap-6 xl:w-[90%]">
           <h2
             style={{ lineHeight: "1.08" }}
             className="text-5xl font-bold tracking-tight text-backgroundw/80 md:text-6xl lg:text-7xl 2xl:text-8xl"
           >
-            Selected <br className="xl:hidden" />
-            Works/
+            Selected <br className="sm:hidden" />
+            Works
           </h2>
-          <p className="col-span-2 mt-2 w-[75%] place-self-end text-xs font-medium text-[#f7f7f7]/70 sm:w-[60%] sm:text-sm md:mt-10 md:pb-6 lg:ml-2 lg:w-[70%] lg:text-lg xl:w-[60%] xl:text-xl 2xl:w-[50%]">
-            Here are few of my featured project0s that showcase my skill and
-            expertise difference in reaching your objectives and setting your
+          <p className="col-span-2 mt-3 w-[70%] place-self-end text-balance text-xs font-medium text-[#f7f7f7]/70 sm:w-[50%] sm:text-sm md:ml-[30%] md:w-[40%] md:place-self-center lg:ml-[35%] lg:w-[50%] lg:text-lg xl:text-xl">
+            Here are some of my featured projects that showcase my skill and
+            expertise in crafting user-friendly websites.
           </p>
         </div>
       </Bounded>

@@ -20,11 +20,16 @@
 }
 
 .rest {
-  line-height: 1.15;
+  line-height: 1.2;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
   .rest {
     line-height: 1.25;
+  }
+}
+@media (min-width: 1024px) {
+  .rest {
+    line-height: 1.2;
   }
 }

@@ -6,11 +6,62 @@ import { TextFlip } from "../magicui/TextFlip";
 export const Footer = () => {
   return (
     <footer
-      className="border-t border-black/20 bg-backgroundw lg:pt-2"
+      className="mx-auto border-t border-black/10 bg-backgroundw lg:pt-1"
       aria-label="footer"
     >
-      <div className="flex items-center justify-between px-6 pb-1 pt-4 md:px-4 lg:px-20">
-        <div>
+      <div className="mx-auto flex items-center justify-between px-4 pb-1 pt-2 md:px-6 lg:pb-1 xl:max-w-6xl 2xl:max-w-8xl">
+        <div className="grid cursor-pointer grid-flow-col gap-4">
+          <ul
+            tabIndex={0}
+            className="flex flex-row gap-2 py-2 text-sm text-black/80 lg:gap-4 lg:text-lg"
+          >
+            <li>
+              <Link href="https://x.com/jdscodes04" target="_blank">
+                <TextFlip className="font-medium max-md:text-xs">
+                  Twitter
+                </TextFlip>
+              </Link>
+            </li>
+            <li>
+              <Link href="https://www.Linkedin.com/" target="_blank">
+                <TextFlip className="font-medium max-md:text-xs">
+                  Linkedin
+                </TextFlip>
+              </Link>
+            </li>
+            <li>
+              <Link href="https://github.com/joshuadsouza500/" target="_blank">
+                <TextFlip className="font-medium max-md:text-xs">
+                  Github
+                </TextFlip>
+              </Link>
+            </li>
+            <li>
+              <Link href={`https://wa.me/97336158093`} target="_blank">
+                <TextFlip className="font-medium max-md:text-xs">
+                  Whatsapp
+                </TextFlip>
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <h6 className="text-xs font-light tracking-wide text-black/80 md:text-sm">
+          JoshuaDsouza
+          <span
+            className="text-xs md:text-xs"
+            style={{ verticalAlign: "super" }}
+          >
+            &copy;
+          </span>
+          2024
+        </h6>
+      </div>
+    </footer>
+  );
+};
+
+{
+  /** <div className="hidden">
           <ul
             tabIndex={0}
             className="flex flex-col gap-1 py-2 text-black/80 md:flex-row md:gap-2 lg:gap-4 lg:text-xl"
@@ -39,39 +90,5 @@ export const Footer = () => {
               </Link>
             </li>
           </ul>
-        </div>
-        <div className="grid cursor-pointer grid-flow-col gap-4">
-          <ul
-            tabIndex={0}
-            className="flex flex-col gap-1 py-2 text-black/80 md:flex-row md:gap-2 lg:gap-4 lg:text-xl"
-          >
-            <li>
-              <Link href="https://x.com/jdscodes04" target="_blank">
-                <TextFlip className="font-medium">Twitter</TextFlip>
-              </Link>
-            </li>
-            <li>
-              <Link href="https://www.Linkedin.com/" target="_blank">
-                <TextFlip className="font-medium">Linkedin</TextFlip>
-              </Link>
-            </li>
-            <li>
-              <Link href="https://github.com/joshuadsouza500/" target="_blank">
-                <TextFlip className="font-medium">Github</TextFlip>
-              </Link>
-            </li>
-            <li>
-              <Link href={`https://wa.me/97336158093`} target="_blank">
-                <TextFlip className="font-medium">Whatsapp</TextFlip>
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <hr className="white opacity-50" />
-      <div className="flex items-center justify-between px-2 py-4 text-black text-opacity-80 md:px-8">
-        <h6 className="text-xs"> © 2024 JoshuaDS </h6>
-      </div>
-    </footer>
-  );
-};
+        </div> */
+}
