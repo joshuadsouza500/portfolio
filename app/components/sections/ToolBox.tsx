@@ -15,6 +15,7 @@ import {
 } from "../svgs/Icons";
 import Bounded from "../Bounded";
 import { title } from "process";
+import { MHeading, SlideP } from "../ui/MotionText";
 
 const Icons = [
   {
@@ -96,7 +97,9 @@ function ToolBox() {
 
   const scaleX = useTransform(scrollYProgress, [0, 1], [1, 1]);
 
-  /** Here we use the scroll y value of the ref container(screen) and change the Xsize based on scroll     <Skills /> */
+  /** Here we use the scroll y value of the ref container(screen) and change the Xsize based on scroll     <Skills />   <h2 className="text-5xl font-bold tracking-tight text-backgroundw/80 md:text-6xl lg:text-7xl xl:text-center 2xl:text-8xl">
+            What I Use
+          </h2>*/
   return (
     <motion.div
       ref={container}
@@ -105,17 +108,22 @@ function ToolBox() {
     >
       <div className="absolute inset-0 mb-6 rounded-b-3xl bg-black bg-[url('/noise-light.png')] opacity-15" />
       <Bounded className="px-4 py-8 md:py-8">
-        <div className="grid h-fit w-full gap-2 lg:gap-6">
-          <h2
-            style={{ lineHeight: "1.08" }}
-            className="text-5xl font-bold tracking-tight text-backgroundw/80 md:text-6xl lg:text-7xl xl:text-center 2xl:text-8xl"
-          >
-            What I Use <br className="xl:hidden" />
-          </h2>
-          <p className="col-span-2 mt-3 w-[70%] place-self-end text-balance text-xs font-medium text-[#f7f7f7]/70 sm:w-[50%] sm:text-sm md:ml-[30%] md:place-self-center lg:ml-[35%] lg:w-[50%] lg:text-lg xl:text-xl">
-            Here are some of the tools and technologies i use to create
-            responsive user friendly designs and more.
-          </p>
+        <div className="grid h-fit w-full gap-2 lg:gap-6 2xl:pl-10">
+          <MHeading
+            className={
+              "text-5xl font-bold tracking-tight text-backgroundw/80 md:text-6xl lg:text-7xl 2xl:text-8xl"
+            }
+            text={"What I Use"}
+            duration={0.6}
+          />
+
+          <SlideP
+            className="col-span-2 mt-3 w-[70%] place-self-end text-balance text-xs font-medium text-[#f7f7f7]/70 sm:w-[50%] sm:text-sm md:ml-[30%] md:place-self-center lg:ml-[35%] lg:w-[50%] lg:text-lg xl:text-xl"
+            duration={0.6}
+            text={
+              " Here are some of the tools and technologies i use to create responsive user friendly designs and more."
+            }
+          />
         </div>
 
         <section className="mt-8 flex w-[90%] flex-col justify-around border-t border-white/30 text-white sm:mt-10 sm:w-[80%] lg:mt-14 lg:w-[70%]">

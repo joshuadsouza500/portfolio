@@ -3,6 +3,8 @@ import { Photography, Restaurant, Aurora, Elevate } from "../ui/WorksCard";
 import TextRevealByWord from "../magicui/text-reveal";
 import Bounded from "../Bounded";
 import SmallScroll from "../ui/SmallScroll";
+import { Motionh2 } from "../ui/Motion";
+import { SlideP } from "../ui/MotionText";
 
 const features = [
   {
@@ -69,17 +71,29 @@ const WorksStickyScroll = () => {
       <div className="absolute inset-0 bg-black bg-[url('/noise-light.png')] opacity-15" />
       <Bounded className="px-2 py-8 md:mb-8 md:py-4 lg:py-8 xl:py-14 2xl:mb-0">
         <div className="grid h-fit w-full gap-2 lg:gap-6 xl:w-[90%]">
-          <h2
-            style={{ lineHeight: "1.08" }}
-            className="text-5xl font-bold tracking-tight text-backgroundw/80 md:text-6xl lg:text-7xl 2xl:text-8xl"
-          >
-            Selected <br className="sm:hidden" />
-            Works
-          </h2>
-          <p className="col-span-2 mt-3 w-[70%] place-self-end text-balance text-xs font-medium text-[#f7f7f7]/70 sm:w-[50%] sm:text-sm md:ml-[30%] md:w-[40%] md:place-self-center lg:ml-[35%] lg:w-[50%] lg:text-lg xl:text-xl">
-            Here are some of my featured projects that showcase my skill and
-            expertise in crafting user-friendly websites.
-          </p>
+          <span className="inline-block overflow-hidden">
+            <Motionh2
+              style={{ lineHeight: "1.08" }}
+              className="text-5xl font-bold tracking-tight text-backgroundw/80 md:text-6xl lg:text-7xl 2xl:text-8xl"
+              initial={{ y: "100%", opacity: 0.4 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{
+                delay: 0.1,
+                duration: 0.2,
+              }}
+              viewport={{ once: true }}
+            >
+              Selected <br className="sm:hidden" />
+              Works
+            </Motionh2>
+          </span>
+          <SlideP
+            className="col-span-2 mt-3 w-[70%] place-self-end text-balance text-xs font-medium text-[#f7f7f7]/70 sm:w-[50%] sm:text-sm md:ml-[30%] md:w-[40%] md:place-self-center lg:ml-[35%] lg:w-[50%] lg:text-lg xl:text-xl"
+            duration={0.6}
+            text={
+              "Here are some of my featured projects that showcase my skill and expertise in crafting user-friendly websites."
+            }
+          />
         </div>
       </Bounded>
 
@@ -106,7 +120,11 @@ const WorksStickyScroll = () => {
         <div className="sticky top-0 flex h-screen w-full items-center">
           <div className="relative aspect-square h-[600px] w-full rounded-2xl bg-slate-200 2xl:h-[650px]">
             {features.map((feature) => (
-              <feature.card id={feature.id} key={feature.id} />
+              <feature.card
+                id={feature.id}
+                key={feature.id}
+                live={feature.live}
+              />
             ))}
           </div>
         </div>

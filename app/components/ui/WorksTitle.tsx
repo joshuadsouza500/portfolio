@@ -51,7 +51,7 @@ function WorksTitle({
 
       <h6
         className={cn(
-          "pl-1 pt-8 text-base font-medium tracking-wide",
+          "pl-1 pt-8 text-base font-medium tracking-wide 2xl:pt-10",
           isInView ? "text-white/40" : "text-transparent",
         )}
       >
@@ -60,7 +60,7 @@ function WorksTitle({
       <div className={cn("flex justify-between text-3xl font-semibold")}>
         <h6
           className={cn(
-            "pt-1 text-3xl font-semibold transition-colors duration-150 ease-in xl:text-4xl",
+            "pt-1 text-3xl font-semibold transition-colors duration-150 ease-in xl:text-4xl 2xl:pl-1 2xl:text-5xl",
             isInView
               ? "cursor-pointer tracking-tight text-white/80 hover:text-white"
               : "text-transparent",
@@ -73,7 +73,7 @@ function WorksTitle({
       </div>
       <div
         className={cn(
-          "flex gap-2 pt-4 text-sm",
+          "flex gap-2 pt-4 text-sm 2xl:pl-1 2xl:pt-6",
           isInView ? "text-white/40" : "text-transparent",
         )}
       >

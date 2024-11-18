@@ -65,7 +65,7 @@ function SmallScroll({
         <section className="items-center justify-between sm:flex md:w-[95%]">
           {" "}
           <div className="pt-1">
-            <h4 className="text-3xl font-semibold text-white/80 md:text-4xl">
+            <h4 className="text-3xl font-semibold text-white/80 md:text-[32px]">
               {called}
             </h4>
           </div>

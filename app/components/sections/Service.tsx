@@ -5,7 +5,7 @@ import Bounded from "../Bounded";
 import { Minus, Plus } from "lucide-react";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { MHeading } from "../ui/MotionText";
+import { MHeading, SlideP } from "../ui/MotionText";
 import { Motionh2, MotionP } from "../ui/Motion";
 interface Service {
   id: string;
@@ -47,7 +47,7 @@ function Service() {
   return (
     <Bounded className="relative h-full rounded-t-3xl bg-backgroundb px-4">
       <div className="absolute inset-0 bg-black bg-[url('/noise-light.png')] opacity-15" />
-      <div className="grid h-fit w-full gap-2 lg:gap-6">
+      <div className="grid h-fit w-full 2xl:pl-10">
         {/* Heading Animation  <motion.h2
           className="overflow-hidden text-5xl font-bold tracking-tight text-backgroundw/80 md:text-6xl lg:text-7xl xl:text-center 2xl:text-8xl"
           initial={{ y: "100%", opacity: 0 }}
@@ -61,29 +61,37 @@ function Service() {
         </motion.h2> */}
         <MHeading
           className={
-            "overflow-hidden text-5xl font-bold tracking-tight text-backgroundw/80 md:text-6xl lg:text-7xl xl:text-center 2xl:text-8xl"
+            "overflow-hidden pb-2 text-5xl font-bold tracking-tight text-backgroundw/80 md:text-6xl lg:pb-6 lg:text-7xl 2xl:text-8xl"
           }
           text={"What I Do"}
           duration={0.6}
         />
 
         {/* Paragraph Animation */}
-        <span className="inline-block overflow-hidden">
-          <MotionP
-            className="col-span-2 mt-3 w-[70%] place-self-end text-balance text-xs font-medium text-[#f7f7f7]/70 sm:w-[50%] sm:text-sm md:ml-[30%] md:place-self-center lg:ml-[35%] lg:w-[50%] lg:text-lg xl:text-xl"
-            initial={{ y: "100%", opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{
-              duration: 0.6,
-            }}
-          >
-            Here’s why partnering with me can make a significant difference in
-            reaching your objectives{" "}
-            <span className="hidden md:block">
-              and setting your brand apart in a competitive market.
-            </span>
-          </MotionP>
-        </span>
+        <SlideP
+          text="Here’s why partnering with me "
+          className="col-span-2 mt-3 w-[60%] place-self-end text-balance text-xs font-medium text-[#f7f7f7]/70 sm:w-[50%] sm:text-sm md:ml-[30%] md:place-self-center lg:ml-[35%] lg:text-lg xl:text-xl"
+          delay={0.5}
+          duration={0.6}
+        />
+        <SlideP
+          text="can make a significant difference"
+          className="col-span-2 w-[60%] place-self-end text-balance text-xs font-medium text-[#f7f7f7]/70 sm:w-[50%] sm:text-sm md:ml-[30%] md:place-self-center lg:ml-[35%] lg:text-lg xl:text-xl"
+          delay={0.6}
+          duration={0.6}
+        />
+        <SlideP
+          text="in reaching your objectives"
+          className="col-span-2 w-[60%] place-self-end text-balance text-xs font-medium text-[#f7f7f7]/70 sm:w-[50%] sm:text-sm md:ml-[30%] md:place-self-center lg:ml-[35%] lg:text-lg xl:text-xl"
+          delay={0.7}
+          duration={0.6}
+        />
+        <SlideP
+          text="and setting your brand apart in a competitive market."
+          className="col-span-2 w-[60%] place-self-end text-balance text-xs font-medium text-[#f7f7f7]/70 sm:w-[50%] sm:text-sm md:ml-[30%] md:place-self-center lg:ml-[35%] lg:text-lg xl:text-xl"
+          delay={0.8}
+          duration={0.6}
+        />
       </div>
       <div className="relative mx-auto grid w-full gap-2 lg:grid-cols-3 lg:gap-8 xl:md:grid-cols-5">
         {/* Left Column - Sticky */}
@@ -110,9 +118,9 @@ function Service() {
                     initial={{ filter: "blur(1px)", opacity: 0.2 }}
                     whileInView={{ filter: "blur(0px)", opacity: 1 }}
                     transition={{
-                      duration: 0.3,
-                      delay: 0.2,
-                      ease: "easeIn",
+                      duration: 0.4,
+                      delay: 0.1,
+                      ease: "easeInOut",
                     }}
                     className="text-2xl font-semibold text-backgroundw/80 sm:text-2xl md:text-3xl 2xl:text-4xl"
                   >
@@ -133,7 +141,7 @@ function Service() {
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                    transition={{ duration: 0.4, ease: "easeInOut" }}
                     className="ml-2 w-[90%] overflow-hidden sm:ml-10 md:ml-14 md:w-[85%]"
                   >
                     <div className="pt-3 md:pt-5">

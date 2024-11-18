@@ -1,16 +1,19 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import Lenis from "lenis";
 import Hero from "./components/sections/Hero";
 import ToolBox from "./components/sections/ToolBox";
 import Service from "./components/sections/Service";
 import CTA from "./components/sections/CTA";
-import { useScroll } from "framer-motion";
+import { spring, useScroll } from "framer-motion";
 import WorksStickyScroll from "./components/sections/WorksStickyScroll";
-
+import useMouse from "@react-hook/mouse-position";
+import { MotionDiv } from "./components/ui/Motion";
+import { motion } from "framer-motion";
 export default function Home() {
   const container = useRef<HTMLDivElement>(null);
+
   const { scrollYProgress } = useScroll({
     target: container,
     offset: ["start start", "end end"],
@@ -26,14 +29,13 @@ export default function Home() {
     requestAnimationFrame(raf);
   }, []); 
   
-   
+    <Hero scrollYProgress={scrollYProgress} <Service /> />
+    
   */
   }
 
   return (
     <main ref={container} className="relative">
-      <Hero scrollYProgress={scrollYProgress} />
-      <Service />
       <WorksStickyScroll />
       <ToolBox />
 
@@ -44,7 +46,7 @@ export default function Home() {
 
 {
   /**
-1.HUY ADD a view button when hovering over image and video for big screens and for small screens on click of image go to website
+
 2. Naviagte on project title click  
 
   */

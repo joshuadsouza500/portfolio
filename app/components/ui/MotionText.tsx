@@ -29,6 +29,7 @@ export const MotionText: React.FC<MotionTextProps> = ({
           delay: delay || 0.3,
           duration: 0.6,
         }}
+        viewport={{ once: true }}
       >
         {text}
       </MotionP>
@@ -52,6 +53,7 @@ export const SlideP: React.FC<MotionTextProps> = ({
           delay: delay || 0.5,
           duration: duration || 0.4,
         }}
+        viewport={{ once: true }}
       >
         {text}
       </MotionP>
