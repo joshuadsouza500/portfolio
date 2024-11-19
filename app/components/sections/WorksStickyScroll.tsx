@@ -4,7 +4,7 @@ import TextRevealByWord from "../magicui/text-reveal";
 import Bounded from "../Bounded";
 import SmallScroll from "../ui/SmallScroll";
 import { Motionh2 } from "../ui/Motion";
-import { SlideP } from "../ui/MotionText";
+import AnimatedText, { SlideP } from "../ui/MotionText";
 
 const features = [
   {
@@ -87,12 +87,12 @@ const WorksStickyScroll = () => {
               Works
             </Motionh2>
           </span>
-          <SlideP
+          <AnimatedText
             className="col-span-2 mt-3 w-[70%] place-self-end text-balance text-xs font-medium text-[#f7f7f7]/70 sm:w-[50%] sm:text-sm md:ml-[30%] md:w-[40%] md:place-self-center lg:ml-[35%] lg:w-[50%] lg:text-lg xl:text-xl"
-            duration={0.6}
             text={
               "Here are some of my featured projects that showcase my skill and expertise in crafting user-friendly websites."
             }
+            Y={`70%`}
           />
         </div>
       </Bounded>

@@ -29,14 +29,16 @@ export default function Home() {
     requestAnimationFrame(raf);
   }, []); 
   
-    <Hero scrollYProgress={scrollYProgress} <Service /> />
+    <Service />
+      <WorksStickyScroll />
+     
     
   */
   }
 
   return (
     <main ref={container} className="relative">
-      <WorksStickyScroll />
+      <Hero scrollYProgress={scrollYProgress} />
       <ToolBox />
 
       <CTA />
@@ -47,7 +49,9 @@ export default function Home() {
 {
   /**
 
-2. Naviagte on project title click  
+2.Fix small para under headings,
+3. fix links.
+
 
   */
 }

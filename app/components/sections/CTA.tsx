@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import { ArrowUp } from "lucide-react";
 import { MotionDiv } from "../ui/Motion";
-import { MHeading, SlideP } from "../ui/MotionText";
+import AnimatedText, { MHeading, SlideP } from "../ui/MotionText";
 
 function CTA() {
   return (
@@ -36,12 +36,11 @@ function CTA() {
               }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <MHeading
+              <AnimatedText
                 className={"text-6xl font-medium md:text-8xl lg:text-[128px]"}
                 text={`Let's Talk`}
-                duration={0.6}
-                delay={0}
-              ></MHeading>
+                delay={0.3}
+              />
               <MotionDiv
                 className="absolute bottom-0 left-2 h-[5px] bg-backgroundb/95"
                 variants={{

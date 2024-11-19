@@ -5,8 +5,8 @@ import Bounded from "../Bounded";
 import { Minus, Plus } from "lucide-react";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { MHeading, SlideP } from "../ui/MotionText";
-import { Motionh2, MotionP } from "../ui/Motion";
+import AnimatedText, { MHeading, SlideP } from "../ui/MotionText";
+import { MotionDiv, Motionh2, MotionP, MotionSpan } from "../ui/Motion";
 interface Service {
   id: string;
   number: string;
@@ -68,29 +68,11 @@ function Service() {
         />
 
         {/* Paragraph Animation */}
-        <SlideP
-          text="Here’s why partnering with me "
-          className="col-span-2 mt-3 w-[60%] place-self-end text-balance text-xs font-medium text-[#f7f7f7]/70 sm:w-[50%] sm:text-sm md:ml-[30%] md:place-self-center lg:ml-[35%] lg:text-lg xl:text-xl"
-          delay={0.5}
-          duration={0.6}
-        />
-        <SlideP
-          text="can make a significant difference"
-          className="col-span-2 w-[60%] place-self-end text-balance text-xs font-medium text-[#f7f7f7]/70 sm:w-[50%] sm:text-sm md:ml-[30%] md:place-self-center lg:ml-[35%] lg:text-lg xl:text-xl"
-          delay={0.6}
-          duration={0.6}
-        />
-        <SlideP
-          text="in reaching your objectives"
-          className="col-span-2 w-[60%] place-self-end text-balance text-xs font-medium text-[#f7f7f7]/70 sm:w-[50%] sm:text-sm md:ml-[30%] md:place-self-center lg:ml-[35%] lg:text-lg xl:text-xl"
-          delay={0.7}
-          duration={0.6}
-        />
-        <SlideP
-          text="and setting your brand apart in a competitive market."
-          className="col-span-2 w-[60%] place-self-end text-balance text-xs font-medium text-[#f7f7f7]/70 sm:w-[50%] sm:text-sm md:ml-[30%] md:place-self-center lg:ml-[35%] lg:text-lg xl:text-xl"
-          delay={0.8}
-          duration={0.6}
+        <AnimatedText
+          text={`Here’s why partnering with me can make a significant difference in reaching your objectives and setting your brand apart in a competitive market.`}
+          className={
+            "col-span-2 mt-3 w-[60%] place-self-end text-xs font-medium leading-tight text-backgroundw/70 sm:w-[50%] sm:text-balance sm:text-sm md:ml-[30%] md:place-self-center lg:ml-[35%] lg:text-lg lg:leading-tight 2xl:text-xl 2xl:leading-tight"
+          }
         />
       </div>
       <div className="relative mx-auto grid w-full gap-2 lg:grid-cols-3 lg:gap-8 xl:md:grid-cols-5">
@@ -100,8 +82,12 @@ function Service() {
         {/* Right Column - Sticky Services */}
         <div className="col-span-2 mt-2 flex w-full flex-col space-y-4 max-lg:mx-auto sm:mt-6 md:mt-12 md:w-[80%] lg:space-y-6 xl:col-span-3 2xl:mt-16">
           {services.map((service) => (
-            <div
+            <MotionDiv
               key={service.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              viewport={{ once: true }}
               className="w-full border-b border-white/20 pb-6 pt-2"
             >
               <button
@@ -111,12 +97,23 @@ function Service() {
                 className="group flex w-full items-center justify-between"
               >
                 <div className="flex items-center gap-2 md:gap-4">
-                  <span className="mr-1 text-white/60 max-md:text-sm">
+                  <MotionSpan
+                    className="mr-1 text-white/60 max-md:text-sm"
+                    initial={{ filter: "blur(1px)", opacity: 0.2 }}
+                    whileInView={{ filter: "blur(0px)", opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{
+                      duration: 0.4,
+                      delay: 0.1,
+                      ease: "easeInOut",
+                    }}
+                  >
                     ({service.number})
-                  </span>
+                  </MotionSpan>
                   <Motionh2
                     initial={{ filter: "blur(1px)", opacity: 0.2 }}
                     whileInView={{ filter: "blur(0px)", opacity: 1 }}
+                    viewport={{ once: true }}
                     transition={{
                       duration: 0.4,
                       delay: 0.1,
@@ -144,7 +141,13 @@ function Service() {
                     transition={{ duration: 0.4, ease: "easeInOut" }}
                     className="ml-2 w-[90%] overflow-hidden sm:ml-10 md:ml-14 md:w-[85%]"
                   >
-                    <div className="pt-3 md:pt-5">
+                    <MotionDiv
+                      initial={{ y: 20, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      exit={{ y: -20, opacity: 0 }}
+                      transition={{ duration: 0.3, ease: "easeOut" }}
+                      className="pt-3 md:pt-5"
+                    >
                       <p className="tracking-wide text-[#f7f7f7]/60 max-md:text-sm">
                         {service.description}
                       </p>
@@ -153,11 +156,11 @@ function Service() {
                           {service.content}
                         </div>
                       )}
-                    </div>
+                    </MotionDiv>
                   </motion.div>
                 )}
               </AnimatePresence>
-            </div>
+            </MotionDiv>
           ))}
         </div>
       </div>

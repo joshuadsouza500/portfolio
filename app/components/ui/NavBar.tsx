@@ -65,10 +65,10 @@ export default function NavBar() {
       {/*Big screen nav*/}
 
       <motion.nav
-        className="inset-x-0 top-0 z-20 mx-auto px-2 py-1 text-white backdrop-blur-sm max-md:sticky sm:bg-green md:bg-red-200 lg:bg-purple-400 xl:bg-red-200 2xl:py-2"
+        className="inset-x-0 top-0 z-20 mx-auto px-2 py-1 text-white backdrop-blur-sm max-md:sticky 2xl:py-2"
         transition={{ duration: 0.8, ease: easeInOut }}
       >
-        <div className="relative mx-auto flex max-w-5xl items-center justify-between gap-4 py-2 md:px-1 xl:max-w-6xl 2xl:max-w-8xl">
+        <div className="relative mx-auto flex max-w-5xl items-center justify-between gap-4 border-b border-backgroundb/5 py-2 md:px-1 xl:max-w-6xl 2xl:max-w-[1600px]">
           <Link
             href={"/"}
             className="flex flex-col justify-center pl-2 text-center"

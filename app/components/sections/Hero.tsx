@@ -4,7 +4,7 @@ import React from "react";
 import { useTransform, motion, MotionValue } from "framer-motion";
 
 import Link from "next/link";
-import { MotionText, SlideP } from "../ui/MotionText";
+import AnimatedText, { MotionText, SlideP } from "../ui/MotionText";
 
 type props = {
   scrollYProgress: MotionValue;
@@ -18,12 +18,12 @@ function Hero({ scrollYProgress }: props) {
     <motion.div
       id="Home"
       style={{ scale, opacity }}
-      className="text-primary sticky top-16 mx-auto flex h-[90vh] w-full max-w-5xl flex-col justify-end px-4 pb-12 md:px-6 xl:max-w-6xl 2xl:max-w-8xl"
+      className="text-primary sticky top-16 mx-auto flex h-[90vh] w-full max-w-5xl flex-col justify-end px-4 pb-12 md:px-6 xl:max-w-6xl 2xl:max-w-8xl 2xl:pb-24"
     >
       {/** Main content  <motion.p className="rest overflow-hidden text-balance py-1 text-2xl font-medium tracking-[0.015em] text-backgroundb md:text-4xl lg:w-[95%] lg:text-5xl 2xl:text-[56px]">
           Hello! I’m Joshua, a web developer specializing in crafting modern,
           human-centered websites.
-        </motion.p>*/}
+        </motion.p>  */}
       <MotionText text="Hello! I’m Joshua, a web developer" delay={0.3} />
       <MotionText
         text="specializing in crafting modern,"
@@ -34,7 +34,7 @@ function Hero({ scrollYProgress }: props) {
 
       {/** Footer section  <p className="text-[#161616]/80">Available for work</p>   <p className="text-[#161616]">jdscodes04@gmail.com</p>*/}
       <div className="mt-16 flex w-full items-center justify-between self-start max-sm:text-sm md:mt-8 2xl:w-[95%]">
-        <div className="flex items-center gap-x-1 bg-red-200 sm:gap-x-2">
+        <div className="flex items-center gap-x-1 sm:gap-x-2">
           <p className="size-2 animate-pulse rounded-full bg-[#17A21C] sm:size-3" />
 
           <SlideP className={"text-[#161616]/80"} text={"Available for work"} />

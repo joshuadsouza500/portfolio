@@ -1,5 +1,5 @@
 import { cn } from "@/app/utils/cn";
-import { Motionh1, MotionP } from "./Motion";
+import { Motionh1, MotionP, MotionSpan } from "./Motion";
 import { Children } from "react";
 
 //React.FC (Functional Component):Enforces typing for component props and children (though no children are used here).
@@ -84,3 +84,40 @@ export const MHeading: React.FC<MotionTextProps> = ({
     </span>
   );
 };
+
+interface AnimatedTextProps {
+  text: string;
+  className?: string;
+  delay?: number;
+  duration?: number;
+  Y?: any;
+}
+
+export default function AnimatedText({
+  text,
+  className,
+  delay = 0.1,
+  duration = 0.4,
+  Y,
+}: AnimatedTextProps) {
+  return (
+    <div className={cn("", className)}>
+      {text.split(" ").map((word, index) => (
+        <span key={index} className="mr-1 inline-block overflow-hidden">
+          <MotionSpan
+            className="inline-block"
+            initial={{ y: Y || "100%", opacity: 0.2 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{
+              delay: delay + index * 0.05,
+              duration: duration,
+            }}
+            viewport={{ once: true }}
+          >
+            {word}
+          </MotionSpan>
+        </span>
+      ))}
+    </div>
+  );
+}
