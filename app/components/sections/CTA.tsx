@@ -2,19 +2,19 @@ import React from "react";
 
 import Link from "next/link";
 
-import { ArrowUp } from "lucide-react";
-import { MotionDiv } from "../ui/Motion";
+import { ArrowUp, Mail } from "lucide-react";
+import { MotionDiv, MotionLink } from "../ui/Motion";
 import AnimatedText, { MHeading, SlideP } from "../ui/MotionText";
 
 function CTA() {
   return (
     <div
       id="CTA"
-      className="relative mx-auto flex h-auto flex-col justify-center bg-backgroundw px-4 max-lg:pb-4 max-md:pt-12 md:max-w-5xl md:px-6 md:pt-16 lg:pb-6 xl:max-w-6xl 2xl:h-[60vh] 2xl:max-w-8xl 2xl:pb-2"
+      className="relative mx-auto flex h-auto flex-col justify-center bg-backgroundw px-4 pt-6 max-lg:pb-4 sm:pt-12 md:max-w-5xl md:px-6 md:pt-16 lg:pb-6 xl:max-w-6xl 2xl:h-[55vh] 2xl:max-w-8xl 2xl:pb-2"
     >
       <div className="cursor-pointer">
         {" "}
-        <div className="space-y-3 sm:space-y-5">
+        <div className="space-y-2 sm:space-y-3">
           <SlideP
             className={
               "text-xl font-medium tracking-tight text-black/55 md:text-2xl lg:text-3xl"
@@ -25,47 +25,61 @@ function CTA() {
           />
 
           <div className="flex items-center gap-1 sm:gap-2">
-            <p className="size-5 animate-pulse rounded-full bg-[#32CD32] duration-300 md:size-7" />
-            <MotionDiv
+            <SlideP
+              delay={0.3}
+              duration={0.3}
+              className="size-4 animate-pulse rounded-full bg-[#32CD32] duration-300 md:size-6"
+            />
+            <MotionLink
+              href="mailto:jdscodes04@gmail.com"
               className="relative"
               initial="rest"
               whileHover="hover"
               animate="rest"
               variants={{
-                hover: { scale: ".99" },
+                rest: { scale: 1 },
+                hover: { scale: 0.98 },
               }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <AnimatedText
-                className={"text-6xl font-medium md:text-8xl lg:text-[128px]"}
+                className={
+                  "text-6xl font-medium md:text-8xl lg:font-semibold xl:text-[128px]"
+                }
                 text={`Let's Talk`}
                 delay={0.3}
               />
               <MotionDiv
-                className="absolute bottom-0 left-2 h-[5px] bg-backgroundb/95"
+                className="absolute bottom-2 left-1 h-1 bg-backgroundb md:bottom-6 xl:left-2"
                 variants={{
                   rest: { width: 0 },
                   hover: { width: "100%" },
                 }}
-                transition={{ duration: 0.35 }}
+                transition={{ duration: 0.3 }}
               />
-            </MotionDiv>
+            </MotionLink>
           </div>
         </div>
-        <div className="mt-5 flex w-full items-center justify-between pt-3 md:mb-2 lg:mt-8">
-          <SlideP
-            className={
-              "text-xl font-medium hover:scale-[.98] hover:text-black/80 hover:underline md:text-2xl lg:text-3xl"
-            }
-            text={"JohnDoe@email.com"}
-            duration={0.6}
-            delay={0.3}
-          />
-          <button className="mr-1 flex size-7 items-center justify-center rounded-full bg-black text-white hover:scale-95 md:size-11">
-            <Link href={"/"}>
-              <ArrowUp className="size-5 md:size-8" />
-            </Link>
-          </button>
+        <div className="mt-2 flex w-full items-center justify-between pt-2 md:mb-2 lg:mt-5">
+          <MotionLink
+            href="mailto:jdscodes04@gmail.com"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="group flex items-center space-x-1 text-lg font-medium text-black/55 transition-colors hover:text-backgroundb md:space-x-2 md:text-2xl lg:text-3xl"
+          >
+            <Mail className="size-5 transition-transform group-hover:scale-105 md:size-6" />
+            <span>jdscodes@gmail.com</span>
+          </MotionLink>
+          <MotionLink
+            href="/"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="group flex items-center justify-center rounded-full border border-black/80 p-2 text-black transition-transform hover:scale-105 hover:bg-backgroundb hover:text-white"
+          >
+            <ArrowUp className="size-4 transition-transform group-hover:scale-110 md:size-6" />
+          </MotionLink>
         </div>
       </div>
     </div>

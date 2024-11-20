@@ -16,7 +16,7 @@ import {
 import Bounded from "../Bounded";
 import { title } from "process";
 import AnimatedText, { MHeading, SlideP } from "../ui/MotionText";
-import { Motionh2, Motionh3 } from "../ui/Motion";
+import { MotionDiv, Motionh2, Motionh3 } from "../ui/Motion";
 
 const Icons = [
   {
@@ -109,7 +109,7 @@ function ToolBox() {
     >
       <div className="absolute inset-0 mb-6 rounded-b-3xl bg-black bg-[url('/noise-light.png')] opacity-15" />
       <Bounded className="px-4 py-8 md:py-8">
-        <div className="grid h-fit w-full gap-2 lg:gap-6 2xl:pl-10">
+        <div className="grid h-fit w-full grid-cols-1 gap-2 lg:gap-6 xl:w-[90%]">
           <MHeading
             className={
               "text-5xl font-bold tracking-tight text-backgroundw/80 md:text-6xl lg:text-7xl 2xl:text-8xl"
@@ -119,7 +119,7 @@ function ToolBox() {
           />
 
           <AnimatedText
-            className="col-span-2 mt-3 w-[70%] place-self-end text-balance text-xs font-medium text-[#f7f7f7]/70 sm:w-[50%] sm:text-sm md:ml-[30%] md:place-self-center lg:ml-[35%] lg:w-[50%] lg:text-lg xl:text-xl"
+            className="col-span-2 mt-2 w-[70%] place-self-end text-balance text-xs font-medium leading-none text-backgroundw/70 sm:mt-3 sm:w-[50%] sm:text-sm md:ml-[30%] md:place-self-center lg:ml-[35%] lg:text-lg lg:leading-tight 2xl:text-xl 2xl:leading-tight"
             Y={`70%`}
             text={
               " Here are some of the tools and technologies i use to create responsive user friendly designs and more."
@@ -127,51 +127,81 @@ function ToolBox() {
           />
         </div>
 
-        <section className="mt-8 flex w-[90%] flex-col justify-around border-t border-white/25 text-white sm:mt-10 sm:w-[80%] lg:mt-14 lg:w-[70%]">
+        <section className="mt-8 flex w-[90%] flex-col justify-around border-t border-white/25 text-white sm:mt-10 sm:w-[80%] lg:mt-16 lg:w-[70%]">
           {Icons.map((category, index) => (
-            <div
+            <MotionDiv
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.4,
+                delay: 0.1,
+                ease: "easeInOut",
+              }}
               key={index}
               className="flex cursor-pointer items-center justify-between border-b border-white/25 px-1 py-2 md:py-4 2xl:py-6"
+              variants={{
+                visible: { transition: { staggerChildren: 0.2 } },
+                hidden: {},
+              }}
             >
+              {/* Number and Title */}
               <div className="flex items-center">
                 <Motionh3
                   className="mr-3 text-sm text-white/70 md:text-base"
-                  initial={{ filter: "blur(1px)", opacity: 0.2 }}
-                  whileInView={{ filter: "blur(0px)", opacity: 1 }}
-                  viewport={{ once: true }}
+                  variants={{
+                    hidden: { filter: "blur(1px)", opacity: 0.1 },
+                    visible: { filter: "blur(0px)", opacity: 1 },
+                  }}
                   transition={{
                     duration: 0.4,
-                    delay: 0.1,
                     ease: "easeInOut",
                   }}
                 >
                   {category.no}
-                </Motionh3>{" "}
+                </Motionh3>
                 <Motionh3
                   className="text-lg font-medium text-white/70 md:text-xl lg:text-2xl"
-                  initial={{ filter: "blur(1px)", opacity: 0.2 }}
-                  whileInView={{ filter: "blur(0px)", opacity: 1 }}
-                  viewport={{ once: true }}
+                  variants={{
+                    hidden: { filter: "blur(1px)", opacity: 0.1 },
+                    visible: { filter: "blur(0px)", opacity: 1 },
+                  }}
                   transition={{
                     duration: 0.4,
-                    delay: 0.1,
                     ease: "easeInOut",
                   }}
                 >
                   {category.title}
                 </Motionh3>
               </div>
-              <ul className="flex gap-2 md:gap-5">
+
+              {/* Icons */}
+              <motion.ul
+                className="flex gap-2 md:gap-5"
+                variants={{
+                  visible: { transition: { staggerChildren: 0.1 } },
+                  hidden: {},
+                }}
+              >
                 {category.icons.map((icon, iconIndex) => (
-                  <li key={iconIndex} className="">
+                  <motion.li
+                    key={iconIndex}
+                    variants={{
+                      hidden: { scale: 0.9, opacity: 0 },
+                      visible: { scale: 1, opacity: 1 },
+                    }}
+                    transition={{
+                      duration: 0.3,
+                      ease: "easeInOut",
+                    }}
+                    className="hover:scale-95"
+                  >
                     <span className="md:hidden">{icon.component}</span>
-                    <span className="hidden hover:scale-95 md:block">
-                      {icon.component2}
-                    </span>
-                  </li>
+                    <span className="hidden md:block">{icon.component2}</span>
+                  </motion.li>
                 ))}
-              </ul>
-            </div>
+              </motion.ul>
+            </MotionDiv>
           ))}
         </section>
       </Bounded>

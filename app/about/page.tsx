@@ -3,11 +3,17 @@ import Link from "next/link";
 import { ArrowRight, Download } from "lucide-react";
 import Bounded from "../components/Bounded";
 import { MHeading } from "../components/ui/MotionText";
-import { MotionB, MotionDiv, Motionh2, MotionP } from "../components/ui/Motion";
+import {
+  MotionB,
+  MotionDiv,
+  Motionh2,
+  Motionh3,
+  MotionP,
+} from "../components/ui/Motion";
 
 export default function About() {
   const imageVariants = {
-    hidden: { opacity: 0, scale: 0.92 }, // Start small and transparent
+    hidden: { opacity: 0, scale: 0.95 }, // Start small and transparent
     show: { opacity: 1, scale: 1 }, // Animate to full size and visible
   };
   const containerVariants = {
@@ -52,14 +58,22 @@ export default function About() {
     <Bounded className="h-full bg-gradient-to-br from-white to-gray-50 px-4 max-md:py-6 md:py-6 lg:py-6">
       {/* About Me Section */}
       <section className="mb-16 2xl:mb-28 2xl:mt-8">
-        <MHeading
-          className={
-            "text-4xl font-bold tracking-tight md:text-5xl md:font-semibold lg:text-6xl xl:w-96 xl:pl-[10%] 2xl:text-6xl"
-          }
-          text={"About Me"}
-          duration={0.6}
-        />
-
+        <span className="inline-block overflow-hidden">
+          <Motionh2
+            initial={{ y: "100%", opacity: 0.4 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{
+              delay: 0.1,
+              duration: 0.6,
+            }}
+            viewport={{ once: true }}
+            className={
+              "text-4xl font-bold tracking-tight md:text-5xl md:font-semibold lg:text-6xl xl:w-96 xl:pl-[3%] 2xl:text-6xl"
+            }
+          >
+            About Me
+          </Motionh2>
+        </span>
         <MotionDiv
           className="mt-4 flex flex-col-reverse max-sm:gap-8 sm:grid sm:grid-cols-3 md:items-center lg:mt-8 lg:gap-6 2xl:pt-4"
           variants={containerVariants}
@@ -71,11 +85,11 @@ export default function About() {
             className="col-span-1 mx-auto h-full w-[80%] rounded-lg sm:w-full md:w-[80%] lg:w-[75%] 2xl:h-[95%] 2xl:w-[65%]"
             initial="hidden"
             animate="show"
-            transition={{ duration: 0.8, ease: "easeIn" }}
+            transition={{ delay: 0.1, duration: 0.8, ease: "easeIn" }}
             variants={imageVariants}
           >
             <Image
-              src="/me5.jpeg"
+              src="/Me2.jpg"
               width={300}
               height={400}
               alt="Profile photo"
@@ -108,7 +122,7 @@ export default function About() {
               understanding of this area.
             </MotionP>
             <MotionB
-              className="mt-4 flex items-center gap-2 rounded-3xl bg-backgroundb px-4 py-2 text-backgroundw transition-colors hover:bg-backgroundb/80 hover:shadow-lg"
+              className="mt-4 flex items-center gap-2 rounded-3xl bg-backgroundb px-4 py-2 text-backgroundw transition-colors hover:bg-backgroundb/90 hover:shadow-lg"
               variants={childVariants}
             >
               <Download size={20} />

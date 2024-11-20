@@ -5,6 +5,7 @@ import { useTransform, motion, MotionValue } from "framer-motion";
 
 import Link from "next/link";
 import AnimatedText, { MotionText, SlideP } from "../ui/MotionText";
+import { MotionP } from "../ui/Motion";
 
 type props = {
   scrollYProgress: MotionValue;
@@ -20,30 +21,43 @@ function Hero({ scrollYProgress }: props) {
       style={{ scale, opacity }}
       className="text-primary sticky top-16 mx-auto flex h-[90vh] w-full max-w-5xl flex-col justify-end px-4 pb-12 md:px-6 xl:max-w-6xl 2xl:max-w-8xl 2xl:pb-24"
     >
-      {/** Main content  <motion.p className="rest overflow-hidden text-balance py-1 text-2xl font-medium tracking-[0.015em] text-backgroundb md:text-4xl lg:w-[95%] lg:text-5xl 2xl:text-[56px]">
-          Hello! I’m Joshua, a web developer specializing in crafting modern,
-          human-centered websites.
-        </motion.p>  */}
-      <MotionText text="Hello! I’m Joshua, a web developer" delay={0.3} />
+      {/** Main content   
+      <MotionText text="Hello! I’m Joshua, a web " delay={0.3} />
       <MotionText
-        text="specializing in crafting modern,"
+        text="developer specializing in crafting modern,"
         delay={0.4}
         className="lg:my-1 lg:pb-1"
       />
       <MotionText text="human-centered websites." delay={0.45} />
+ */}
+      <AnimatedText
+        className={
+          "overflow-hidden text-balance py-1 text-left text-xl font-medium tracking-[0.015em] text-backgroundb sm:text-2xl md:text-4xl lg:w-[95%] lg:text-5xl 2xl:text-[56px]"
+        }
+        text={`Hello! I’m Joshua, a web developer specializing in crafting modern, 
+ human-centered websites.`}
+        delay={0.1}
+        STAGGER={0.02}
+      />
 
       {/** Footer section  <p className="text-[#161616]/80">Available for work</p>   <p className="text-[#161616]">jdscodes04@gmail.com</p>*/}
       <div className="mt-16 flex w-full items-center justify-between self-start max-sm:text-sm md:mt-8 2xl:w-[95%]">
         <div className="flex items-center gap-x-1 sm:gap-x-2">
-          <p className="size-2 animate-pulse rounded-full bg-[#17A21C] sm:size-3" />
+          <SlideP className="size-2 animate-pulse rounded-full bg-[#17A21C] sm:size-3" />
 
           <SlideP className={"text-[#161616]/80"} text={"Available for work"} />
         </div>
-        <div className="flex flex-col">
-          <p className="hidden text-[#161616]/60 md:block">Get in Touch </p>
+        <Link
+          href="mailto:jdscodes04@gmail.com"
+          className="flex cursor-pointer flex-col"
+        >
+          <SlideP
+            text={"Get in Touch"}
+            className="hidden text-[#161616]/70 md:block"
+          />
 
           <SlideP className={"text-[#161616]"} text={"jdscodes04@gmail.com"} />
-        </div>
+        </Link>
       </div>
     </motion.div>
   );

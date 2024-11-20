@@ -4,7 +4,7 @@ import { Children } from "react";
 
 //React.FC (Functional Component):Enforces typing for component props and children (though no children are used here).
 interface MotionTextProps {
-  text: string;
+  text?: string;
   className?: string;
   delay?: number;
   duration?: number;
@@ -20,7 +20,7 @@ export const MotionText: React.FC<MotionTextProps> = ({
     <span className="inline-block overflow-hidden text-left">
       <MotionP
         className={cn(
-          "text-balance text-2xl font-medium tracking-[0.015em] text-backgroundb md:text-4xl lg:w-[95%] lg:text-5xl 2xl:text-[56px]",
+          "text-2xl font-medium tracking-[0.015em] text-backgroundb md:text-4xl lg:w-[95%] lg:text-5xl 2xl:text-[56px]",
           className,
         )}
         initial={{ y: "100%", opacity: 0.8 }}
@@ -70,7 +70,7 @@ export const MHeading: React.FC<MotionTextProps> = ({
   return (
     <span className="inline-block overflow-hidden">
       <Motionh1
-        className={cn(className)}
+        className={cn("w-full", className)}
         initial={{ y: "100%", opacity: 0.4 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{
@@ -91,6 +91,7 @@ interface AnimatedTextProps {
   delay?: number;
   duration?: number;
   Y?: any;
+  STAGGER?: number;
 }
 
 export default function AnimatedText({
@@ -99,17 +100,21 @@ export default function AnimatedText({
   delay = 0.1,
   duration = 0.4,
   Y,
+  STAGGER,
 }: AnimatedTextProps) {
   return (
-    <div className={cn("", className)}>
+    <div className={cn("leading-tight", className)}>
       {text.split(" ").map((word, index) => (
-        <span key={index} className="mr-1 inline-block overflow-hidden">
+        <span
+          key={index}
+          className="mr-1 inline-block overflow-hidden leading-tight"
+        >
           <MotionSpan
-            className="inline-block"
-            initial={{ y: Y || "100%", opacity: 0.2 }}
+            className="inline-block text-left"
+            initial={{ y: Y || "100%", opacity: 0.1 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{
-              delay: delay + index * 0.05,
+              delay: delay + index * (STAGGER || 0.05),
               duration: duration,
             }}
             viewport={{ once: true }}

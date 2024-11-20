@@ -29,18 +29,20 @@ export default function Home() {
     requestAnimationFrame(raf);
   }, []); 
   
-    <Service />
-      <WorksStickyScroll />
-     
+   
     
+     
+
+     
   */
   }
 
   return (
     <main ref={container} className="relative">
       <Hero scrollYProgress={scrollYProgress} />
+      <Service />
+      <WorksStickyScroll />
       <ToolBox />
-
       <CTA />
     </main>
   );
@@ -48,10 +50,9 @@ export default function Home() {
 
 {
   /**
-
-2.Fix small para under headings,
-3. fix links.
-
-
-  */
+Fix the leading for all the titles especially hero
+  1.LInes in dark section,
+ 2.Each propject maybe text animation
+ 3. run optimizer maybe
+*/
 }

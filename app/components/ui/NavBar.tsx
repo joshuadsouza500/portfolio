@@ -10,6 +10,8 @@ import {
 } from "framer-motion";
 import ButtonLink from "./ButtonLink";
 import { TextFlip } from "../magicui/TextFlip";
+import { MotionDiv, MotionNav, MotionUl } from "./Motion";
+import { usePathname } from "next/navigation";
 
 const menu = {
   open: {
@@ -39,6 +41,10 @@ export default function NavBar() {
   const [text, setText] = useState<string>("Menu");
 
   const { scrollY } = useScroll();
+  const pathName = usePathname();
+  // Helper function to check if the route matches the current page
+
+  const isCurrentPage = (path: string) => pathName === path;
 
   //The motion value event shows when anything changes so when the scroll position changes it is notified.//
   {
@@ -64,11 +70,11 @@ export default function NavBar() {
     <>
       {/*Big screen nav*/}
 
-      <motion.nav
+      <MotionNav
         className="inset-x-0 top-0 z-20 mx-auto px-2 py-1 text-white backdrop-blur-sm max-md:sticky 2xl:py-2"
         transition={{ duration: 0.8, ease: easeInOut }}
       >
-        <div className="relative mx-auto flex max-w-5xl items-center justify-between gap-4 border-b border-backgroundb/5 py-2 md:px-1 xl:max-w-6xl 2xl:max-w-[1600px]">
+        <div className="relative mx-auto flex max-w-5xl items-center justify-between gap-4 border-b border-backgroundb/5 py-2 max-md:pb-4 md:px-1 xl:max-w-6xl 2xl:max-w-[1600px]">
           <Link
             href={"/"}
             className="flex flex-col justify-center pl-2 text-center"
@@ -86,7 +92,7 @@ export default function NavBar() {
 
           {/**Based on active state the animate prop loads */}
 
-          <motion.div
+          <MotionDiv
             className="absolute z-20 cursor-pointer rounded-3xl bg-backgroundb text-center md:hidden"
             variants={menu}
             animate={active ? "open" : "closed"}
@@ -98,7 +104,7 @@ export default function NavBar() {
             />
             {active && (
               <>
-                <motion.nav
+                <MotionNav
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
@@ -109,7 +115,7 @@ export default function NavBar() {
                   }}
                   className="pt-14 text-white sm:pt-20"
                 >
-                  <motion.ul className="ml-3 space-y-1 text-left text-3xl font-medium">
+                  <MotionUl className="ml-3 space-y-1 text-left text-3xl font-medium">
                     <li className="">
                       <Link href={"/"}>Home</Link>
                     </li>
@@ -122,9 +128,9 @@ export default function NavBar() {
                     <li className="">
                       <Link href={"#CTA"}> Contact</Link>
                     </li>
-                  </motion.ul>
-                </motion.nav>
-                <motion.nav
+                  </MotionUl>
+                </MotionNav>
+                <MotionNav
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
@@ -164,21 +170,28 @@ export default function NavBar() {
                       <TextFlip className="font-normal">Twitter</TextFlip>
                     </Link>
                   </ul>
-                </motion.nav>
+                </MotionNav>
               </>
             )}
-          </motion.div>
+          </MotionDiv>
 
+          {/**Large screen home, about and contact */}
           <ul className="hidden items-center gap-x-6 text-left text-lg text-backgroundb md:flex">
-            <li className="">
+            <li
+              className={`${isCurrentPage("/") ? "border-b-2 border-black" : ""}`}
+            >
               <Link href={"/"}>
                 <TextFlip className="font-semibold leading-[0.95]">
                   Home
                 </TextFlip>
               </Link>
             </li>
-            <li className="">
-              <Link href={"#Services"}>
+            <li
+              className={`${
+                isCurrentPage("/about") ? "border-b-2 border-black" : ""
+              }`}
+            >
+              <Link href={"/about"}>
                 {" "}
                 <TextFlip className="font-semibold leading-[0.95]">
                   About
@@ -186,8 +199,8 @@ export default function NavBar() {
               </Link>
             </li>
 
-            <li className="rounded-3xl bg-backgroundb px-5 py-3 text-backgroundw hover:scale-[.97] hover:shadow-lg">
-              <Link href={"#CTA"}>
+            <li className="rounded-3xl bg-backgroundb px-5 py-2 text-backgroundw hover:scale-[.97] hover:shadow-lg">
+              <Link href={"/#CTA"}>
                 {" "}
                 <TextFlip className="font-semibold leading-[0.94]">
                   Contact
@@ -196,7 +209,7 @@ export default function NavBar() {
             </li>
           </ul>
         </div>
-      </motion.nav>
+      </MotionNav>
     </>
   );
 }
@@ -206,7 +219,7 @@ export default function NavBar() {
     <>
    
 
-      <motion.nav
+      <MotionNav
         className="sticky inset-x-0 top-0 z-20 mx-auto flex items-center justify-between gap-4 border-b border-black bg-[#e2e8f00a] px-2 py-3 text-black backdrop-blur-sm md:flex-row md:px-20 2xl:px-36"
         variants={{
           hidden: {
@@ -228,7 +241,7 @@ export default function NavBar() {
 
 
 
-        <motion.div
+        <MotionDiv
           className="fixed right-1 top-2 z-20 cursor-pointer rounded-3xl bg-black text-center"
           variants={menu}
           animate={active ? "open" : "closed"}
@@ -236,7 +249,7 @@ export default function NavBar() {
           <ButtonLink text={text} active={active} handleButton={handleButton} />
           {active && (
             <>
-              <motion.nav
+              <MotionNav
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
@@ -280,8 +293,8 @@ export default function NavBar() {
                     </Link>
                   </li>
                 </motion.ul>
-              </motion.nav>
-              <motion.nav
+              </MotionNav>
+              <MotionNav
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
@@ -321,13 +334,13 @@ export default function NavBar() {
                     <TextFlip className="font-normal">Twitter</TextFlip>
                   </Link>
                 </ul>
-              </motion.nav>
+              </MotionNav>
             </>
           )}
-        </motion.div>
+        </MotionDiv>
 
       
-      </motion.nav>
+      </MotionNav>
     </>
   */
 }

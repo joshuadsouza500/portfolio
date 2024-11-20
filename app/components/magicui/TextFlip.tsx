@@ -1,11 +1,10 @@
-"use client";
-
 import React, { Children } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/app/utils/cn";
+import { MotionSpan } from "../ui/Motion";
 
 const DURATION = 0.25;
-const STAGGER = 0.025;
+const STAGGER = 0.02;
 
 type Props = {
   children: string;
@@ -14,11 +13,11 @@ type Props = {
 };
 export const TextFlip = ({ children, href, className }: Props) => {
   return (
-    <motion.div
+    <MotionSpan
       initial="initial"
       whileHover="hovered"
       className={cn(
-        "relative block overflow-hidden whitespace-nowrap font-black",
+        "relative inline-block overflow-hidden whitespace-nowrap font-black",
         className,
       )}
     >
@@ -26,7 +25,7 @@ export const TextFlip = ({ children, href, className }: Props) => {
         {/* We use the split method on empty string and then map over each letter to perform animations */}
         {children.split("").map((l, i) => {
           return (
-            <motion.span
+            <MotionSpan
               variants={{
                 initial: { y: 0 },
                 hovered: { y: "-100%" },
@@ -40,14 +39,14 @@ export const TextFlip = ({ children, href, className }: Props) => {
               key={i}
             >
               {l}
-            </motion.span>
+            </MotionSpan>
           );
         })}
       </div>
       <div className="absolute inset-0">
         {children.split("").map((l, i) => {
           return (
-            <motion.span
+            <MotionSpan
               variants={{
                 initial: { y: "100%" },
                 hovered: { y: 0 },
@@ -61,10 +60,10 @@ export const TextFlip = ({ children, href, className }: Props) => {
               key={i}
             >
               {l}
-            </motion.span>
+            </MotionSpan>
           );
         })}
       </div>
-    </motion.div>
+    </MotionSpan>
   );
 };

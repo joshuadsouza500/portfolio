@@ -13,7 +13,7 @@ export const Footer = () => {
         <div className="grid cursor-pointer grid-flow-col gap-4">
           <ul
             tabIndex={0}
-            className="flex flex-row gap-2 py-2 text-sm text-black/80 lg:gap-4 lg:text-lg"
+            className="flex flex-row gap-2 py-2 text-sm text-black/100 lg:gap-4 lg:text-lg"
           >
             <li>
               <Link href="https://x.com/jdscodes04" target="_blank">

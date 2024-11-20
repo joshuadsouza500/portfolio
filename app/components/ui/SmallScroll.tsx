@@ -37,7 +37,9 @@ function SmallScroll({
         className="relative flex w-full flex-col max-sm:-mt-4 md:px-4"
         id="Services"
       >
-        <div
+        <Link
+          href={live}
+          target="_blank"
           style={{
             backgroundImage: `url(${cover})`,
             backgroundSize: "cover",
@@ -57,7 +59,7 @@ function SmallScroll({
           >
             <source src={vid} type="video/mp4" />
           </video>
-        </div>
+        </Link>
 
         <h6 className="pt-4 font-medium tracking-wide text-white/40 max-sm:pl-1 max-sm:text-sm">
           {type}
@@ -65,13 +67,17 @@ function SmallScroll({
         <section className="items-center justify-between sm:flex md:w-[95%]">
           {" "}
           <div className="pt-1">
-            <h4 className="text-3xl font-semibold text-white/80 md:text-[32px]">
+            <Link
+              href={live}
+              target="_blank"
+              className="text-3xl font-semibold text-white/80 md:text-[32px]"
+            >
               {called}
-            </h4>
+            </Link>
           </div>
           <div
             className={cn(
-              "flex gap-2 pl-1 pt-2 text-xs text-white/60 max-sm:w-full max-sm:justify-start md:text-sm",
+              "flex gap-2 pt-2 text-xs text-white/60 max-sm:w-full max-sm:justify-start sm:pl-1 md:text-sm",
             )}
           >
             <h6

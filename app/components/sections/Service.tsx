@@ -47,8 +47,9 @@ function Service() {
   return (
     <Bounded className="relative h-full rounded-t-3xl bg-backgroundb px-4">
       <div className="absolute inset-0 bg-black bg-[url('/noise-light.png')] opacity-15" />
-      <div className="grid h-fit w-full 2xl:pl-10">
-        {/* Heading Animation  <motion.h2
+      <div className="grid h-fit w-full grid-cols-1 gap-2 xl:w-[90%]">
+        {/*
+         Heading Animation  <motion.h2
           className="overflow-hidden text-5xl font-bold tracking-tight text-backgroundw/80 md:text-6xl lg:text-7xl xl:text-center 2xl:text-8xl"
           initial={{ y: "100%", opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -69,9 +70,15 @@ function Service() {
 
         {/* Paragraph Animation */}
         <AnimatedText
+          text={`Here’s why partnering with me can make a significant difference in reaching your objectives.`}
+          className={
+            "mt-2 w-[70%] place-self-end text-balance pl-1 text-xs font-medium leading-none text-backgroundw/70 sm:mt-3 sm:w-[50%] sm:text-sm sm:leading-none md:hidden"
+          }
+        />
+        <AnimatedText
           text={`Here’s why partnering with me can make a significant difference in reaching your objectives and setting your brand apart in a competitive market.`}
           className={
-            "col-span-2 mt-3 w-[60%] place-self-end text-xs font-medium leading-tight text-backgroundw/70 sm:w-[50%] sm:text-balance sm:text-sm md:ml-[30%] md:place-self-center lg:ml-[35%] lg:text-lg lg:leading-tight 2xl:text-xl 2xl:leading-tight"
+            "ml-[30%] mt-3 hidden w-[50%] text-balance font-medium leading-tight text-backgroundw/70 md:block md:place-self-center lg:ml-[35%] lg:text-lg lg:leading-tight 2xl:text-xl 2xl:leading-tight"
           }
         />
       </div>

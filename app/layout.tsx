@@ -54,7 +54,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <link rel="icon" href="/Logo.svg" />
-      <body className="font-Manrope bg-backgroundw">
+      <body className="bg-backgroundw font-Manrope">
         <link
           rel="stylesheet"
           type="text/css"
