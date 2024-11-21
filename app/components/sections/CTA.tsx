@@ -10,7 +10,7 @@ function CTA() {
   return (
     <div
       id="CTA"
-      className="relative mx-auto flex h-auto flex-col justify-center bg-backgroundw px-4 pt-6 max-lg:pb-4 sm:pt-12 md:max-w-5xl md:px-6 md:pt-16 lg:pb-6 xl:max-w-6xl 2xl:h-[55vh] 2xl:max-w-8xl 2xl:pb-2"
+      className="relative mx-auto flex h-auto flex-col justify-center bg-backgroundw px-4 pt-16 max-lg:pb-4 md:max-w-5xl md:px-6 lg:pb-6 xl:max-w-6xl 2xl:h-[55vh] 2xl:max-w-8xl 2xl:pb-2"
     >
       <div className="cursor-pointer">
         {" "}

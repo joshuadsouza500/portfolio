@@ -44,6 +44,15 @@ export default function Home() {
 }
 
 {
+  /**FIXES
+   * 
+   *
+
+
+*/
+}
+
+{
   /**
 TO DO
 1. Smooth scroll to section on navigation button click 

@@ -105,7 +105,7 @@ function ToolBox() {
     <motion.div
       ref={container}
       style={{ scaleX }}
-      className="relative -mt-1 rounded-b-3xl bg-backgroundb pb-10"
+      className="relative -mt-1 rounded-b-3xl bg-backgroundb max-md:pb-14 md:pb-10"
     >
       <div className="absolute inset-0 mb-6 rounded-b-3xl bg-black bg-[url('/noise-light.png')] opacity-15" />
       <Bounded className="px-4 py-8 md:py-8">
@@ -124,12 +124,12 @@ function ToolBox() {
             STAGGER={0.01}
             Y={`70%`}
             text={
-              " Here are some of the tools and technologies i use to create responsive user friendly designs."
+              "Here are some of the tools and technologies i use to create responsive user friendly designs."
             }
           />
         </div>
 
-        <section className="mt-8 flex w-[90%] flex-col justify-around border-t border-white/25 text-white sm:mt-10 sm:w-[80%] lg:mt-16 lg:w-[70%]">
+        <section className="mt-12 flex w-[90%] flex-col justify-around border-t border-white/25 text-white sm:mt-10 sm:w-[80%] lg:mt-16 lg:w-[70%]">
           {Icons.map((category, index) => (
             <MotionDiv
               initial="hidden"
@@ -150,7 +150,7 @@ function ToolBox() {
               {/* Number and Title */}
               <div className="flex items-center">
                 <Motionh3
-                  className="mr-3 text-sm text-white/70 md:text-base"
+                  className="mr-2 text-sm text-white/70 sm:mr-3 md:text-base"
                   variants={{
                     hidden: { filter: "blur(1px)", opacity: 0.1 },
                     visible: { filter: "blur(0px)", opacity: 1 },
@@ -179,7 +179,7 @@ function ToolBox() {
 
               {/* Icons */}
               <motion.ul
-                className="flex gap-2 md:gap-5"
+                className="flex gap-[10px] md:gap-5"
                 variants={{
                   visible: { transition: { staggerChildren: 0.1 } },
                   hidden: {},

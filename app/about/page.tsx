@@ -100,13 +100,13 @@ export default function About() {
 
           {/* Image for smaller screens */}
 
-          <div className="col-span-2 w-[95%] space-y-4 font-medium tracking-wide max-md:mx-auto max-md:pb-2 max-md:leading-relaxed lg:w-[70%] xl:w-[80%] xl:text-lg 2xl:text-xl">
+          <div className="col-span-2 w-[95%] space-y-4 text-balance font-medium tracking-wide max-md:mx-auto max-md:pb-2 max-md:leading-relaxed lg:w-[70%] xl:w-[80%] xl:text-lg 2xl:text-xl">
             <MotionP
               className="pb-1 text-backgroundb/70"
               variants={childVariants}
               transition={{ delay: 1, duration: 1 }}
             >
-              Hello! {`I'm`}Joshua, a web developer based in Bahrain with a
+              Hello! {`I'm`} Joshua, a web developer based in Bahrain with a
               passion for crafting seamless and engaging user-friendly
               applications. With a solid foundation in front-end development and
               a keen eye for detail, I focus on creating websites that are not

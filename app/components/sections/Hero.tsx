@@ -35,16 +35,16 @@ function Hero({ scrollYProgress }: props) {
  */}
           <AnimatedText
             className={
-              "overflow-hidden text-balance text-left text-xl font-medium leading-5 tracking-[0.015em] text-backgroundb sm:text-3xl sm:leading-4 md:text-4xl md:leading-3 lg:w-[95%] lg:text-5xl lg:leading-3 xl:w-[80%] 2xl:text-[56px] 2xl:tracking-wide"
+              "overflow-hidden text-left text-2xl font-medium leading-5 text-backgroundb max-md:tracking-[0.015em] sm:text-balance sm:text-3xl sm:leading-4 md:w-[95%] md:text-4xl md:leading-3 lg:text-5xl lg:leading-3 xl:w-[80%] xl:tracking-wide 2xl:text-[56px] 2xl:tracking-wide"
             }
-            text={`Hello! I’m Joshua, a web developer specializing in crafting modern, 
- human-centered websites.`}
+            text={`Hello! I’m Joshua, a web developer focused on creating modern, 
+ user-friendly websites.`}
             delay={0.8}
             STAGGER={0.02}
           />
 
-          {/** Footer section  <p className="text-[#161616]/80">Available for work</p>   <p className="text-[#161616]">jdscodes04@gmail.com</p>*/}
-          <div className="mt-16 flex w-full items-center justify-between self-start max-sm:text-sm md:mt-8 2xl:w-[95%]">
+          {/** Footer section  */}
+          <div className="mt-20 flex w-full items-center justify-between self-start max-sm:text-sm md:mt-8 2xl:w-[95%]">
             <div className="flex items-center gap-x-1 sm:gap-x-2">
               <SlideP
                 delay={0.8}

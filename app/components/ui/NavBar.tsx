@@ -16,14 +16,14 @@ import { usePathname } from "next/navigation";
 const menu = {
   open: {
     width: "250px",
-    height: "320px",
+    height: "340px",
     top: "2px",
     right: "2px",
     transition: { duration: 0.75, type: "tween", ease: [0.76, 0, 0.24, 1] },
   },
   closed: {
     width: "90px",
-    height: "38px",
+    height: "35px",
     top: "2px",
     right: "2px",
     transition: {
@@ -71,15 +71,15 @@ export default function NavBar() {
       {/*Big screen nav*/}
 
       <MotionNav
-        className="inset-x-0 top-0 z-20 mx-auto px-2 py-1 text-white backdrop-blur-sm max-md:sticky 2xl:py-2"
+        className="inset-x-0 top-0 z-20 mx-auto px-2 py-2 text-white backdrop-blur-sm max-md:sticky 2xl:py-2"
         transition={{ duration: 0.8, ease: easeInOut }}
       >
-        <div className="relative mx-auto flex max-w-5xl items-center justify-between gap-4 border-b border-backgroundb/5 py-2 max-md:pb-4 md:px-1 xl:max-w-6xl 2xl:max-w-[1600px]">
+        <div className="relative mx-auto flex max-w-5xl items-center justify-between gap-4 border-backgroundb/5 py-2 max-md:pb-4 sm:border-b md:px-1 xl:max-w-6xl 2xl:max-w-[1600px]">
           <Link
             href={"/"}
             className="flex flex-col justify-center pl-2 text-center"
           >
-            <h6 className="text-sm font-bold text-black md:text-base">
+            <h6 className="text-base font-bold text-black max-md:-tracking-tight">
               Joshua Dsouza
               <span
                 className="text-xs md:text-xs"
@@ -113,9 +113,9 @@ export default function NavBar() {
                     duration: 0.6,
                     ease: "easeIn",
                   }}
-                  className="pt-14 text-white sm:pt-20"
+                  className="pt-16 text-white sm:pt-20"
                 >
-                  <MotionUl className="ml-3 space-y-1 text-left text-3xl font-medium">
+                  <MotionUl className="ml-4 space-y-1 text-left text-3xl font-medium">
                     <li className="">
                       <Link href={"/"}>Home</Link>
                     </li>
@@ -140,7 +140,7 @@ export default function NavBar() {
                   }}
                   className="mx-1 pt-6 text-white/80"
                 >
-                  <ul className="ml-2 grid cursor-pointer grid-cols-2 gap-1 text-left">
+                  <ul className="ml-4 grid cursor-pointer grid-cols-2 gap-1 text-left">
                     <Link
                       className="hover:scale-[.98]"
                       target="_blank"

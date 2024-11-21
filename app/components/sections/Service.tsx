@@ -45,21 +45,9 @@ function Service() {
   const [openService, setOpenService] =
     React.useState<string>("web-development");
   return (
-    <Bounded className="relative h-full rounded-t-3xl bg-backgroundb px-4">
+    <Bounded className="relative h-full rounded-t-3xl bg-backgroundb px-4 max-md:pb-20">
       <div className="absolute inset-0 bg-black bg-[url('/noise-light.png')] opacity-15" />
       <div className="grid h-fit w-full grid-cols-1 gap-2 xl:w-[90%]">
-        {/*
-         Heading Animation  <motion.h2
-          className="overflow-hidden text-5xl font-bold tracking-tight text-backgroundw/80 md:text-6xl lg:text-7xl xl:text-center 2xl:text-8xl"
-          initial={{ y: "100%", opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{
-            duration: 1.6,
-            ease: "easeOut",
-          }}
-        >
-          What I Do
-        </motion.h2> */}
         <MHeading
           className={
             "overflow-hidden text-5xl font-bold tracking-tight text-backgroundw/80 md:text-6xl lg:text-7xl 2xl:text-8xl"
@@ -90,7 +78,7 @@ function Service() {
         <div className="col-span-1 h-fit xl:col-span-2"></div>
 
         {/* Right Column - Sticky Services */}
-        <div className="col-span-2 mt-2 flex w-full flex-col space-y-4 max-lg:mx-auto sm:mt-6 md:mt-12 md:w-[80%] lg:space-y-6 xl:col-span-3 2xl:mt-16">
+        <div className="col-span-2 mt-4 flex w-full flex-col space-y-4 max-lg:mx-auto sm:mt-6 md:mt-12 md:w-[80%] lg:space-y-6 xl:col-span-3 2xl:mt-16">
           {services.map((service) => (
             <MotionDiv
               key={service.id}
@@ -149,20 +137,20 @@ function Service() {
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.4, ease: "easeInOut" }}
-                    className="ml-2 w-[90%] overflow-hidden sm:ml-10 md:ml-14 md:w-[85%]"
+                    className="ml-2 w-[92%] overflow-hidden sm:ml-10 md:ml-14 md:w-[85%]"
                   >
                     <MotionDiv
                       initial={{ y: 20, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
                       exit={{ y: -20, opacity: 0 }}
                       transition={{ duration: 0.3, ease: "easeOut" }}
-                      className="pt-3 md:pt-5"
+                      className="pt-4 md:pt-5"
                     >
-                      <p className="tracking-wide text-[#f7f7f7]/60 max-md:text-sm">
+                      <p className="tracking-wider text-[#f7f7f7]/70 max-md:text-sm">
                         {service.description}
                       </p>
                       {service.content && (
-                        <div className="mt-3 font-medium text-white/80 max-md:text-sm md:mt-4">
+                        <div className="mt-4 font-medium text-white/80 max-md:text-sm">
                           {service.content}
                         </div>
                       )}

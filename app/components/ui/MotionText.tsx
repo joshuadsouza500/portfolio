@@ -107,7 +107,7 @@ export default function AnimatedText({
       {text.split(" ").map((word, index) => (
         <span
           key={index}
-          className="mr-1 inline-block overflow-hidden leading-tight"
+          className="mr-1 inline-block overflow-hidden leading-tight lg:px-[2px]"
         >
           <MotionSpan
             className="inline-block text-left"

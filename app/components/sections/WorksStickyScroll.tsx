@@ -67,7 +67,7 @@ const features = [
 
 const WorksStickyScroll = () => {
   return (
-    <section id="Works" className="relative bg-backgroundb px-1">
+    <section id="Works" className="relative bg-backgroundb px-1 max-md:pb-6">
       <div className="absolute inset-0 bg-black bg-[url('/noise-light.png')] opacity-15" />
       <Bounded className="px-2 py-8 md:mb-8 md:py-4 lg:py-8 xl:py-14 2xl:mb-0">
         <div className="grid h-fit w-full grid-cols-1 gap-2 lg:gap-6 xl:w-[90%]">
