@@ -27,7 +27,7 @@ function CTA() {
           <div className="flex items-center gap-1 sm:gap-2">
             <SlideP
               delay={0.3}
-              duration={0.3}
+              duration={0.4}
               className="size-4 animate-pulse rounded-full bg-[#32CD32] duration-300 md:size-6"
             />
             <MotionLink
@@ -65,7 +65,7 @@ function CTA() {
             href="mailto:jdscodes04@gmail.com"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
             className="group flex items-center space-x-1 text-lg font-medium text-black/55 transition-colors hover:text-backgroundb md:space-x-2 md:text-2xl lg:text-3xl"
           >
             <Mail className="size-5 transition-transform group-hover:scale-105 md:size-6" />

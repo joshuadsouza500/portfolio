@@ -20,22 +20,17 @@ export default function Home() {
   });
 
   {
-    /**  useEffect(() => {
+    /**
+     */
+  }
+  useEffect(() => {
     const lenis = new Lenis();
     const raf = (time: number) => {
       lenis.raf(time);
       requestAnimationFrame(raf);
     };
     requestAnimationFrame(raf);
-  }, []); 
-  
-   
-    
-     
-
-     
-  */
-  }
+  }, []);
 
   return (
     <main ref={container} className="relative">
@@ -50,9 +45,7 @@ export default function Home() {
 
 {
   /**
-Fix the leading for all the titles especially hero
-  1.LInes in dark section,
- 2.Each propject maybe text animation
- 3. run optimizer maybe
+TO DO
+1. Smooth scroll to section on navigation button click 
 */
 }

@@ -13,8 +13,8 @@ import {
 
 export default function About() {
   const imageVariants = {
-    hidden: { opacity: 0, scale: 0.95 }, // Start small and transparent
-    show: { opacity: 1, scale: 1 }, // Animate to full size and visible
+    hidden: { opacity: 0, filter: "blur(2px)", y: 1 }, // Start small and transparent
+    show: { opacity: 1, filter: "blur(0px)", y: 0 }, // Animate to full size and visible
   };
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -68,7 +68,7 @@ export default function About() {
             }}
             viewport={{ once: true }}
             className={
-              "text-4xl font-bold tracking-tight md:text-5xl md:font-semibold lg:text-6xl xl:w-96 xl:pl-[3%] 2xl:text-6xl"
+              "text-4xl font-bold tracking-tight md:text-5xl md:font-semibold lg:text-6xl xl:w-96 xl:pl-[6%] 2xl:text-6xl"
             }
           >
             About Me
@@ -100,7 +100,7 @@ export default function About() {
 
           {/* Image for smaller screens */}
 
-          <div className="col-span-2 w-[90%] space-y-4 font-medium tracking-wide max-md:mx-auto max-md:pb-2 max-md:leading-relaxed lg:w-[70%] xl:w-[80%] xl:text-lg 2xl:text-xl">
+          <div className="col-span-2 w-[95%] space-y-4 font-medium tracking-wide max-md:mx-auto max-md:pb-2 max-md:leading-relaxed lg:w-[70%] xl:w-[80%] xl:text-lg 2xl:text-xl">
             <MotionP
               className="pb-1 text-backgroundb/70"
               variants={childVariants}
@@ -110,7 +110,7 @@ export default function About() {
               passion for crafting seamless and engaging user-friendly
               applications. With a solid foundation in front-end development and
               a keen eye for detail, I focus on creating websites that are not
-              only visually appealing but also highly functional—designed to
+              only visually appealing but also highly functional and designed to
               solve real-world problems.
             </MotionP>
             <MotionP

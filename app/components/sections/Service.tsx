@@ -62,18 +62,21 @@ function Service() {
         </motion.h2> */}
         <MHeading
           className={
-            "overflow-hidden pb-2 text-5xl font-bold tracking-tight text-backgroundw/80 md:text-6xl lg:pb-6 lg:text-7xl 2xl:text-8xl"
+            "overflow-hidden text-5xl font-bold tracking-tight text-backgroundw/80 md:text-6xl lg:text-7xl 2xl:text-8xl"
           }
           text={"What I Do"}
-          duration={0.6}
+          duration={0.7}
         />
 
         {/* Paragraph Animation */}
         <AnimatedText
           text={`Here’s why partnering with me can make a significant difference in reaching your objectives.`}
           className={
-            "mt-2 w-[70%] place-self-end text-balance pl-1 text-xs font-medium leading-none text-backgroundw/70 sm:mt-3 sm:w-[50%] sm:text-sm sm:leading-none md:hidden"
+            "mt-2 w-[60%] place-self-end text-balance pl-1 text-xs font-medium leading-[0.5rem] text-backgroundw/70 sm:mt-3 sm:w-[50%] sm:text-sm sm:leading-none md:hidden"
           }
+          delay={0}
+          STAGGER={0.01}
+          Y={`70%`}
         />
         <AnimatedText
           text={`Here’s why partnering with me can make a significant difference in reaching your objectives and setting your brand apart in a competitive market.`}

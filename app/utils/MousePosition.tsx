@@ -1,4 +1,5 @@
-import React from "react";
+{
+  /**import React from "react";
 import { MotionDiv } from "../components/ui/Motion";
 
 const MousePosition = () => {
@@ -64,3 +65,5 @@ const MousePosition = () => {
 };
 
 export default MousePosition;
+ */
+}

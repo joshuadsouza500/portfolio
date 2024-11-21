@@ -9,7 +9,7 @@ export const Footer = () => {
       className="mx-auto border-t border-black/10 bg-backgroundw lg:pt-1"
       aria-label="footer"
     >
-      <div className="mx-auto flex items-center justify-between px-4 pb-1 pt-2 md:px-6 lg:pb-1 xl:max-w-6xl 2xl:max-w-8xl">
+      <div className="mx-auto flex items-center justify-between px-4 pb-1 pt-2 lg:pb-1 xl:max-w-6xl 2xl:max-w-8xl">
         <div className="grid cursor-pointer grid-flow-col gap-4">
           <ul
             tabIndex={0}

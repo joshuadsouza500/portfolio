@@ -3,6 +3,7 @@ import "./globals.css";
 import NavBar from "./components/ui/NavBar";
 import { Footer } from "./components/ui/Footer";
 import Initial from "./components/Initial";
+import { LoaderProvider } from "./utils/LoaderContext";
 
 export const metadata: Metadata = {
   title: {
@@ -10,8 +11,12 @@ export const metadata: Metadata = {
     default: "Joshua Dsouza",
   },
   description: "Hey, I am Joshua, a Web developer based in bahrain.",
-  keywords:
+  verification: {
+    google: "m3YkuK-Y4S-R_8lvq_jMpg2khDcoUQJKPe0TmD0r9ms",
+  },
+  keywords: [
     "Web development, portfolio, bahrain, portfolio website, animations, front-end development, freelance, SEO, Web design, Reactjs",
+  ],
   robots: {
     index: true,
     follow: true,
@@ -32,27 +37,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  {
-    /**
-    <meta
+  return (
+    <html lang="en">
+      <meta
         name="google-site-verification"
         content="m3YkuK-Y4S-R_8lvq_jMpg2khDcoUQJKPe0TmD0r9ms"
       />
-      
-      add under html*/
-  }
-  {
-    /**
-    verification: {
-      google: "m3YkuK-Y4S-R_8lvq_jMpg2khDcoUQJKPe0TmD0r9ms",
-    }, 
-    
-  
-    */
-  }
-
-  return (
-    <html lang="en">
       <link rel="icon" href="/Logo.svg" />
       <body className="bg-backgroundw font-Manrope">
         <link
@@ -60,10 +50,13 @@ export default function RootLayout({
           type="text/css"
           href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
         />
-        {/** <Initial /> */}
-        <NavBar />
-        {children}
-        <Footer />
+        <LoaderProvider>
+          {/***/}
+          <Initial />
+          <NavBar />
+          {children}
+          <Footer />
+        </LoaderProvider>
       </body>
     </html>
   );

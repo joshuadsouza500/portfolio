@@ -105,7 +105,7 @@ function ToolBox() {
     <motion.div
       ref={container}
       style={{ scaleX }}
-      className="relative rounded-b-3xl bg-backgroundb pb-10"
+      className="relative -mt-1 rounded-b-3xl bg-backgroundb pb-10"
     >
       <div className="absolute inset-0 mb-6 rounded-b-3xl bg-black bg-[url('/noise-light.png')] opacity-15" />
       <Bounded className="px-4 py-8 md:py-8">
@@ -119,10 +119,12 @@ function ToolBox() {
           />
 
           <AnimatedText
-            className="col-span-2 mt-2 w-[70%] place-self-end text-balance text-xs font-medium leading-none text-backgroundw/70 sm:mt-3 sm:w-[50%] sm:text-sm md:ml-[30%] md:place-self-center lg:ml-[35%] lg:text-lg lg:leading-tight 2xl:text-xl 2xl:leading-tight"
+            className="col-span-2 mt-2 w-[60%] place-self-end text-balance text-xs font-medium leading-3 text-backgroundw/70 sm:mt-3 sm:w-[50%] sm:text-sm sm:leading-none md:ml-[30%] md:place-self-center lg:ml-[35%] lg:text-lg lg:leading-tight 2xl:text-xl 2xl:leading-tight"
+            delay={0}
+            STAGGER={0.01}
             Y={`70%`}
             text={
-              " Here are some of the tools and technologies i use to create responsive user friendly designs and more."
+              " Here are some of the tools and technologies i use to create responsive user friendly designs."
             }
           />
         </div>

@@ -70,8 +70,8 @@ const WorksStickyScroll = () => {
     <section id="Works" className="relative bg-backgroundb px-1">
       <div className="absolute inset-0 bg-black bg-[url('/noise-light.png')] opacity-15" />
       <Bounded className="px-2 py-8 md:mb-8 md:py-4 lg:py-8 xl:py-14 2xl:mb-0">
-        <div className="grid h-fit w-full gap-2 lg:gap-6 xl:w-[90%]">
-          <span className="inline-block overflow-hidden max-sm:w-screen">
+        <div className="grid h-fit w-full grid-cols-1 gap-2 lg:gap-6 xl:w-[90%]">
+          <span className="inline-block overflow-hidden">
             <Motionh2
               style={{ lineHeight: "1.08" }}
               className="text-5xl font-bold tracking-tight text-backgroundw/80 md:text-6xl lg:text-7xl 2xl:text-8xl"
@@ -88,11 +88,13 @@ const WorksStickyScroll = () => {
             </Motionh2>
           </span>
           <AnimatedText
-            className="mt-2 w-[70%] place-self-end text-balance text-xs font-medium leading-none text-backgroundw/70 sm:mt-3 sm:w-[50%] sm:text-sm sm:leading-tight md:ml-[30%] md:place-self-center lg:ml-[35%] lg:text-lg lg:leading-tight 2xl:text-xl 2xl:leading-tight"
+            className="mt-2 w-[65%] place-self-end text-balance text-xs font-medium leading-3 text-backgroundw/70 sm:mt-3 sm:w-[50%] sm:text-sm sm:leading-none md:ml-[30%] md:place-self-center lg:ml-[35%] lg:text-lg lg:leading-tight 2xl:text-xl 2xl:leading-tight"
             text={
               "Here are some of my featured projects that showcase my skill and expertise in crafting user-friendly websites."
             }
             Y={`70%`}
+            delay={0}
+            STAGGER={0.01}
           />
         </div>
       </Bounded>

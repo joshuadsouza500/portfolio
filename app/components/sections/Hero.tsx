@@ -5,7 +5,8 @@ import { useTransform, motion, MotionValue } from "framer-motion";
 
 import Link from "next/link";
 import AnimatedText, { MotionText, SlideP } from "../ui/MotionText";
-import { MotionP } from "../ui/Motion";
+import { MotionDiv, MotionP } from "../ui/Motion";
+import { useLoader } from "@/app/utils/LoaderContext";
 
 type props = {
   scrollYProgress: MotionValue;
@@ -14,14 +15,16 @@ type props = {
 function Hero({ scrollYProgress }: props) {
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0]);
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
-
+  const { isLoading } = useLoader();
   return (
-    <motion.div
-      id="Home"
-      style={{ scale, opacity }}
-      className="text-primary sticky top-16 mx-auto flex h-[90vh] w-full max-w-5xl flex-col justify-end px-4 pb-12 md:px-6 xl:max-w-6xl 2xl:max-w-8xl 2xl:pb-24"
-    >
-      {/** Main content   
+    <>
+      {!isLoading && (
+        <MotionDiv
+          id="Home"
+          style={{ scale, opacity }}
+          className="text-primary sticky top-16 mx-auto flex h-[90vh] w-full max-w-5xl flex-col justify-end px-4 pb-12 md:px-6 lg:pb-10 xl:max-w-6xl 2xl:max-w-8xl 2xl:pb-24"
+        >
+          {/** Main content   
       <MotionText text="Hello! I’m Joshua, a web " delay={0.3} />
       <MotionText
         text="developer specializing in crafting modern,"
@@ -30,36 +33,50 @@ function Hero({ scrollYProgress }: props) {
       />
       <MotionText text="human-centered websites." delay={0.45} />
  */}
-      <AnimatedText
-        className={
-          "overflow-hidden text-balance py-1 text-left text-xl font-medium tracking-[0.015em] text-backgroundb sm:text-2xl md:text-4xl lg:w-[95%] lg:text-5xl 2xl:text-[56px]"
-        }
-        text={`Hello! I’m Joshua, a web developer specializing in crafting modern, 
+          <AnimatedText
+            className={
+              "overflow-hidden text-balance text-left text-xl font-medium leading-5 tracking-[0.015em] text-backgroundb sm:text-3xl sm:leading-4 md:text-4xl md:leading-3 lg:w-[95%] lg:text-5xl lg:leading-3 xl:w-[80%] 2xl:text-[56px] 2xl:tracking-wide"
+            }
+            text={`Hello! I’m Joshua, a web developer specializing in crafting modern, 
  human-centered websites.`}
-        delay={0.1}
-        STAGGER={0.02}
-      />
-
-      {/** Footer section  <p className="text-[#161616]/80">Available for work</p>   <p className="text-[#161616]">jdscodes04@gmail.com</p>*/}
-      <div className="mt-16 flex w-full items-center justify-between self-start max-sm:text-sm md:mt-8 2xl:w-[95%]">
-        <div className="flex items-center gap-x-1 sm:gap-x-2">
-          <SlideP className="size-2 animate-pulse rounded-full bg-[#17A21C] sm:size-3" />
-
-          <SlideP className={"text-[#161616]/80"} text={"Available for work"} />
-        </div>
-        <Link
-          href="mailto:jdscodes04@gmail.com"
-          className="flex cursor-pointer flex-col"
-        >
-          <SlideP
-            text={"Get in Touch"}
-            className="hidden text-[#161616]/70 md:block"
+            delay={0.8}
+            STAGGER={0.02}
           />
 
-          <SlideP className={"text-[#161616]"} text={"jdscodes04@gmail.com"} />
-        </Link>
-      </div>
-    </motion.div>
+          {/** Footer section  <p className="text-[#161616]/80">Available for work</p>   <p className="text-[#161616]">jdscodes04@gmail.com</p>*/}
+          <div className="mt-16 flex w-full items-center justify-between self-start max-sm:text-sm md:mt-8 2xl:w-[95%]">
+            <div className="flex items-center gap-x-1 sm:gap-x-2">
+              <SlideP
+                delay={0.8}
+                className="size-2 animate-pulse rounded-full bg-[#17A21C] sm:size-3"
+              />
+
+              <SlideP
+                delay={0.8}
+                className={"text-[#161616]/80"}
+                text={"Available for work"}
+              />
+            </div>
+            <Link
+              href="mailto:jdscodes04@gmail.com"
+              className="flex cursor-pointer flex-col"
+            >
+              <SlideP
+                delay={0.8}
+                text={"Get in Touch"}
+                className="hidden text-[#161616]/70 md:block"
+              />
+
+              <SlideP
+                delay={0.8}
+                className={"text-[#161616]"}
+                text={"jdscodes04@gmail.com"}
+              />
+            </Link>
+          </div>
+        </MotionDiv>
+      )}
+    </>
   );
 }
 

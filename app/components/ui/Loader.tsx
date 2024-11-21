@@ -73,8 +73,8 @@ export default function Loader() {
           </span>
 
           <section className="flex items-end justify-between">
-            <div className="flex flex-col gap-1">
-              <Motionh1 className="overflow-hidden text-[2rem] font-bold leading-[0.8] text-backgroundw/55 sm:text-[3rem]">
+            <div className="flex flex-col gap-2 md:gap-3">
+              <Motionh1 className="overflow-hidden text-[2rem] font-semibold leading-[0.8] text-backgroundw/55 sm:text-[3rem] sm:font-bold">
                 <MotionSpan
                   className="inline-block overflow-hidden"
                   initial={{ y: "100%", opacity: 0 }}
@@ -92,7 +92,7 @@ export default function Loader() {
                   Web Developer
                 </MotionSpan>
               </Motionh1>
-              <Motionh1 className="overflow-hidden text-[2rem] font-bold leading-[0.8] text-backgroundw/55 sm:text-[3rem]">
+              <Motionh1 className="overflow-hidden pl-[2px] text-[2rem] font-semibold leading-[0.8] text-backgroundw/55 sm:text-[3rem] sm:font-bold">
                 <MotionSpan
                   className="inline-block overflow-hidden"
                   initial={{ y: "100%", opacity: 0 }}

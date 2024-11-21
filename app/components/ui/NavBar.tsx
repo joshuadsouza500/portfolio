@@ -16,7 +16,7 @@ import { usePathname } from "next/navigation";
 const menu = {
   open: {
     width: "250px",
-    height: "310px",
+    height: "320px",
     top: "2px",
     right: "2px",
     transition: { duration: 0.75, type: "tween", ease: [0.76, 0, 0.24, 1] },
@@ -120,10 +120,10 @@ export default function NavBar() {
                       <Link href={"/"}>Home</Link>
                     </li>
                     <li className="">
-                      <Link href={"#Services"}> Services</Link>
+                      <Link href={"/about"}> About</Link>
                     </li>
                     <li className="">
-                      <Link href={"#Works"}> Works</Link>
+                      <Link href={"#Services"}> Services</Link>
                     </li>
                     <li className="">
                       <Link href={"#CTA"}> Contact</Link>
@@ -142,7 +142,7 @@ export default function NavBar() {
                 >
                   <ul className="ml-2 grid cursor-pointer grid-cols-2 gap-1 text-left">
                     <Link
-                      className="hover:scale-[..98]"
+                      className="hover:scale-[.98]"
                       target="_blank"
                       href="https://www.instagram.com/"
                     >
@@ -202,7 +202,7 @@ export default function NavBar() {
             <li className="rounded-3xl bg-backgroundb px-5 py-2 text-backgroundw hover:scale-[.97] hover:shadow-lg">
               <Link href={"/#CTA"}>
                 {" "}
-                <TextFlip className="font-semibold leading-[0.94]">
+                <TextFlip className="font-semibold leading-none">
                   Contact
                 </TextFlip>
               </Link>
