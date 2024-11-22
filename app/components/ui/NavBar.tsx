@@ -180,8 +180,8 @@ export default function NavBar() {
             <li
               className={`${isCurrentPage("/") ? "border-b-2 border-black" : ""}`}
             >
-              <Link href={"/"}>
-                <TextFlip className="font-semibold leading-[0.95]">
+              <Link href={"/"} className="">
+                <TextFlip className="font-semibold leading-[0.85]">
                   Home
                 </TextFlip>
               </Link>
@@ -193,19 +193,14 @@ export default function NavBar() {
             >
               <Link href={"/about"}>
                 {" "}
-                <TextFlip className="font-semibold leading-[0.95]">
+                <TextFlip className="font-semibold leading-[0.85]">
                   About
                 </TextFlip>
               </Link>
             </li>
 
-            <li className="rounded-3xl bg-backgroundb px-5 py-2 text-backgroundw hover:scale-[.97] hover:shadow-lg">
-              <Link href={"/#CTA"}>
-                {" "}
-                <TextFlip className="font-semibold leading-none">
-                  Contact
-                </TextFlip>
-              </Link>
+            <li className="rounded-3xl bg-backgroundb px-4 py-[10px] font-semibold leading-none text-backgroundw hover:scale-[.97] hover:shadow-lg 2xl:px-5 2xl:py-3">
+              <Link href={"/#CTA"}>Contact</Link>
             </li>
           </ul>
         </div>

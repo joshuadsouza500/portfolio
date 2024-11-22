@@ -45,8 +45,9 @@ export default function Home() {
 
 {
   /**FIXES
+   * contact button 
+   * toolbox spacing
    * 
-   *
 
 
 */

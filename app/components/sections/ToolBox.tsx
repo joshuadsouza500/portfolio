@@ -96,19 +96,18 @@ function ToolBox() {
     offset: ["end end", "end start"], //animations starts when the end of the target touches end of the screen//
   });
 
-  const scaleX = useTransform(scrollYProgress, [0, 1], [1, 1]);
+  const scaleX = useTransform(scrollYProgress, [0, 1], [1, 0.98]);
 
   /** Here we use the scroll y value of the ref container(screen) and change the Xsize based on scroll     <Skills />   <h2 className="text-5xl font-bold tracking-tight text-backgroundw/80 md:text-6xl lg:text-7xl xl:text-center 2xl:text-8xl">
-            What I Use
-          </h2>*/
+   */
   return (
     <motion.div
       ref={container}
       style={{ scaleX }}
-      className="relative -mt-1 rounded-b-3xl bg-backgroundb max-md:pb-14 md:pb-10"
+      className="relative -mt-1 rounded-b-3xl bg-backgroundb max-md:pb-14 md:pb-12"
     >
       <div className="absolute inset-0 mb-6 rounded-b-3xl bg-black bg-[url('/noise-light.png')] opacity-15" />
-      <Bounded className="px-4 py-8 md:py-8">
+      <Bounded className="px-4 py-8">
         <div className="grid h-fit w-full grid-cols-1 gap-2 lg:gap-6 xl:w-[90%]">
           <MHeading
             className={
@@ -129,7 +128,7 @@ function ToolBox() {
           />
         </div>
 
-        <section className="mt-12 flex w-[90%] flex-col justify-around border-t border-white/25 text-white sm:mt-10 sm:w-[80%] lg:mt-16 lg:w-[70%]">
+        <section className="mt-12 flex w-[90%] flex-col justify-around border-t border-white/25 text-white sm:mt-10 sm:w-[80%] lg:mt-20 lg:w-[70%]">
           {Icons.map((category, index) => (
             <MotionDiv
               initial="hidden"

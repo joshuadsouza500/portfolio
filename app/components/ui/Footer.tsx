@@ -9,7 +9,7 @@ export const Footer = () => {
       className="pt-` mx-auto border-t border-black/10 bg-backgroundw max-md:pb-1"
       aria-label="footer"
     >
-      <div className="mx-auto flex items-center justify-between px-4 pb-1 pt-2 lg:pb-1 xl:max-w-6xl 2xl:max-w-8xl">
+      <div className="mx-auto flex items-center justify-between px-4 pb-1 pt-2 lg:pb-1 xl:max-w-6xl xl:px-2 2xl:max-w-8xl">
         <div className="w-full items-center justify-between md:flex">
           {/**Mobile footer */}
           <ul
@@ -44,43 +44,40 @@ export const Footer = () => {
           >
             <li>
               <Link href="https://x.com/jdscodes04" target="_blank">
-                <TextFlip className="font-medium max-md:text-xs">
+                <TextFlip className="font-semibold max-md:text-xs">
                   Twitter
                 </TextFlip>
               </Link>
             </li>
             <li>
               <Link href="https://www.Linkedin.com/" target="_blank">
-                <TextFlip className="font-medium max-md:text-xs">
+                <TextFlip className="font-semibold max-md:text-xs">
                   Linkedin
                 </TextFlip>
               </Link>
             </li>
             <li>
               <Link href="https://github.com/joshuadsouza500/" target="_blank">
-                <TextFlip className="font-medium max-md:text-xs">
+                <TextFlip className="font-semibold max-md:text-xs">
                   Github
                 </TextFlip>
               </Link>
             </li>
             <li>
               <Link href={`https://wa.me/97336158093`} target="_blank">
-                <TextFlip className="font-medium max-md:text-xs">
+                <TextFlip className="font-semibold max-md:text-xs">
                   Whatsapp
                 </TextFlip>
               </Link>
             </li>
           </ul>
 
-          <h6 className="text-[10px] font-medium tracking-wide text-backgroundb/90 md:hidden">
+          <h6 className="text-[10px] font-medium tracking-wide text-backgroundb/95 md:hidden">
             &copy; JoshuaDs 2024
           </h6>
-          <h6 className="hidden text-sm font-medium tracking-wide text-backgroundb/90 md:block">
+          <h6 className="hidden text-xs font-semibold tracking-wide text-backgroundb/95 md:block 2xl:text-sm">
             JoshuaDs
-            <span
-              className="text-xs md:text-xs"
-              style={{ verticalAlign: "super" }}
-            >
+            <span className="text-xs" style={{ verticalAlign: "super" }}>
               &copy;
             </span>
             2024
