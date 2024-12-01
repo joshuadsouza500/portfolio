@@ -37,7 +37,7 @@ export const Footer = () => {
               </Link>
             </li>
           </ul>
-          {/**Md: footer */}
+          {/**Md: foote */}
           <ul
             tabIndex={0}
             className="hidden flex-row gap-2 py-2 text-sm text-black/100 md:flex lg:gap-4 lg:text-lg"
