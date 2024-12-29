@@ -3,14 +3,14 @@ import React from "react";
 import Link from "next/link";
 
 import { ArrowUp, Mail } from "lucide-react";
-import { MotionDiv, MotionLink } from "../ui/Motion";
+import { MotionB, MotionDiv, MotionLink } from "../ui/Motion";
 import AnimatedText, { MHeading, SlideP } from "../ui/MotionText";
 
 function CTA() {
   return (
     <div
       id="CTA"
-      className="relative mx-auto flex h-auto flex-col justify-center bg-backgroundw px-4 pt-16 max-lg:pb-4 md:max-w-5xl md:px-6 lg:pb-6 xl:max-w-6xl xl:pt-20 2xl:h-[55vh] 2xl:max-w-8xl 2xl:pb-2"
+      className="relative mx-auto flex h-auto flex-col justify-center bg-backgroundw px-4 pt-16 max-lg:pb-6 md:max-w-5xl md:px-6 lg:pb-6 xl:max-w-6xl xl:pt-20 2xl:h-[55vh] 2xl:max-w-8xl 2xl:pb-2"
     >
       <div className="cursor-pointer">
         {" "}
@@ -71,15 +71,15 @@ function CTA() {
             <Mail className="size-5 transition-transform group-hover:scale-105 md:size-6" />
             <span>jdscodes@gmail.com</span>
           </MotionLink>
-          <MotionLink
-            href="/"
+          <MotionB
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             className="group flex items-center justify-center rounded-full border border-black/80 p-2 text-black transition-transform hover:scale-105 hover:bg-backgroundb hover:text-white"
           >
             <ArrowUp className="size-4 transition-transform group-hover:scale-110 md:size-6" />
-          </MotionLink>
+          </MotionB>
         </div>
       </div>
     </div>

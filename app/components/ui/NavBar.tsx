@@ -115,7 +115,7 @@ export default function NavBar() {
                   }}
                   className="pt-16 text-white sm:pt-20"
                 >
-                  <MotionUl className="ml-4 space-y-1 text-left text-3xl font-medium">
+                  <MotionUl className="ml-4 space-y-2 text-left text-3xl font-medium">
                     <li className="">
                       <Link href={"/"}>Home</Link>
                     </li>
