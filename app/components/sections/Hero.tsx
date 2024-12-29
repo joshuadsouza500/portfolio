@@ -22,7 +22,7 @@ function Hero({ scrollYProgress }: props) {
         <MotionDiv
           id="Home"
           style={{ scale, opacity }}
-          className="text-primary sticky top-16 mx-auto flex h-[90vh] w-full max-w-5xl flex-col justify-end px-4 pb-12 md:px-6 lg:pb-10 xl:max-w-6xl 2xl:max-w-8xl 2xl:pb-24"
+          className="text-primary sticky top-16 mx-auto flex h-[90vh] w-full max-w-5xl flex-col justify-end px-4 pb-16 md:px-6 lg:pb-10 xl:max-w-6xl 2xl:max-w-8xl 2xl:pb-24"
         >
           {/** Main content   
       <MotionText text="Hello! I’m Joshua, a web " delay={0.3} />
@@ -35,10 +35,10 @@ function Hero({ scrollYProgress }: props) {
  */}
           <AnimatedText
             className={
-              "overflow-hidden text-left text-2xl font-medium leading-5 text-backgroundb max-md:tracking-[0.015em] sm:text-balance sm:text-3xl sm:leading-4 md:w-[95%] md:text-4xl md:leading-3 lg:text-5xl lg:leading-3 xl:w-[80%] xl:tracking-wide 2xl:text-[56px] 2xl:tracking-wide"
+              "overflow-hidden text-left text-2xl font-medium leading-6 text-backgroundb max-md:tracking-[0.015em] sm:text-balance sm:text-3xl sm:leading-4 md:w-[95%] md:text-4xl md:leading-3 lg:text-5xl lg:leading-3 xl:w-[80%] xl:tracking-wide 2xl:text-[56px] 2xl:tracking-wide"
             }
             text={`Hello! I’m Joshua, a web developer focused on creating modern, 
- user-friendly websites.`}
+ user friendly websites.`}
             delay={0.8}
             STAGGER={0.02}
           />
@@ -64,7 +64,7 @@ function Hero({ scrollYProgress }: props) {
               <SlideP
                 delay={0.8}
                 text={"Get in Touch"}
-                className="hidden text-[#161616]/70 md:block"
+                className="hidden text-[#161616]/70"
               />
 
               <SlideP

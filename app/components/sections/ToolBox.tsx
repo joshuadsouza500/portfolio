@@ -123,7 +123,7 @@ function ToolBox() {
             STAGGER={0.01}
             Y={`70%`}
             text={
-              "Here are some of the tools and technologies i use to create responsive user friendly designs."
+              "These are some of the tools i use to create responsive user friendly websites"
             }
           />
         </div>
@@ -140,7 +140,7 @@ function ToolBox() {
                 ease: "easeInOut",
               }}
               key={index}
-              className="flex cursor-pointer items-center justify-between border-b border-white/25 px-1 py-2 md:py-4 2xl:py-6"
+              className="flex cursor-pointer items-center justify-between border-b border-white/25 px-1 py-3 md:py-4 2xl:py-6"
               variants={{
                 visible: { transition: { staggerChildren: 0.2 } },
                 hidden: {},
@@ -178,7 +178,7 @@ function ToolBox() {
 
               {/* Icons */}
               <motion.ul
-                className="flex gap-[10px] md:gap-5"
+                className="flex gap-3 md:gap-5"
                 variants={{
                   visible: { transition: { staggerChildren: 0.1 } },
                   hidden: {},

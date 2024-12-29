@@ -14,7 +14,7 @@ export const Footer = () => {
           {/**Mobile footer */}
           <ul
             tabIndex={0}
-            className="flex flex-row gap-1 py-2 text-xs font-medium text-black/100 md:hidden"
+            className="flex flex-row items-center justify-center gap-1 py-2 text-xs font-medium text-black/100 md:hidden"
           >
             <li>
               <Link href="https://x.com/jdscodes04" target="_blank">
@@ -72,7 +72,7 @@ export const Footer = () => {
             </li>
           </ul>
 
-          <h6 className="text-[10px] font-medium tracking-wide text-backgroundb/95 md:hidden">
+          <h6 className="hidden text-[10px] font-medium tracking-wide text-backgroundb/95">
             &copy; JoshuaDs 2024
           </h6>
           <h6 className="hidden text-xs font-semibold tracking-wide text-backgroundb/95 md:block 2xl:text-sm">
