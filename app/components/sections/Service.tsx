@@ -58,7 +58,7 @@ function Service() {
 
         {/* Paragraph Animation */}
         <AnimatedText
-          text={`Here’s how i can help you reach your objectives.`}
+          text={`Here’s how I can help you reach your objectives by designing and developing websites that meet your needs`}
           className={
             "mt-2 w-[60%] place-self-end text-balance pl-1 text-xs font-medium leading-[0.5rem] text-backgroundw/70 sm:mt-3 sm:w-[50%] sm:text-sm sm:leading-none md:hidden"
           }

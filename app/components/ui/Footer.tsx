@@ -9,7 +9,7 @@ export const Footer = () => {
       className="pt-` mx-auto border-t border-black/10 bg-backgroundw max-md:pb-1"
       aria-label="footer"
     >
-      <div className="mx-auto flex items-center justify-between px-4 pb-1 pt-2 lg:pb-1 xl:max-w-6xl xl:px-2 2xl:max-w-8xl">
+      <div className="mx-auto flex items-center justify-between px-4 pb-2 pt-2 lg:pb-1 xl:max-w-6xl xl:px-2 2xl:max-w-8xl">
         <div className="w-full items-center justify-between md:flex">
           {/**Mobile footer */}
           <ul
