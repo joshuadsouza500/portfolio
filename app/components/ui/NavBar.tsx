@@ -165,7 +165,7 @@ export default function NavBar() {
                     <Link
                       className="hover:scale-[.98]"
                       target="_blank"
-                      href="https://x.com/jdscodes04"
+                      href="https://x.com/battoasty"
                     >
                       <TextFlip className="font-normal">Twitter</TextFlip>
                     </Link>
