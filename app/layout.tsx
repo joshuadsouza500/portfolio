@@ -24,11 +24,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Joshua Dsouza",
     description: "Hey, I am Joshua, a Web developer based in bahrain.",
+    images: "/OpenGraph.jpeg", // Add your Open Graph image URL here
   },
   twitter: {
     title: "Joshua Dsouza",
     description: "Hey, I am Joshua, a Web developer based in bahrain.",
+    images: "/OpenGraph.jpeg", // Add your Twitter image URL here
   },
+
   metadataBase: new URL("https://joshuads.vercel.app"),
 };
 

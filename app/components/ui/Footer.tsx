@@ -17,7 +17,7 @@ export const Footer = () => {
             className="flex flex-row items-center justify-center gap-1 py-2 text-xs font-medium text-black/100 md:hidden"
           >
             <li>
-              <Link href="https://x.com/jdscodes04" target="_blank">
+              <Link href="https://x.com/battoasty" target="_blank">
                 Twitter •
               </Link>
             </li>
