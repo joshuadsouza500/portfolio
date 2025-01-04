@@ -74,7 +74,7 @@ export default function NavBar() {
         className="inset-x-0 top-0 z-20 mx-auto px-2 py-2 text-white backdrop-blur-sm max-md:sticky 2xl:py-2"
         transition={{ duration: 0.8, ease: easeInOut }}
       >
-        <div className="relative mx-auto flex max-w-5xl items-center justify-between gap-4 border-backgroundb/5 py-2 max-md:pb-4 sm:border-b md:px-1 xl:max-w-6xl 2xl:max-w-[1600px]">
+        <div className="relative mx-auto flex max-w-5xl items-center justify-between gap-4 py-2 max-md:pb-4 md:px-1 xl:max-w-6xl 2xl:max-w-[1600px]">
           <Link
             href={"/"}
             className="flex flex-col justify-center pl-2 text-center"

@@ -10,12 +10,13 @@ export const metadata: Metadata = {
     template: "%s | Joshua Dsouza",
     default: "Joshua Dsouza",
   },
-  description: "Hey, I am Joshua, a Web developer based in bahrain.",
+  description:
+    "Hey, I am Joshua, a Web developer with a passion for creating dynamic and responsive websites that enhance user experience. Based in bahrain  ",
   verification: {
     google: "m3YkuK-Y4S-R_8lvq_jMpg2khDcoUQJKPe0TmD0r9ms",
   },
   keywords: [
-    "Web development, portfolio, bahrain, portfolio website, animations, front-end development, freelance, SEO, Web design, Reactjs",
+    "Web development, bahrain, front-end development, freelance, SEO, Web design, Reactjs",
   ],
   robots: {
     index: true,
@@ -23,13 +24,15 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Joshua Dsouza",
-    description: "Hey, I am Joshua, a Web developer based in bahrain.",
-    images: "/OpenGraph.jpeg", // Add your Open Graph image URL here
+    description:
+      "Hey, I am Joshua, a Web developer with a passion for creating dynamic and responsive websites that enhance user experience. Based in bahrain.",
+    images: "/OpenGraph2.jpeg", // Add your Open Graph image URL here
   },
   twitter: {
     title: "Joshua Dsouza",
-    description: "Hey, I am Joshua, a Web developer based in bahrain.",
-    images: "/OpenGraph.jpeg", // Add your Twitter image URL here
+    description:
+      "Hey, I am Joshua, a Web developer with a passion for creating dynamic and responsive websites that enhance user experience. Based in bahrain.",
+    images: "/OpenGraph2.jpeg", // Add your Twitter image URL here
   },
 
   metadataBase: new URL("https://joshuads.vercel.app"),
@@ -46,6 +49,7 @@ export default function RootLayout({
         name="google-site-verification"
         content="m3YkuK-Y4S-R_8lvq_jMpg2khDcoUQJKPe0TmD0r9ms"
       />
+      <meta name="twitter:image" content="/OpenGraph2.jpeg"></meta>
       <link rel="icon" href="/Logo.svg" />
       <body className="bg-backgroundw font-Manrope">
         <link
