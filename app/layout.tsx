@@ -26,16 +26,16 @@ export const metadata: Metadata = {
     title: "Joshua Dsouza",
     description:
       "Hey, I am Joshua, a Web developer with a passion for creating dynamic and responsive websites that enhance user experience. Based in bahrain.",
-    images: "/OpenGraph2.jpeg", // Add your Open Graph image URL here
+    images: "/OpenGraph2.jpeg",
   },
   twitter: {
     title: "Joshua Dsouza",
     description:
       "Hey, I am Joshua, a Web developer with a passion for creating dynamic and responsive websites that enhance user experience. Based in bahrain.",
-    images: "/OpenGraph2.jpeg", // Add your Twitter image URL here
+    images: "/OpenGraph2.jpeg",
   },
 
-  metadataBase: new URL("https://joshuads.vercel.app"),
+  metadataBase: new URL("https://joshuads.vercel.app/"),
 };
 
 export default function RootLayout({
