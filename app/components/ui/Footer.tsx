@@ -14,7 +14,7 @@ export const Footer = () => {
           {/**Mobile footer */}
           <ul
             tabIndex={0}
-            className="flex flex-row items-center justify-center gap-1 py-2 text-xs font-medium text-black/100 md:hidden"
+            className="flex flex-row items-center justify-center gap-1 py-2 text-xs font-semibold text-black md:hidden"
           >
             <li>
               <Link href="https://x.com/battoasty" target="_blank">
