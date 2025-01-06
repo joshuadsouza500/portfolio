@@ -120,7 +120,7 @@ export const Photography = ({ id, live }: CardProps) => {
           style={{ objectFit: "fill" }}
           className="h-full w-full rounded-md shadow-2xl shadow-black"
         >
-          <source src="/Photography.mp4" type="video/mp4" />
+          <source src="/Videos/Photography.mp4" type="video/mp4" />
         </video>
       </Link>
     </FeatureCard>
@@ -147,7 +147,7 @@ export const Restaurant = ({ id, live }: CardProps) => {
           style={{ objectFit: "fill" }}
           className="h-full w-full rounded-md shadow-2xl shadow-black"
         >
-          <source src="/Littlelemon.mp4" type="video/mp4" />
+          <source src="/Videos/Littlelemon.mp4" type="video/mp4" />
         </video>
       </Link>
     </FeatureCard>
@@ -172,7 +172,7 @@ export const Aurora = ({ id, live }: CardProps) => {
           style={{ objectFit: "fill" }}
           className="h-full w-full rounded-md shadow-2xl shadow-black"
         >
-          <source src="/Aurora.mp4" type="video/mp4" />
+          <source src="/Videos/Aurora.mp4" type="video/mp4" />
         </video>
       </Link>
     </FeatureCard>
@@ -199,7 +199,7 @@ export const Elevate = ({ id, live }: CardProps) => {
           style={{ objectFit: "fill" }}
           className="h-full w-full rounded-md shadow-2xl shadow-black"
         >
-          <source src="/Elevate2.mp4" type="video/mp4" />
+          <source src="/Videos/Elevate2.mp4" type="video/mp4" />
         </video>
       </Link>
     </FeatureCard>
@@ -226,7 +226,7 @@ export const NextClothing = ({ id, live }: CardProps) => {
           style={{ objectFit: "fill" }}
           className="h-full w-full rounded-md shadow-2xl shadow-black"
         >
-          <source src="/NextClothing.mp4" type="video/mp4" />
+          <source src="/Videos/NextClothing.mp4" type="video/mp4" />
         </video>
       </Link>
     </FeatureCard>

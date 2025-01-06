@@ -158,7 +158,7 @@ export default function About() {
         >
           <CertificateItem
             variants={CitemVariants}
-            imageUrl={"/Meta.pdf"}
+            imageUrl={"/pdff/Meta.pdf"}
             number="(01)"
             title="Meta Front-end Developer"
           />
@@ -170,13 +170,13 @@ export default function About() {
           />
           <CertificateItem
             variants={CitemVariants}
-            imageUrl={"/React.pdf"}
+            imageUrl={"/pdff/React.pdf"}
             number="(03)"
             title="Advanced React"
           />
           <CertificateItem
             variants={CitemVariants}
-            imageUrl={"/MongoDB.pdf"}
+            imageUrl={"/pdff/MongoDB.pdf"}
             number="(04)"
             title="Introduction to MongoDB"
           />
