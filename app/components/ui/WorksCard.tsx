@@ -212,7 +212,7 @@ export const NextClothing = ({ id, live }: CardProps) => {
       id={id}
       color=""
       live={live}
-      className="flex cursor-pointer items-center justify-center bg-[url('/Image3.jpg')] bg-cover bg-no-repeat"
+      className="flex cursor-pointer items-center justify-center bg-[url('/interior-min.jpg')] bg-cover bg-no-repeat"
     >
       <div className="absolute inset-0 rounded-2xl bg-black/20 bg-[url('/noise-light.png')] opacity-10" />
       <Link href={live} target="_blank" className="h-[70%] w-[90%] rounded-md">
