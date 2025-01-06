@@ -1,5 +1,11 @@
 import WorksTitle from "../ui/WorksTitle";
-import { Photography, Restaurant, Aurora, Elevate } from "../ui/WorksCard";
+import {
+  Photography,
+  Restaurant,
+  Aurora,
+  Elevate,
+  NextClothing,
+} from "../ui/WorksCard";
 import TextRevealByWord from "../magicui/text-reveal";
 import Bounded from "../Bounded";
 import SmallScroll from "../ui/SmallScroll";
@@ -57,11 +63,25 @@ const features = [
     live: "https://elevate-app-bh.vercel.app/",
     link: "https://github.com/joshuadsouza500/Elevate-app",
     cover: "/Image3.jpg",
-    vid: "/Elevate.mp4",
+    vid: "/Elevate2.mp4",
     tool1: "Reactjs",
     tool2: "TailwindCSS",
     tool3: "Framer Motion",
     card: Elevate,
+  },
+  {
+    id: "E-commerce",
+    title: "Project 05",
+    type: "E-commerce Website",
+    name: "Next Clothing",
+    live: "https://nextclothing.vercel.app/",
+    link: "https://github.com/joshuadsouza500/e-commerce",
+    cover: "/Image3.jpg",
+    vid: "/NextClothing.mp4",
+    tool1: "Reactjs",
+    tool2: "MongoDB",
+    tool3: "Nodejs",
+    card: NextClothing,
   },
 ];
 

@@ -199,7 +199,34 @@ export const Elevate = ({ id, live }: CardProps) => {
           style={{ objectFit: "fill" }}
           className="h-full w-full rounded-md shadow-2xl shadow-black"
         >
-          <source src="/Elevate.mp4" type="video/mp4" />
+          <source src="/Elevate2.mp4" type="video/mp4" />
+        </video>
+      </Link>
+    </FeatureCard>
+  );
+};
+
+export const NextClothing = ({ id, live }: CardProps) => {
+  return (
+    <FeatureCard
+      id={id}
+      color=""
+      live={live}
+      className="flex cursor-pointer items-center justify-center bg-[url('/Image3.jpg')] bg-cover bg-no-repeat"
+    >
+      <div className="absolute inset-0 rounded-2xl bg-black/20 bg-[url('/noise-light.png')] opacity-10" />
+      <Link href={live} target="_blank" className="h-[70%] w-[90%] rounded-md">
+        <video
+          width="400"
+          height="600"
+          preload="none"
+          autoPlay
+          muted
+          loop
+          style={{ objectFit: "fill" }}
+          className="h-full w-full rounded-md shadow-2xl shadow-black"
+        >
+          <source src="/NextClothing.mp4" type="video/mp4" />
         </video>
       </Link>
     </FeatureCard>
