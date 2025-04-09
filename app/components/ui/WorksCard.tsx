@@ -153,7 +153,7 @@ export const Restaurant = ({ id, live }: CardProps) => {
     </FeatureCard>
   );
 };
-export const Aurora = ({ id, live }: CardProps) => {
+export const Travelo = ({ id, live }: CardProps) => {
   return (
     <FeatureCard
       id={id}
@@ -172,7 +172,7 @@ export const Aurora = ({ id, live }: CardProps) => {
           style={{ objectFit: "fill" }}
           className="h-full w-full rounded-md shadow-2xl shadow-black"
         >
-          <source src="/Videos/Aurora.mp4" type="video/mp4" />
+          <source src="/Videos/Travelo.mp4" type="video/mp4" />
         </video>
       </Link>
     </FeatureCard>

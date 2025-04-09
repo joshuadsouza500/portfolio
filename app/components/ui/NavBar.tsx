@@ -178,7 +178,7 @@ export default function NavBar() {
           {/**Large screen home, about and contact */}
           <ul className="hidden items-center gap-x-6 text-left text-lg text-backgroundb md:flex">
             <li
-              className={`${isCurrentPage("/") ? "border-b-2 border-black" : ""}`}
+              className={`transition-all duration-200 ease-in-out ${isCurrentPage("/") ? "border-b-2 border-black" : ""}`}
             >
               <Link href={"/"} className="">
                 <TextFlip className="font-semibold leading-[0.85]">
@@ -187,7 +187,7 @@ export default function NavBar() {
               </Link>
             </li>
             <li
-              className={`${
+              className={`transition-all duration-200 ease-in-out ${
                 isCurrentPage("/about") ? "border-b-2 border-black" : ""
               }`}
             >
@@ -199,7 +199,7 @@ export default function NavBar() {
               </Link>
             </li>
 
-            <li className="rounded-3xl bg-backgroundb px-4 py-[10px] font-semibold leading-none text-backgroundw hover:scale-[.97] hover:shadow-lg 2xl:px-5 2xl:py-3">
+            <li className="rounded-3xl bg-backgroundb px-4 py-[10px] font-semibold leading-none text-backgroundw transition-all duration-200 ease-in-out hover:scale-[.97] hover:shadow-lg 2xl:px-5 2xl:py-3">
               <Link href={"/#CTA"}>Contact</Link>
             </li>
           </ul>
