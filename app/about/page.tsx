@@ -55,7 +55,7 @@ export default function About() {
   };
 
   return (
-    <Bounded className="h-full bg-gradient-to-br from-white to-gray-50 px-4 max-md:py-6 md:py-6 lg:py-6">
+    <Bounded className="h-full bg-gradient-to-br from-white to-white/95 px-4 max-md:py-6 md:py-6 lg:py-6">
       {/* About Me Section */}
       <section className="mb-16 2xl:mb-28 2xl:mt-8">
         <span className="inline-block overflow-hidden">
@@ -212,7 +212,7 @@ function CertificateItem({
           <span className="mr-3 text-sm text-gray-700">{number}</span>
           <span className="font-medium lg:text-lg 2xl:text-xl">{title}</span>
         </div>
-        <button className="flex size-6 items-center justify-center rounded-full text-gray-700 ring-1 ring-gray-300 transition-colors duration-200 ease-in-out group-hover:bg-green group-hover:text-white md:size-8">
+        <button className="flex size-6 items-center justify-center rounded-full text-gray-700 ring-1 ring-gray-300 transition-all duration-200 ease-in-out group-hover:bg-green group-hover:text-white md:size-8">
           <ArrowRight className="size-4 md:size-6" />
         </button>
       </MotionDiv>

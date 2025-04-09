@@ -181,7 +181,7 @@ export default function NavBar() {
               className={`transition-all duration-200 ease-in-out ${isCurrentPage("/") ? "border-b-2 border-black" : ""}`}
             >
               <Link href={"/"} className="">
-                <TextFlip className="font-semibold leading-[0.85]">
+                <TextFlip className="font-semibold leading-[0.82]">
                   Home
                 </TextFlip>
               </Link>
@@ -193,13 +193,13 @@ export default function NavBar() {
             >
               <Link href={"/about"}>
                 {" "}
-                <TextFlip className="font-semibold leading-[0.85]">
+                <TextFlip className="font-semibold leading-[0.82]">
                   About
                 </TextFlip>
               </Link>
             </li>
 
-            <li className="rounded-3xl bg-backgroundb px-4 py-[10px] font-semibold leading-none text-backgroundw transition-all duration-200 ease-in-out hover:scale-[.97] hover:shadow-lg 2xl:px-5 2xl:py-3">
+            <li className="rounded-3xl bg-backgroundb px-4 py-[10px] font-semibold leading-none text-backgroundw transition-all duration-200 ease-in-out hover:scale-[.97] hover:shadow 2xl:px-5 2xl:py-3">
               <Link href={"/#CTA"}>Contact</Link>
             </li>
           </ul>

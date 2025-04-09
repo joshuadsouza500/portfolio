@@ -40,7 +40,7 @@ function CTA() {
                 rest: { scale: 1 },
                 hover: { scale: 0.98 },
               }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              transition={{ duration: 0.4, delay: 0.2 }}
             >
               <AnimatedText
                 className={
@@ -76,7 +76,7 @@ function CTA() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="group flex items-center justify-center rounded-full border border-black/80 p-2 text-black transition-transform hover:scale-105 hover:bg-backgroundb hover:text-white"
+            className="group flex items-center justify-center rounded-full border border-black/80 p-2 text-black transition-all duration-200 ease-in-out hover:scale-105 hover:bg-backgroundb hover:text-white hover:shadow"
           >
             <ArrowUp className="size-4 transition-transform group-hover:scale-110 md:size-6" />
           </MotionB>
