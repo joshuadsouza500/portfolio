@@ -35,7 +35,7 @@ function Hero({ scrollYProgress }: props) {
  */}
           <AnimatedText
             className={
-              "overflow-hidden text-left text-2xl font-medium leading-6 text-backgroundb max-md:tracking-[0.015em] sm:text-balance sm:text-3xl sm:leading-4 md:w-[95%] md:text-4xl md:leading-3 lg:text-5xl lg:leading-3 xl:w-[80%] xl:tracking-wide 2xl:text-[56px] 2xl:tracking-wide"
+              "dark:backgroundb overflow-hidden text-left text-[28px] font-medium leading-7 text-backgroundb max-md:tracking-[0.015em] sm:text-balance sm:text-3xl sm:leading-4 md:w-[95%] md:text-4xl md:leading-3 lg:text-5xl lg:leading-3 xl:w-[80%] xl:tracking-wide 2xl:text-[56px] 2xl:tracking-wide"
             }
             text={`Hello! I’m Joshua, a web developer focused on creating modern, 
  user friendly websites.`}

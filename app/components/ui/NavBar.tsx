@@ -2,12 +2,7 @@
 import Link from "next/link";
 
 import React, { useState } from "react";
-import {
-  easeInOut,
-  motion,
-  useMotionValueEvent,
-  useScroll,
-} from "framer-motion";
+import { easeInOut, useScroll } from "framer-motion";
 import ButtonLink from "./ButtonLink";
 import { TextFlip } from "../magicui/TextFlip";
 import { MotionDiv, MotionNav, MotionUl } from "./Motion";
@@ -22,7 +17,7 @@ const menu = {
     transition: { duration: 0.75, type: "tween", ease: [0.76, 0, 0.24, 1] },
   },
   closed: {
-    width: "90px",
+    width: "80px",
     height: "35px",
     top: "2px",
     right: "2px",
@@ -62,8 +57,15 @@ export default function NavBar() {
   }
 
   function handleButton() {
+    if (active) {
+      // Delay the text change until the closing animation completes
+      setTimeout(() => {
+        setText("Menu");
+      }, 600); // Match the duration of the closing animation (750ms)
+    } else {
+      setText("Close");
+    }
     setActive(!active);
-    setText(text === "Menu" ? "Close" : "Menu");
   }
 
   return (
@@ -138,35 +140,22 @@ export default function NavBar() {
                     delay: 0.8,
                     duration: 0.4,
                   }}
-                  className="mx-1 pt-6 text-white/80"
+                  className="mx-1 pt-6 text-white/90"
                 >
                   <ul className="ml-4 grid cursor-pointer grid-cols-2 gap-1 text-left">
-                    <Link
-                      className="hover:scale-[.98]"
-                      target="_blank"
-                      href="https://www.instagram.com/"
-                    >
+                    <Link target="_blank" href="https://www.instagram.com/">
                       <TextFlip className="font-normal">Instagram</TextFlip>
                     </Link>
-                    <Link
-                      className="hover:scale-[.98]"
-                      target="_blank"
-                      href="https://www.Linkedin.com/"
-                    >
+                    <Link target="_blank" href="https://www.Linkedin.com/">
                       <TextFlip className="font-normal">Linkedin</TextFlip>
                     </Link>
                     <Link
-                      className="hover:scale-[.98]"
                       target="_blank"
                       href="https://github.com/joshuadsouza500/"
                     >
                       <TextFlip className="font-normal">Github</TextFlip>
                     </Link>
-                    <Link
-                      className="hover:scale-[.98]"
-                      target="_blank"
-                      href="https://x.com/battoasty"
-                    >
+                    <Link target="_blank" href="https://x.com/battoasty">
                       <TextFlip className="font-normal">Twitter</TextFlip>
                     </Link>
                   </ul>
@@ -301,28 +290,28 @@ export default function NavBar() {
               >
                 <ul className="grid cursor-pointer grid-cols-2 gap-1">
                   <Link
-                    className="hover:scale-[.98]"
+                    
                     target="_blank"
                     href="https://www.instagram.com/"
                   >
                     <TextFlip className="font-normal">Instagram</TextFlip>
                   </Link>
                   <Link
-                    className="hover:scale-[.98]"
+                    
                     target="_blank"
                     href="https://www.Linkedin.com/"
                   >
                     <TextFlip className="font-normal">Linkedin</TextFlip>
                   </Link>
                   <Link
-                    className="hover:scale-[.98]"
+                    
                     target="_blank"
                     href="https://github.com/joshuadsouza500/"
                   >
                     <TextFlip className="-ml-6 font-normal">Github</TextFlip>
                   </Link>
                   <Link
-                    className="hover:scale-[.98]"
+                    
                     target="_blank"
                     href="https://x.com/jdscodes04"
                   >

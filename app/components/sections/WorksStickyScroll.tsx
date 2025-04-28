@@ -32,7 +32,7 @@ const features = [
     id: "Portfolio",
     title: "Project 02",
     type: "Photography Portfolio",
-    name: "John Doe Photogrpahy",
+    name: "Photographer Portfolio",
     live: "https://photographybh.vercel.app/",
     link: "https://github.com/joshuadsouza500/Photography",
     cover: "/Image8.jpeg",

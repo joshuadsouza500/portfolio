@@ -106,7 +106,7 @@ function ToolBox() {
       style={{ scaleX }}
       className="relative -mt-1 rounded-b-3xl bg-backgroundb max-md:pb-14 md:pb-12"
     >
-      <div className="absolute inset-0 mb-6 rounded-b-3xl bg-black bg-[url('/noise-light.png')] opacity-15" />
+      <div className="absolute inset-0 mb-1 rounded-b-3xl bg-black bg-[url('/noise-light.png')] opacity-15" />
       <Bounded className="px-4 py-8">
         <div className="grid h-fit w-full grid-cols-1 gap-2 lg:gap-6 xl:w-[90%]">
           <MHeading
