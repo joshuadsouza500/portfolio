@@ -31,15 +31,26 @@ const menu = {
 };
 
 export default function NavBar() {
-  const [hidden, setHidden] = useState<boolean>(false);
+  //const [hidden, setHidden] = useState<boolean>(false);
   const [active, setActive] = useState<boolean>(false);
-  const [text, setText] = useState<string>("Menu");
-
+  const [text, setText] = useState("Menu");
   const { scrollY } = useScroll();
   const pathName = usePathname();
   // Helper function to check if the route matches the current page
 
   const isCurrentPage = (path: string) => pathName === path;
+
+  function handleButton() {
+    if (active) {
+      // Delay the text change until the closing animation completes
+      setTimeout(() => {
+        setText("Menu");
+      }, 600); // Match the duration of the closing animation (750ms)
+    } else {
+      setText("Close"); // Update state immediately when opening
+    }
+    setActive(!active); // Toggle the active state
+  }
 
   //The motion value event shows when anything changes so when the scroll position changes it is notified.//
   {
@@ -54,18 +65,6 @@ export default function NavBar() {
       setHidden(false);
     }
   }); */
-  }
-
-  function handleButton() {
-    if (active) {
-      // Delay the text change until the closing animation completes
-      setTimeout(() => {
-        setText("Menu");
-      }, 600); // Match the duration of the closing animation (750ms)
-    } else {
-      setText("Close");
-    }
-    setActive(!active);
   }
 
   return (
@@ -97,13 +96,10 @@ export default function NavBar() {
           <MotionDiv
             className="absolute z-20 cursor-pointer rounded-3xl bg-backgroundb text-center md:hidden"
             variants={menu}
+            initial={active ? "open" : "closed"} //Aded initial otherwise it animated from left-0 by default
             animate={active ? "open" : "closed"}
           >
-            <ButtonLink
-              text={text}
-              active={active}
-              handleButton={handleButton}
-            />
+            <ButtonLink text={text} handleButton={handleButton} />
             {active && (
               <>
                 <MotionNav
@@ -118,17 +114,37 @@ export default function NavBar() {
                   className="pt-16 text-white sm:pt-20"
                 >
                   <MotionUl className="ml-4 space-y-2 text-left text-3xl font-medium">
-                    <li className="">
+                    <li
+                      className="hover:text-white/80"
+                      onClick={() => {
+                        handleButton();
+                      }}
+                    >
                       <Link href={"/"}>Home</Link>
                     </li>
-                    <li className="">
+                    <li
+                      className="hover:text-white/80"
+                      onClick={() => {
+                        handleButton();
+                      }}
+                    >
                       <Link href={"/about"}> About</Link>
                     </li>
-                    <li className="">
-                      <Link href={"#Services"}> Services</Link>
+                    <li
+                      className="hover:text-white/80"
+                      onClick={() => {
+                        handleButton();
+                      }}
+                    >
+                      <Link href={"/#Services"}> Services</Link>
                     </li>
-                    <li className="">
-                      <Link href={"#CTA"}> Contact</Link>
+                    <li
+                      className="hover:text-white/80"
+                      onClick={() => {
+                        handleButton();
+                      }}
+                    >
+                      <Link href={"/#CTA"}> Contact</Link>
                     </li>
                   </MotionUl>
                 </MotionNav>
@@ -192,139 +208,16 @@ export default function NavBar() {
               <Link href={"/#CTA"}>Contact</Link>
             </li>
           </ul>
+          {active && (
+            <div
+              className="fixed inset-0 z-10 h-dvh bg-black opacity-10 transition-all duration-200 ease-in"
+              onClick={() => {
+                handleButton();
+              }}
+            ></div>
+          )}
         </div>
       </MotionNav>
     </>
   );
-}
-
-{
-  /**
-    <>
-   
-
-      <MotionNav
-        className="sticky inset-x-0 top-0 z-20 mx-auto flex items-center justify-between gap-4 border-b border-black bg-[#e2e8f00a] px-2 py-3 text-black backdrop-blur-sm md:flex-row md:px-20 2xl:px-36"
-        variants={{
-          hidden: {
-            y: -100,
-          },
-          visible: {
-            y: 0,
-          },
-        }}
-        animate={hidden ? "hidden" : "visible"}
-        transition={{ duration: 0.6, ease: easeInOut }}
-      >
-        <Link
-          href={"/"}
-          className="flex flex-col justify-center pl-2 text-center"
-        >
-          <div className="h-10 w-8 bg-[url('/Logo.svg')] bg-no-repeat" />
-        </Link>
-
-
-
-        <MotionDiv
-          className="fixed right-1 top-2 z-20 cursor-pointer rounded-3xl bg-black text-center"
-          variants={menu}
-          animate={active ? "open" : "closed"}
-        >
-          <ButtonLink text={text} active={active} handleButton={handleButton} />
-          {active && (
-            <>
-              <MotionNav
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{
-                  delay: 0.6,
-                  duration: 0.6,
-                  ease: "easeIn",
-                }}
-                className="left-2 pt-14 text-white sm:pt-20"
-              >
-                <motion.ul className="text-left text-4xl font-medium">
-                  <li className="">
-                    <Link href={"/"}>
-                      <TextFlip className="font-semibold leading-[0.95]">
-                        Home
-                      </TextFlip>
-                    </Link>
-                  </li>
-                  <li className="">
-                    <Link href={"#Services"}>
-                      {" "}
-                      <TextFlip className="font-semibold leading-[0.95]">
-                        Services
-                      </TextFlip>
-                    </Link>
-                  </li>
-                  <li className="">
-                    <Link href={"#Works"}>
-                      {" "}
-                      <TextFlip className="font-semibold leading-[0.95]">
-                        Works
-                      </TextFlip>
-                    </Link>
-                  </li>
-                  <li className="">
-                    <Link href={"#CTA"}>
-                      {" "}
-                      <TextFlip className="font-semibold leading-[0.95]">
-                        Contact
-                      </TextFlip>
-                    </Link>
-                  </li>
-                </motion.ul>
-              </MotionNav>
-              <MotionNav
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{
-                  delay: 0.8,
-                  duration: 0.4,
-                }}
-                className="mx-2 pt-8 text-white/80"
-              >
-                <ul className="grid cursor-pointer grid-cols-2 gap-1">
-                  <Link
-                    
-                    target="_blank"
-                    href="https://www.instagram.com/"
-                  >
-                    <TextFlip className="font-normal">Instagram</TextFlip>
-                  </Link>
-                  <Link
-                    
-                    target="_blank"
-                    href="https://www.Linkedin.com/"
-                  >
-                    <TextFlip className="font-normal">Linkedin</TextFlip>
-                  </Link>
-                  <Link
-                    
-                    target="_blank"
-                    href="https://github.com/joshuadsouza500/"
-                  >
-                    <TextFlip className="-ml-6 font-normal">Github</TextFlip>
-                  </Link>
-                  <Link
-                    
-                    target="_blank"
-                    href="https://x.com/jdscodes04"
-                  >
-                    <TextFlip className="font-normal">Twitter</TextFlip>
-                  </Link>
-                </ul>
-              </MotionNav>
-            </>
-          )}
-        </MotionDiv>
-
-      
-      </MotionNav>
-    </>
-  */
 }

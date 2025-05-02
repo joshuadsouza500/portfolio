@@ -49,7 +49,9 @@ export default function RootLayout({
         name="google-site-verification"
         content="m3YkuK-Y4S-R_8lvq_jMpg2khDcoUQJKPe0TmD0r9ms"
       />
-      <meta name="twitter:image" content="/OpenGraph2.jpeg"></meta>
+      <meta name="twitter:image" content="/OpenGraph2.jpeg" />
+      <meta name="author" content="Joshua Dsouza" />
+      <meta name="application-name" content="Joshua Dsouza Portfolio" />
       <link rel="icon" href="/Logo.svg" />
       <body className="bg-backgroundw font-Manrope">
         <link

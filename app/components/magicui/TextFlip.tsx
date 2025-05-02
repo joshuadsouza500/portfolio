@@ -23,7 +23,7 @@ export const TextFlip = ({ children, href, className }: Props) => {
     >
       <div>
         {/* We use the split method on empty string and then map over each letter to perform animations */}
-        {children.split("").map((l, i) => {
+        {children?.split("").map((l, i) => {
           return (
             <MotionSpan
               variants={{
