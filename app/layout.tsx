@@ -7,7 +7,7 @@ import { LoaderProvider } from "./utils/LoaderContext";
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Joshua Dsouza",
+    template: "%s | Joshua D'souza",
     default: "Joshua Dsouza",
   },
   description:
@@ -16,14 +16,14 @@ export const metadata: Metadata = {
     google: "m3YkuK-Y4S-R_8lvq_jMpg2khDcoUQJKPe0TmD0r9ms",
   },
   keywords: [
-    "Web development, bahrain, front-end development, freelance, SEO, Web design, Reactjs",
+    "Web development, freelance web developer , bahrain, front-end development, freelance, SEO, Web design, Reactjs",
   ],
   robots: {
     index: true,
     follow: true,
   },
   openGraph: {
-    title: "Joshua Dsouza",
+    title: "Joshua D'souza",
     description:
       "Hey, I am Joshua, a Web developer with a passion for creating dynamic and responsive websites that enhance user experience. Based in bahrain.",
     images: "/OpenGraph2.jpeg",
