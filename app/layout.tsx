@@ -7,7 +7,7 @@ import { LoaderProvider } from "./utils/LoaderContext";
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Joshua D'souza",
+    template: "%s | Joshua Dsouza",
     default: "Joshua Dsouza",
   },
   description:
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: "Joshua D'souza",
+    title: "Joshua Dsouza",
     description:
       "Hey, I am Joshua, a Web developer with a passion for creating dynamic and responsive websites that enhance user experience. Based in bahrain.",
     images: "/OpenGraph2.jpeg",
