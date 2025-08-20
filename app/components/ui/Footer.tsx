@@ -22,7 +22,10 @@ export const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link href="https://www.Linkedin.com/" target="_blank">
+              <Link
+                href="https://bh.linkedin.com/in/joshua-dsouza-92968735b"
+                target="_blank"
+              >
                 Linkedin •
               </Link>
             </li>
@@ -37,7 +40,7 @@ export const Footer = () => {
               </Link>
             </li>
           </ul>
-          {/**Md: foote */}
+          {/**Md: footer */}
           <ul
             tabIndex={0}
             className="hidden flex-row gap-2 py-2 text-sm text-black/100 md:flex lg:gap-4 lg:text-lg"
@@ -50,7 +53,10 @@ export const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link href="https://www.Linkedin.com/" target="_blank">
+              <Link
+                href="https://bh.linkedin.com/in/joshua-dsouza-92968735b"
+                target="_blank"
+              >
                 <TextFlip className="font-semibold max-md:text-xs">
                   Linkedin
                 </TextFlip>

@@ -100,7 +100,7 @@ const FeatureCard = ({
   );
 };
 
-export const Photography = ({ id, live }: CardProps) => {
+export const Homespace = ({ id, live }: CardProps) => {
   return (
     <FeatureCard
       id={id}
@@ -120,7 +120,7 @@ export const Photography = ({ id, live }: CardProps) => {
           style={{ objectFit: "fill" }}
           className="h-full w-full rounded-md shadow-2xl shadow-black"
         >
-          <source src="/Videos/Photography.mp4" type="video/mp4" />
+          <source src="/Videos/Homespace_demo.mp4" type="video/mp4" />
         </video>
       </Link>
     </FeatureCard>

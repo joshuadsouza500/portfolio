@@ -1,6 +1,6 @@
 import WorksTitle from "../ui/WorksTitle";
 import {
-  Photography,
+  Homespace,
   Restaurant,
   Elevate,
   NextClothing,
@@ -14,8 +14,23 @@ import AnimatedText, { SlideP } from "../ui/MotionText";
 
 const features = [
   {
-    id: "E-commerce Website",
+    id: "Property Finder",
     title: "Project 01",
+    type: "Property Finder",
+    name: "Homespace",
+    live: "https://homespace-bh.onrender.com",
+    link: "https://github.com/joshuadsouza500/Homespace",
+    cover: "/Image8.jpeg",
+    vid: "/Videos/Homespace_demo.mp4",
+    tool1: "MongoDB",
+    tool2: "Expressjs",
+    tool3: "Reactjs",
+    tool4: "Nodejs",
+    card: Homespace,
+  },
+  {
+    id: "E-commerce Website",
+    title: "Project 02",
     type: "E-commerce",
     name: "Next Clothing",
     live: "https://nextclothing.vercel.app/",
@@ -27,20 +42,6 @@ const features = [
     tool3: "Reactjs",
     tool4: "Nodejs",
     card: NextClothing,
-  },
-  {
-    id: "Portfolio",
-    title: "Project 02",
-    type: "Photography Portfolio",
-    name: "Photographer Portfolio",
-    live: "https://photographybh.vercel.app/",
-    link: "https://github.com/joshuadsouza500/Photography",
-    cover: "/Image8.jpeg",
-    vid: "/Videos/Photography.mp4",
-    tool1: "Nextjs",
-    tool2: "Cotentful",
-    tool3: "Framer Motion",
-    card: Photography,
   },
 
   {

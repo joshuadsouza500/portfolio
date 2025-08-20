@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Download } from "lucide-react";
 import Bounded from "../components/Bounded";
-import { MHeading } from "../components/ui/MotionText";
 import {
   MotionB,
   MotionDiv,
@@ -122,10 +121,10 @@ export default function About() {
               understanding of this area.
             </MotionP>
             <MotionB
-              className="mt-4 flex items-center gap-2 rounded-3xl bg-gradient-to-br from-backgroundb to-zinc-800 px-4 py-2 text-backgroundw transition-colors hover:bg-backgroundb/90 hover:shadow-lg"
+              className="mt-4 flex items-center gap-2 rounded-3xl bg-backgroundb px-4 py-1.5 text-sm text-backgroundw transition-all duration-200 ease-in-out hover:scale-[.97] hover:shadow"
               variants={childVariants}
             >
-              <Download size={20} />
+              <Download size={18} />
               Resume
             </MotionB>
           </div>
@@ -212,31 +211,10 @@ function CertificateItem({
           <span className="mr-3 text-sm text-gray-700">{number}</span>
           <span className="font-medium lg:text-lg 2xl:text-xl">{title}</span>
         </div>
-        <button className="flex size-6 items-center justify-center rounded-full text-gray-700 ring-1 ring-gray-300 transition-all duration-200 ease-in-out group-hover:bg-green group-hover:text-white md:size-8">
+        <button className="flex size-6 items-center justify-center rounded-full text-gray-700 ring-1 ring-gray-300 transition-all duration-300 ease-in-out group-hover:bg-green group-hover:text-white md:size-8">
           <ArrowRight className="size-4 md:size-6" />
         </button>
       </MotionDiv>
     </a>
   );
-}
-
-{
-  /**{
-  /** <MotionDiv
-            className="col-span-1 mx-auto h-[200px] w-[30%] rounded-lg bg-red-300 max-md:mr-10 md:h-full md:w-[80%] lg:w-[75%] 2xl:h-[95%] 2xl:w-[65%]"
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, ease: "easeIn" }}
-            variants={imageVariants}
-          >
-            <Image
-              src="/me5.jpeg"
-              width={300}
-              height={400}
-              alt="Profile photo"
-              className="h-full w-full rounded-lg object-cover"
-              priority
-            />
-          </MotionDiv> */
 }

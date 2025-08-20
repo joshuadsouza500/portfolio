@@ -162,7 +162,10 @@ export default function NavBar() {
                     <Link target="_blank" href="https://www.instagram.com/">
                       <TextFlip className="font-normal">Instagram</TextFlip>
                     </Link>
-                    <Link target="_blank" href="https://www.Linkedin.com/">
+                    <Link
+                      target="_blank"
+                      href="https://bh.linkedin.com/in/joshua-dsouza-92968735b"
+                    >
                       <TextFlip className="font-normal">Linkedin</TextFlip>
                     </Link>
                     <Link
