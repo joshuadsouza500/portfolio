@@ -35,8 +35,8 @@ export const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link href={`https://wa.me/97336158093`} target="_blank">
-                Whatsapp
+              <Link href={`https://instagram.com`} target="_blank">
+                Instagram
               </Link>
             </li>
           </ul>
@@ -70,9 +70,9 @@ export const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link href={`https://wa.me/97336158093`} target="_blank">
+              <Link href={`https://instagram.com`} target="_blank">
                 <TextFlip className="font-semibold max-md:text-xs">
-                  Whatsapp
+                  Instagram
                 </TextFlip>
               </Link>
             </li>
