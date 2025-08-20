@@ -93,36 +93,3 @@ export const Footer = () => {
     </footer>
   );
 };
-
-{
-  /** <div className="hidden">
-          <ul
-            tabIndex={0}
-            className="flex flex-col gap-1 py-2 text-black/80 md:flex-row md:gap-2 lg:gap-4 lg:text-xl"
-          >
-            <li>
-              <Link href="/">
-                {" "}
-                <TextFlip className="font-medium">Home</TextFlip>
-              </Link>
-            </li>
-            <li>
-              <Link href="/about">
-                {" "}
-                <TextFlip className="font-medium">Services</TextFlip>
-              </Link>
-            </li>
-            <li>
-              <Link href="/gallery">
-                {" "}
-                <TextFlip className="font-medium">Works</TextFlip>
-              </Link>
-            </li>
-            <li>
-              <Link href="/contact">
-                <TextFlip className="font-medium">Contact</TextFlip>
-              </Link>
-            </li>
-          </ul>
-        </div> */
-}
