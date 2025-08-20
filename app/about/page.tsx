@@ -121,7 +121,7 @@ export default function About() {
               understanding of this area.
             </MotionP>
             <MotionB
-              className="mt-4 flex items-center gap-2 rounded-3xl bg-backgroundb px-4 py-1.5 text-sm text-backgroundw transition-all duration-200 ease-in-out hover:scale-[.97] hover:shadow"
+              className="mt-4 flex items-center gap-2 rounded-3xl bg-backgroundb px-4 py-2 text-backgroundw transition-all duration-200 ease-in-out hover:scale-[.97] hover:shadow"
               variants={childVariants}
             >
               <Download size={18} />
