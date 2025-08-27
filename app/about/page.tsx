@@ -91,7 +91,7 @@ export default function About() {
             />
           </MotionDiv>
 
-          <div className="col-span-2 w-[95%] space-y-4 text-pretty font-medium tracking-wide max-md:mx-auto max-md:pb-2 max-md:leading-relaxed lg:w-[70%] xl:w-[80%] xl:text-lg 2xl:text-xl">
+          <div className="col-span-2 w-[95%] space-y-4 font-medium tracking-wide max-md:mx-auto max-md:text-balance max-md:pb-2 max-md:leading-relaxed md:text-pretty lg:w-[70%] xl:w-[80%] xl:text-lg 2xl:text-xl">
             <MotionP
               className="pb-1 text-backgroundb/70"
               variants={childVariants}
@@ -152,7 +152,7 @@ export default function About() {
         </span>
 
         <MotionDiv
-          className="col-span-2 mx-2 space-y-4 2xl:w-[90%] 2xl:pt-20"
+          className="col-span-2 mx-2 2xl:w-[90%] 2xl:pt-20"
           variants={containerVariants}
           initial="hidden"
           whileInView="show"
@@ -207,7 +207,7 @@ function CertificateItem({
       className="block" // Ensures the full area is clickable
     >
       <MotionDiv
-        className="group mx-auto flex cursor-pointer items-center justify-between border-b border-gray-200 py-4 md:w-[90%] lg:w-full"
+        className="group mx-auto flex cursor-pointer items-center justify-between border-b border-gray-200 py-5 md:w-[90%] md:py-6 lg:w-full"
         variants={variants}
       >
         <div className="flex items-center">
