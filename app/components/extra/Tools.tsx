@@ -1,10 +1,8 @@
 import React from "react";
 import Bounded from "../Bounded";
 
-import Scroller from "./Scroller";
 import { skilldata } from "./data";
 import Image from "next/image";
-import { motion } from "framer-motion";
 
 function Tools() {
   return (

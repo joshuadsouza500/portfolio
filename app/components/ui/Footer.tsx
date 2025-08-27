@@ -4,6 +4,9 @@ import Link from "next/link";
 import { TextFlip } from "../magicui/TextFlip";
 
 export const Footer = () => {
+  const date = new Date();
+  const currentYear = date.getFullYear();
+
   return (
     <footer
       className="pt-` mx-auto border-t border-black/10 bg-backgroundw max-md:pb-1"
@@ -78,15 +81,12 @@ export const Footer = () => {
             </li>
           </ul>
 
-          <h6 className="hidden text-[10px] font-medium tracking-wide text-backgroundb/95">
-            &copy; JoshuaDs 2024
-          </h6>
-          <h6 className="hidden text-xs font-semibold tracking-wide text-backgroundb/95 md:block 2xl:text-sm">
+          <h6 className="hidden font-semibold tracking-wide text-backgroundb/95 md:block">
             JoshuaDs
             <span className="text-xs" style={{ verticalAlign: "super" }}>
               &copy;
             </span>
-            2024
+            {currentYear}
           </h6>
         </div>
       </div>

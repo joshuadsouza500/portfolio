@@ -46,7 +46,7 @@ function Service() {
     React.useState<string>("web-development");
   return (
     <Bounded className="relative h-full rounded-t-3xl bg-backgroundb px-4 max-md:pb-20">
-      <div className="absolute inset-0 bg-black bg-[url('/noise-light.png')] opacity-15" />
+      <div className="absolute inset-0 rounded-t-3xl bg-black bg-[url('/noise-light.png')] opacity-15" />
       <div className="grid h-fit w-full grid-cols-1 gap-2 xl:w-[90%]">
         <MHeading
           className={

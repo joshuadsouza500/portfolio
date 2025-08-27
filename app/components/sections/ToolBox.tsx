@@ -123,7 +123,7 @@ function ToolBox() {
             STAGGER={0.01}
             Y={`70%`}
             text={
-              "These are some of the tools i use to create responsive user friendly websites"
+              "These are some of the tools I use to develop user-friendly, responsive websites"
             }
           />
         </div>

@@ -24,15 +24,6 @@ function Hero({ scrollYProgress }: props) {
           style={{ scale, opacity }}
           className="text-primary sticky top-16 mx-auto flex h-[90vh] w-full max-w-5xl flex-col justify-end px-4 pb-16 md:px-6 lg:pb-10 xl:max-w-6xl 2xl:max-w-8xl 2xl:pb-24"
         >
-          {/** Main content   
-      <MotionText text="Hello! I’m Joshua, a web " delay={0.3} />
-      <MotionText
-        text="developer specializing in crafting modern,"
-        delay={0.4}
-        className="lg:my-1 lg:pb-1"
-      />
-      <MotionText text="human-centered websites." delay={0.45} />
- */}
           <AnimatedText
             className={
               "dark:backgroundb overflow-hidden text-left text-[28px] font-medium leading-7 text-backgroundb max-md:tracking-[0.015em] sm:text-balance sm:text-3xl sm:leading-4 md:w-[95%] md:text-4xl md:leading-3 lg:text-5xl lg:leading-3 xl:w-[80%] xl:tracking-wide 2xl:text-[56px] 2xl:tracking-wide"

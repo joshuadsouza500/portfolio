@@ -2,13 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Download } from "lucide-react";
 import Bounded from "../components/Bounded";
-import {
-  MotionB,
-  MotionDiv,
-  Motionh2,
-  Motionh3,
-  MotionP,
-} from "../components/ui/Motion";
+import { MotionB, MotionDiv, Motionh2, MotionP } from "../components/ui/Motion";
 
 export default function About() {
   const imageVariants = {
@@ -54,9 +48,9 @@ export default function About() {
   };
 
   return (
-    <Bounded className="h-full bg-gradient-to-br from-white to-white/95 px-4 max-md:py-6 md:py-6 lg:py-6">
+    <Bounded className="h-full bg-backgroundw px-4 max-md:py-2 md:py-6 lg:py-4">
       {/* About Me Section */}
-      <section className="mb-16 2xl:mb-28 2xl:mt-8">
+      <section className="mb-16 2xl:mb-28">
         <span className="inline-block overflow-hidden">
           <Motionh2
             initial={{ y: "100%", opacity: 0.4 }}
@@ -67,7 +61,7 @@ export default function About() {
             }}
             viewport={{ once: true }}
             className={
-              "pl-1 text-4xl font-bold tracking-tight md:text-5xl md:font-semibold lg:text-6xl xl:w-96 xl:pl-[6%] 2xl:text-6xl"
+              "pl-1 text-4xl font-bold tracking-tight md:text-5xl md:font-semibold xl:w-96 xl:pl-[8%] xl:text-6xl"
             }
           >
             About Me
@@ -81,7 +75,7 @@ export default function About() {
           viewport={{ once: true, amount: 0.5 }}
         >
           <MotionDiv
-            className="col-span-1 mx-auto h-full w-[80%] rounded-lg sm:w-full md:w-[80%] lg:w-[75%] 2xl:h-[95%] 2xl:w-[65%]"
+            className="col-span-1 mx-auto h-full w-[80%] rounded-lg max-md:mt-2 2xl:w-[70%]"
             initial="hidden"
             animate="show"
             transition={{ delay: 0.1, duration: 0.8, ease: "easeIn" }}
@@ -97,9 +91,7 @@ export default function About() {
             />
           </MotionDiv>
 
-          {/* Image for smaller screens */}
-
-          <div className="col-span-2 w-[95%] space-y-4 text-balance font-medium tracking-wide max-md:mx-auto max-md:pb-2 max-md:leading-relaxed lg:w-[70%] xl:w-[80%] xl:text-lg 2xl:text-xl">
+          <div className="col-span-2 w-[95%] space-y-4 text-pretty font-medium tracking-wide max-md:mx-auto max-md:pb-2 max-md:leading-relaxed lg:w-[70%] xl:w-[80%] xl:text-lg 2xl:text-xl">
             <MotionP
               className="pb-1 text-backgroundb/70"
               variants={childVariants}
@@ -120,12 +112,23 @@ export default function About() {
               {`I'm`} currently diving into back-end development to deepen my
               understanding of this area.
             </MotionP>
+
             <MotionB
-              className="mt-4 flex items-center gap-2 rounded-3xl bg-backgroundb px-4 py-2 text-backgroundw transition-all duration-200 ease-in-out hover:scale-[.97] hover:shadow"
+              className="mt-4 rounded-3xl bg-backgroundb px-4 py-2 text-backgroundw hover:shadow"
+              whileHover={{ scale: 0.98, boxShadow: "some-shadow-value" }}
+              transition={{ duration: 0.2, ease: "easeInOut" }}
               variants={childVariants}
             >
-              <Download size={18} />
-              Resume
+              <a
+                href={"/pdf/Resume.pdf"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2"
+              >
+                {" "}
+                <Download size={18} />
+                Resume
+              </a>
             </MotionB>
           </div>
         </MotionDiv>
@@ -157,7 +160,7 @@ export default function About() {
         >
           <CertificateItem
             variants={CitemVariants}
-            imageUrl={"/pdff/Meta.pdf"}
+            imageUrl={"/pdf/Meta.pdf"}
             number="(01)"
             title="Meta Front-end Developer"
           />
@@ -169,13 +172,13 @@ export default function About() {
           />
           <CertificateItem
             variants={CitemVariants}
-            imageUrl={"/pdff/React.pdf"}
+            imageUrl={"/pdf/React.pdf"}
             number="(03)"
             title="Advanced React"
           />
           <CertificateItem
             variants={CitemVariants}
-            imageUrl={"/pdff/MongoDB.pdf"}
+            imageUrl={"/pdf/MongoDB.pdf"}
             number="(04)"
             title="Introduction to MongoDB"
           />
@@ -204,14 +207,14 @@ function CertificateItem({
       className="block" // Ensures the full area is clickable
     >
       <MotionDiv
-        className="group mx-auto flex cursor-pointer items-center justify-between border-b border-gray-200 py-4 md:w-[80%] lg:w-full"
+        className="group mx-auto flex cursor-pointer items-center justify-between border-b border-gray-200 py-4 md:w-[90%] lg:w-full"
         variants={variants}
       >
         <div className="flex items-center">
           <span className="mr-3 text-sm text-gray-700">{number}</span>
           <span className="font-medium lg:text-lg 2xl:text-xl">{title}</span>
         </div>
-        <button className="flex size-6 items-center justify-center rounded-full text-gray-700 ring-1 ring-gray-300 transition-all duration-300 ease-in-out group-hover:bg-green group-hover:text-white md:size-8">
+        <button className="flex size-6 items-center justify-center rounded-full text-gray-700 ring-1 ring-gray-300 transition-all duration-300 ease-in-out group-hover:bg-backgroundb group-hover:text-white md:size-8">
           <ArrowRight className="size-4 md:size-6" />
         </button>
       </MotionDiv>
