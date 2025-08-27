@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import NavBar from "./components/ui/NavBar";
-import { Footer } from "./components/ui/Footer";
 import Initial from "./components/Initial";
 import { LoaderProvider } from "./utils/LoaderContext";
+import FooterSelector from "./components/sections/CTA";
 
 export const metadata: Metadata = {
   title: {
@@ -60,11 +60,10 @@ export default function RootLayout({
           href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
         />
         <LoaderProvider>
-          {/***/}
           <Initial />
           <NavBar />
           {children}
-          <Footer />
+          <FooterSelector />
         </LoaderProvider>
       </body>
     </html>

@@ -133,7 +133,7 @@ export const Restaurant = ({ id, live }: CardProps) => {
       id={id}
       color=""
       live={live}
-      className="flex cursor-pointer items-center justify-center bg-[url('/Image5.webp')] bg-cover bg-no-repeat"
+      className="flex cursor-pointer items-center justify-center bg-[url('/Image8.jpeg')] bg-cover bg-no-repeat"
     >
       <Link href={live} target="_blank" className="h-[70%] w-[90%] rounded-md">
         <div className="absolute inset-0 rounded-2xl bg-black/20 bg-[url('/noise-light.png')] opacity-20" />

@@ -31,29 +31,23 @@ export default function Home() {
   }, []);
 
   return (
-    <main ref={container} className="relative">
+    <main ref={container} className="relative z-10">
       <Hero scrollYProgress={scrollYProgress} />
       <Service />
       <WorksStickyScroll />
       <ToolBox />
-      <CTA />
+
+      {/*       <CTA /> */}
     </main>
   );
 }
 
 {
   /**FIXES
-   * contact button 
-   * toolbox spacing
+   *  Add clamp to more stuff maybe to Project 01 etc
+   *  Accessability and remve redundant code
    * 
 
 
-*/
-}
-
-{
-  /**
-TO DO
-1. Smooth scroll to section on navigation button click 
 */
 }

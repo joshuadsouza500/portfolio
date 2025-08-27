@@ -50,7 +50,7 @@ function Service() {
       <div className="grid h-fit w-full grid-cols-1 gap-2 xl:w-[90%]">
         <MHeading
           className={
-            "overflow-hidden text-5xl font-bold tracking-tight text-backgroundw/80 md:text-6xl lg:text-7xl 2xl:text-8xl"
+            "overflow-hidden text-[clamp(3rem,3vw+2rem,4.5rem)] font-bold tracking-tight text-backgroundw/80 2xl:text-8xl"
           }
           text={"What I Do"}
           duration={0.7}

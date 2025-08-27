@@ -1,18 +1,27 @@
+"use client";
 import React from "react";
-
-import Link from "next/link";
 
 import { ArrowUp, Mail } from "lucide-react";
 import { MotionB, MotionDiv, MotionLink } from "../ui/Motion";
 import AnimatedText, { MHeading, SlideP } from "../ui/MotionText";
+import { usePathname } from "next/navigation";
+import { Footer } from "../ui/Footer";
+
+function FooterSelector() {
+  const pathname = usePathname();
+  return pathname === "/" ? <CTA /> : <Footer />;
+}
+
+export default FooterSelector;
 
 function CTA() {
   return (
     <div
       id="CTA"
-      className="relative mx-auto flex h-auto flex-col justify-center bg-backgroundw px-4 pt-16 max-lg:pb-6 md:max-w-5xl md:px-6 lg:pb-6 xl:max-w-6xl xl:pt-20 2xl:h-[55vh] 2xl:max-w-8xl 2xl:pb-2"
+      aria-label="Call to Action Section"
+      className="fixed bottom-0 left-0 right-0 z-0 flex h-auto min-h-[clamp(320px,40vh,420px)] w-full flex-col justify-end bg-backgroundw pt-16 lg:min-h-[clamp(450px,63vh,600px)]"
     >
-      <div className="cursor-pointer">
+      <div className="mx-auto flex w-full cursor-pointer flex-col justify-center px-4 pb-6 md:max-w-5xl md:px-6 xl:max-w-6xl 2xl:max-w-8xl 2xl:pb-16">
         {" "}
         <div className="space-y-2 2xl:space-y-3">
           <SlideP
@@ -41,6 +50,7 @@ function CTA() {
                 hover: { scale: 0.98 },
               }}
               transition={{ duration: 0.4, delay: 0.2 }}
+              aria-label="Send an email to jdscodes04@gmail.com"
             >
               <AnimatedText
                 className={
@@ -67,6 +77,7 @@ function CTA() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             className="group flex items-center space-x-1 text-lg font-medium text-black/55 transition-colors hover:text-backgroundb md:space-x-2 md:text-2xl lg:text-3xl"
+            aria-label="Send an email to jdscodes04@gmail.com"
           >
             <Mail className="size-5 transition-transform group-hover:scale-105 md:size-6" />
             <span>jdscodes@gmail.com</span>
@@ -77,13 +88,13 @@ function CTA() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             className="group flex items-center justify-center rounded-full border border-black/80 p-2 text-black transition-all duration-200 ease-in-out hover:scale-105 hover:bg-backgroundb hover:text-white hover:shadow"
+            aria-label="scroll to top"
           >
             <ArrowUp className="size-4 transition-transform group-hover:scale-110 md:size-6" />
           </MotionB>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
-
-export default CTA;

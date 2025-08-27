@@ -14,7 +14,6 @@ import {
   TailwindIcon,
 } from "../svgs/Icons";
 import Bounded from "../Bounded";
-import { title } from "process";
 import AnimatedText, { MHeading, SlideP } from "../ui/MotionText";
 import { MotionDiv, Motionh2, Motionh3 } from "../ui/Motion";
 
@@ -100,23 +99,25 @@ function ToolBox() {
 
   /** Here we use the scroll y value of the ref container(screen) and change the Xsize based on scroll     <Skills />   <h2 className="text-5xl font-bold tracking-tight text-backgroundw/80 md:text-6xl lg:text-7xl xl:text-center 2xl:text-8xl">
    */
+
   return (
     <motion.div
       ref={container}
       style={{ scaleX }}
-      className="relative -mt-1 rounded-b-3xl bg-backgroundb max-md:pb-14 md:pb-12"
+      className="relative -mt-1 mb-[clamp(320px,40vh,420px)] rounded-b-3xl bg-backgroundb max-md:pb-14 lg:mb-[clamp(450px,63dvh,600px)]"
     >
       <div className="absolute inset-0 mb-1 rounded-b-3xl bg-black bg-[url('/noise-light.png')] opacity-15" />
       <Bounded className="px-4 py-8">
         <div className="grid h-fit w-full grid-cols-1 gap-2 lg:gap-6 xl:w-[90%]">
+          {" "}
+          {/* text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl */}
           <MHeading
             className={
-              "text-5xl font-bold tracking-tight text-backgroundw/80 md:text-6xl lg:text-7xl 2xl:text-8xl"
+              "text-[clamp(3rem,3vw+2rem,4.5rem)] font-bold tracking-tight text-backgroundw/80 2xl:text-8xl"
             }
             text={"What I Use"}
             duration={0.6}
           />
-
           <AnimatedText
             className="col-span-2 mt-2 w-[60%] place-self-end text-balance text-xs font-medium leading-[0.5rem] text-backgroundw/70 sm:mt-3 sm:w-[50%] sm:text-sm sm:leading-none md:ml-[30%] md:place-self-center lg:ml-[35%] lg:text-lg lg:leading-tight 2xl:text-xl 2xl:leading-tight"
             delay={0}
@@ -128,8 +129,11 @@ function ToolBox() {
           />
         </div>
 
-        <section className="mt-12 flex w-[90%] flex-col justify-around border-t border-white/25 text-white sm:mt-10 sm:w-[80%] lg:mt-20 lg:w-[70%]">
-          {Icons.map((category, index) => (
+        <section
+          aria-label="toolbox-heading"
+          className="mt-12 flex w-[90%] flex-col justify-around border-t border-white/25 text-white sm:mt-10 sm:w-[80%] lg:mt-20 lg:w-[70%]"
+        >
+          {Icons.map((category) => (
             <MotionDiv
               initial="hidden"
               whileInView="visible"
@@ -139,7 +143,7 @@ function ToolBox() {
                 delay: 0.1,
                 ease: "easeInOut",
               }}
-              key={index}
+              key={category.title}
               className="flex cursor-pointer items-center justify-between border-b border-white/25 px-1 py-3 md:py-4 2xl:py-6"
               variants={{
                 visible: { transition: { staggerChildren: 0.2 } },
@@ -197,8 +201,12 @@ function ToolBox() {
                     }}
                     className="hover:scale-95"
                   >
-                    <span className="md:hidden">{icon.component}</span>
-                    <span className="hidden md:block">{icon.component2}</span>
+                    <span className="md:hidden" aria-label={icon.name}>
+                      {icon.component}
+                    </span>
+                    <span className="hidden md:block" aria-label={icon.name}>
+                      {icon.component2}
+                    </span>
                   </motion.li>
                 ))}
               </motion.ul>

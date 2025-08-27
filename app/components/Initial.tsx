@@ -11,6 +11,7 @@ export default function Initial() {
     const timer = setTimeout(() => {
       setIsLoading(false);
       window.scrollTo(0, 0);
+      console.log("Loader completed");
     }, 1600); // Loader duration
 
     return () => clearTimeout(timer);

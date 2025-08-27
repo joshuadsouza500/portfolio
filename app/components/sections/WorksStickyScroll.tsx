@@ -35,7 +35,7 @@ const features = [
     name: "Next Clothing",
     live: "https://nextclothing.vercel.app/",
     link: "https://github.com/joshuadsouza500/e-commerce",
-    cover: "/Image5.webp",
+    cover: "/interior-min.jpg",
     vid: "/Videos/NextClothing.mp4",
     tool1: "MongoDB",
     tool2: "Expressjs",
@@ -79,7 +79,7 @@ const features = [
     name: "Little Lemon Restaurant",
     live: "https://little-lemonbh.vercel.app/",
     link: "https://github.com/joshuadsouza500/little-lemon",
-    cover: "/interior-min.jpg",
+    cover: "/Image8.jpeg",
     vid: "/Videos/Littlelemon.mp4",
     tool1: "Reactjs",
     tool2: "TailwindCSS",
@@ -90,14 +90,18 @@ const features = [
 
 const WorksStickyScroll = () => {
   return (
-    <section id="Works" className="relative bg-backgroundb px-1 pb-6 xl:pb-10">
+    <section
+      id="Works"
+      aria-label="Recent projects"
+      className="relative bg-backgroundb px-1 pb-6 xl:pb-10"
+    >
       <div className="absolute inset-0 bg-black bg-[url('/noise-light.png')] opacity-15" />
       <Bounded className="px-2 py-8 md:mb-8 md:py-4 lg:py-8 xl:py-14 2xl:mb-0">
         <div className="grid h-fit w-full grid-cols-1 gap-2 lg:gap-6 xl:w-[90%]">
           <span className="inline-block overflow-hidden">
             <Motionh2
               style={{ lineHeight: "1.08" }}
-              className="text-5xl font-bold tracking-tight text-backgroundw/80 md:text-6xl lg:text-7xl 2xl:text-8xl"
+              className="text-[clamp(3rem,3vw+2rem,4.5rem)] font-bold tracking-tight text-backgroundw/80 2xl:text-8xl"
               initial={{ y: "100%", opacity: 0.4 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{
