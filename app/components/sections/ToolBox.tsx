@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import { useScroll, motion, useTransform } from "framer-motion";
 import {
   ExpressIcon,
@@ -108,9 +108,8 @@ function ToolBox() {
     >
       <div className="absolute inset-0 mb-1 rounded-b-3xl bg-black bg-[url('/noise-light.png')] opacity-15" />
       <Bounded className="px-4 py-8">
-        <div className="grid h-fit w-full grid-cols-1 gap-2 lg:gap-6 xl:w-[90%]">
+        <div className="gap-2lg:gap-6 grid h-fit w-full grid-cols-1">
           {" "}
-          {/* text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl */}
           <MHeading
             className={
               "text-[clamp(3rem,3vw+2rem,4.5rem)] font-bold tracking-tight text-backgroundw/80 2xl:text-8xl"
@@ -119,7 +118,7 @@ function ToolBox() {
             duration={0.6}
           />
           <AnimatedText
-            className="col-span-2 mt-2 w-[60%] place-self-end text-balance text-xs font-medium leading-[0.5rem] text-backgroundw/70 sm:mt-3 sm:w-[50%] sm:text-sm sm:leading-none md:ml-[30%] md:place-self-center lg:ml-[35%] lg:text-lg lg:leading-tight 2xl:text-xl 2xl:leading-tight"
+            className="col-span-2 w-[60%] md:ml-[30%] lg:ml-[35%]"
             delay={0}
             STAGGER={0.01}
             Y={`70%`}

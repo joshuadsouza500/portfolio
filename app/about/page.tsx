@@ -48,7 +48,7 @@ export default function About() {
   };
 
   return (
-    <Bounded className="h-full bg-backgroundw px-4 max-md:py-2 md:py-6 lg:py-4">
+    <Bounded className="mx-auto h-full bg-backgroundw px-4 max-md:py-2 md:py-6 lg:py-4">
       {/* About Me Section */}
       <section className="mb-16 2xl:mb-28">
         <span className="inline-block overflow-hidden">
@@ -91,7 +91,7 @@ export default function About() {
             />
           </MotionDiv>
 
-          <div className="col-span-2 w-[95%] space-y-4 font-medium tracking-wide max-md:mx-auto max-md:text-balance max-md:pb-2 max-md:leading-relaxed md:text-pretty lg:w-[70%] xl:w-[80%] xl:text-lg 2xl:text-xl">
+          <div className="col-span-2 w-[95%] space-y-4 font-medium tracking-wide max-md:mx-auto max-md:text-balance max-md:pb-2 max-md:leading-relaxed md:text-pretty lg:w-[80%] xl:text-lg 2xl:text-xl">
             <MotionP
               className="pb-1 text-backgroundb/70"
               variants={childVariants}

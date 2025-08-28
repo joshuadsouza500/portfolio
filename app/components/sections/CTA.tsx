@@ -3,7 +3,11 @@ import React from "react";
 
 import { ArrowUp, Mail } from "lucide-react";
 import { MotionB, MotionDiv, MotionLink } from "../ui/Motion";
-import AnimatedText, { MHeading, SlideP } from "../ui/MotionText";
+import AnimatedText, {
+  AnimatedTitle,
+  MHeading,
+  SlideP,
+} from "../ui/MotionText";
 import { usePathname } from "next/navigation";
 import { Footer } from "../ui/Footer";
 
@@ -21,7 +25,7 @@ function CTA() {
       aria-label="Call to Action Section"
       className="fixed bottom-0 left-0 right-0 z-0 flex h-auto min-h-[clamp(320px,40vh,420px)] w-full flex-col justify-end bg-backgroundw pt-16 lg:min-h-[clamp(450px,63vh,600px)]"
     >
-      <div className="mx-auto flex w-full cursor-pointer flex-col justify-center px-4 pb-6 md:max-w-5xl md:px-6 xl:max-w-6xl 2xl:max-w-8xl 2xl:pb-16">
+      <div className="mx-auto flex w-full cursor-pointer flex-col justify-center px-4 pb-6 md:px-6 lg:max-w-[clamp(62rem,calc(58.180rem+29.09vw),75rem)] 2xl:max-w-8xl 2xl:pb-16">
         {" "}
         <div className="space-y-2 2xl:space-y-3">
           <SlideP
@@ -52,9 +56,9 @@ function CTA() {
               transition={{ duration: 0.4, delay: 0.2 }}
               aria-label="Send an email to jdscodes04@gmail.com"
             >
-              <AnimatedText
+              <AnimatedTitle
                 className={
-                  "text-6xl font-medium md:text-8xl lg:font-semibold xl:text-[128px]"
+                  "text-6xl md:text-8xl lg:font-semibold xl:text-[128px]"
                 }
                 text={`Let's Talk`}
                 delay={0.3}

@@ -1,5 +1,5 @@
 "use client";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Loader from "./ui/Loader";
 import { AnimatePresence } from "framer-motion";
 import { useLoader } from "../utils/LoaderContext";

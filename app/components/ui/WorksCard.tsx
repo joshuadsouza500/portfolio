@@ -111,6 +111,7 @@ export const Homespace = ({ id, live }: CardProps) => {
       <div className="absolute inset-0 rounded-2xl bg-black/20 bg-[url('/noise-light.png')] opacity-5" />
       <Link href={live} target="_blank" className="h-[70%] w-[90%] rounded-md">
         <video
+          aria-label="Project demo video"
           width="200"
           height="600"
           preload="none"
@@ -138,6 +139,7 @@ export const Restaurant = ({ id, live }: CardProps) => {
       <Link href={live} target="_blank" className="h-[70%] w-[90%] rounded-md">
         <div className="absolute inset-0 rounded-2xl bg-black/20 bg-[url('/noise-light.png')] opacity-20" />
         <video
+          aria-label="Project demo video"
           width="200"
           height="600"
           preload="none"
@@ -163,6 +165,7 @@ export const Travelo = ({ id, live }: CardProps) => {
     >
       <Link href={live} target="_blank" className="h-[70%] w-[90%] rounded-md">
         <video
+          aria-label="Project demo video"
           width="200"
           height="600"
           preload="none"
@@ -190,6 +193,7 @@ export const Elevate = ({ id, live }: CardProps) => {
       <div className="absolute inset-0 rounded-2xl bg-black/20 bg-[url('/noise-light.png')] opacity-10" />
       <Link href={live} target="_blank" className="h-[70%] w-[90%] rounded-md">
         <video
+          aria-label="Project demo video"
           width="400"
           height="600"
           preload="none"
@@ -217,6 +221,7 @@ export const NextClothing = ({ id, live }: CardProps) => {
       <div className="absolute inset-0 rounded-2xl bg-black/20 bg-[url('/noise-light.png')] opacity-10" />
       <Link href={live} target="_blank" className="h-[70%] w-[90%] rounded-md">
         <video
+          aria-label="Project demo video"
           width="400"
           height="600"
           preload="none"

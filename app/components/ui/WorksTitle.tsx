@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useFeatureStore } from "../extra/store";
 import { cn } from "@/app/utils/cn";
 import Link from "next/link";
-import Image from "next/image";
+
 type Props = {
   children?: React.ReactNode;
   id: string;
@@ -66,7 +66,7 @@ function WorksTitle({
               : "text-transparent",
           )}
         >
-          <Link href={live} target="_blank" className="">
+          <Link href={live} aria-label="live url" target="_blank" className="">
             {called}
           </Link>
         </h6>
@@ -107,90 +107,3 @@ function WorksTitle({
 }
 
 export default WorksTitle;
-
-{
-  /**
-  
-   <div ref={ref} className="transition-colors">
-      <h1
-        className={cn(
-          "text-8xl font-semibold",
-          isInView ? "text-green/80" : "text-white/5 opacity-50",
-        )}
-      >
-        {title}
-      </h1>
-
-      <h6
-        className={cn(
-          "pl-1 pt-6 text-base",
-          isInView ? "text-white/40" : "text-transparent",
-        )}
-      >
-        {type}
-      </h6>
-      <div className={cn("flex justify-between text-3xl font-semibold")}>
-        <h6
-          className={cn(
-            "text-3xl font-semibold",
-            isInView ? "text-white/80" : "text-transparent",
-          )}
-        >
-          {called}
-        </h6>
-        <div
-          className={cn("flex gap-2 pr-10", isInView ? "visible" : "hidden")}
-        >
-          <Link
-            href={live}
-            target="_blank"
-            className="rounded-md hover:scale-110"
-            style={{ color: "gray", fontSize: "30px", fontWeight: "500" }}
-          >
-            🔗
-          </Link>
-
-          <Link href={link} target="_blank">
-            <Image
-              alt="Github Logo"
-              src="/github.svg"
-              width={30}
-              height={30}
-              className="hover:scale-[1.05]"
-            />
-          </Link>
-        </div>
-      </div>
-      <div
-        className={cn(
-          "flex gap-2 pt-4 text-base",
-          isInView ? "text-white/40" : "text-transparent",
-        )}
-      >
-        <h6
-          className={cn(
-            "rounded-2xl px-3",
-            isInView ? "border-2 border-white/40" : "",
-          )}
-        >
-          {tool1}
-        </h6>
-        <h6
-          className={cn(
-            "rounded-2xl px-3",
-            isInView ? "border border-white/40 px-4" : "",
-          )}
-        >
-          {tool2}
-        </h6>
-        <h6
-          className={cn(
-            "rounded-2xl px-3",
-            isInView ? "border border-white/40 px-4" : "",
-          )}
-        >
-          {tool3}
-        </h6>
-      </div>
-    </div>*/
-}

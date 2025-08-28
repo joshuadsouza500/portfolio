@@ -22,7 +22,7 @@ export const Footer = () => {
       aria-label="footer"
       role="contentinfo"
     >
-      <div className="mx-auto flex items-center justify-between px-4 pb-2 pt-2 xl:max-w-6xl xl:px-2 2xl:max-w-8xl">
+      <div className="mx-auto flex items-center justify-between px-4 pb-2 pt-2 lg:max-w-[clamp(62rem,calc(58.180rem+29.09vw),80rem)] xl:px-2 2xl:max-w-8xl">
         <div className="w-full items-center justify-between md:flex">
           {/* Social Links mobile */}
           <ul className="flex flex-row items-center justify-center gap-1 py-2 text-xs font-semibold text-black md:hidden">

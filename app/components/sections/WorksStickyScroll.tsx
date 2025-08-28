@@ -6,7 +6,6 @@ import {
   NextClothing,
   Travelo,
 } from "../ui/WorksCard";
-import TextRevealByWord from "../magicui/text-reveal";
 import Bounded from "../Bounded";
 import SmallScroll from "../ui/SmallScroll";
 import { Motionh2 } from "../ui/Motion";
@@ -96,8 +95,9 @@ const WorksStickyScroll = () => {
       className="relative bg-backgroundb px-1 pb-6 xl:pb-10"
     >
       <div className="absolute inset-0 bg-black bg-[url('/noise-light.png')] opacity-15" />
+      {/* Heading */}
       <Bounded className="px-2 py-8 md:mb-8 md:py-4 lg:py-8 xl:py-14 2xl:mb-0">
-        <div className="grid h-fit w-full grid-cols-1 gap-2 lg:gap-6 xl:w-[90%]">
+        <div className="grid h-fit w-full grid-cols-1 gap-2 lg:gap-6 2xl:w-[100%]">
           <span className="inline-block overflow-hidden">
             <Motionh2
               style={{ lineHeight: "1.08" }}
@@ -115,7 +115,7 @@ const WorksStickyScroll = () => {
             </Motionh2>
           </span>
           <AnimatedText
-            className="mt-2 w-[65%] place-self-end text-balance text-xs font-medium leading-3 text-backgroundw/70 sm:mt-3 sm:w-[50%] sm:text-sm sm:leading-none md:ml-[30%] md:place-self-center lg:ml-[35%] lg:text-lg lg:leading-tight 2xl:text-xl 2xl:leading-tight"
+            className="md:ml-[30%] md:text-base lg:ml-[35%]"
             text={
               "Here are some of my featured projects that showcase my skill and expertise in crafting user-friendly websites."
             }
@@ -158,9 +158,10 @@ const WorksStickyScroll = () => {
           </div>
         </div>
       </div>
-      {features.map((feature) => (
-        <ul key={feature.id}>
-          <li className="lg:hidden">
+      {/* Mobile works display */}
+      <ul className="lg:hidden">
+        {features.map((feature) => (
+          <li key={feature.id}>
             <SmallScroll
               id={feature.id}
               title={feature.title}
@@ -175,8 +176,8 @@ const WorksStickyScroll = () => {
               tool3={feature.tool3}
             />
           </li>
-        </ul>
-      ))}
+        ))}
+      </ul>
     </section>
   );
 };

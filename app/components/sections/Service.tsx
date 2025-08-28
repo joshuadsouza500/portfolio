@@ -1,12 +1,10 @@
 "use client";
 import React from "react";
 import Bounded from "../Bounded";
-
 import { Minus, Plus } from "lucide-react";
-
 import { motion, AnimatePresence } from "framer-motion";
-import AnimatedText, { MHeading, SlideP } from "../ui/MotionText";
-import { MotionDiv, Motionh2, MotionP, MotionSpan } from "../ui/Motion";
+import AnimatedText, { MHeading } from "../ui/MotionText";
+import { MotionDiv, Motionh2, MotionSpan } from "../ui/Motion";
 interface Service {
   id: string;
   number: string;
@@ -47,10 +45,10 @@ function Service() {
   return (
     <Bounded className="relative h-full rounded-t-3xl bg-backgroundb px-4 max-md:pb-20">
       <div className="absolute inset-0 rounded-t-3xl bg-black bg-[url('/noise-light.png')] opacity-15" />
-      <div className="grid h-fit w-full grid-cols-1 gap-2 xl:w-[90%]">
+      <div className="grid h-fit w-full grid-cols-1 gap-2">
         <MHeading
           className={
-            "overflow-hidden text-[clamp(3rem,3vw+2rem,4.5rem)] font-bold tracking-tight text-backgroundw/80 2xl:text-8xl"
+            "overflow-hidden text-[clamp(3rem,3vw+2rem,4.5rem)] font-bold tracking-tight text-backgroundw/80 lg:ml-6 2xl:text-8xl"
           }
           text={"What I Do"}
           duration={0.7}
@@ -59,9 +57,7 @@ function Service() {
         {/* Paragraph Animation */}
         <AnimatedText
           text={`Here’s how I can help you reach your objectives by creating websites that meet your needs`}
-          className={
-            "mt-2 w-[65%] place-self-end text-balance pl-1 text-xs font-medium leading-[0.5rem] text-backgroundw/70 sm:mt-3 sm:w-[50%] sm:text-sm sm:leading-none md:hidden"
-          }
+          className={"pl-1  md:hidden"}
           delay={0}
           STAGGER={0.01}
           Y={`70%`}
@@ -69,16 +65,16 @@ function Service() {
         <AnimatedText
           text={`Here’s why partnering with me can make a significant difference in reaching your objectives and setting your brand apart in a competitive market.`}
           className={
-            "ml-[30%] mt-3 hidden w-[50%] text-balance font-medium leading-tight text-backgroundw/70 md:block md:place-self-center lg:ml-[35%] lg:text-lg lg:leading-tight 2xl:text-xl 2xl:leading-tight"
+            "ml-[30%] hidden w-[50%] bg-red-800 max-xl:ml-[20%] md:block"
           }
         />
       </div>
-      <div className="relative mx-auto grid w-full gap-2 lg:grid-cols-3 lg:gap-8 xl:md:grid-cols-5">
+      <div className="relative mx-auto grid w-full gap-2 lg:grid-cols-3 lg:gap-8 xl:grid-cols-5">
         {/* Left Column - Sticky */}
         <div className="col-span-1 h-fit xl:col-span-2"></div>
 
         {/* Right Column - Sticky Services */}
-        <div className="col-span-2 mt-4 flex w-full flex-col space-y-4 max-lg:mx-auto sm:mt-6 md:mt-12 md:w-[80%] lg:space-y-6 xl:col-span-3 2xl:mt-16">
+        <div className="col-span-2 mt-4 flex w-full flex-col space-y-4 max-lg:mx-auto sm:mt-6 md:mt-12 md:w-[85%] lg:space-y-6 xl:col-span-3 2xl:mt-16">
           {services.map((service) => (
             <MotionDiv
               key={service.id}
@@ -93,6 +89,8 @@ function Service() {
                   setOpenService(openService === service.id ? "" : service.id)
                 }
                 className="group flex w-full items-center justify-between"
+                aria-expanded={openService === service.id}
+                aria-controls={`service-${service.id}`}
               >
                 <div className="flex items-center gap-2 md:gap-4">
                   <MotionSpan
@@ -133,6 +131,7 @@ function Service() {
               <AnimatePresence>
                 {openService === service.id && (
                   <motion.div
+                    id={`service-${service.id}`}
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}

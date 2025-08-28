@@ -52,21 +52,6 @@ export default function NavBar() {
     setActive(!active); // Toggle the active state
   }
 
-  //The motion value event shows when anything changes so when the scroll position changes it is notified.//
-  {
-    /**
-    useMotionValueEvent(scrollY, "change", (latest) => {
-    const previous: number = scrollY.getPrevious() ?? 0;
-
-    // As we scroll down the number increases//
-    if (latest > previous && active == false) {
-      setHidden(true);
-    } else {
-      setHidden(false);
-    }
-  }); */
-  }
-
   return (
     <>
       {/*Big screen nav*/}
@@ -75,7 +60,7 @@ export default function NavBar() {
         className="inset-x-0 top-0 z-20 mx-auto px-2 py-2 text-white backdrop-blur-sm max-md:sticky 2xl:py-2"
         transition={{ duration: 0.8, ease: easeInOut }}
       >
-        <div className="relative mx-auto flex max-w-5xl items-center justify-between gap-4 py-2 max-md:pb-4 md:px-1 xl:max-w-6xl 2xl:max-w-[1600px]">
+        <div className="relative mx-auto flex items-center justify-between gap-4 py-2 max-md:pb-4 md:px-1 lg:max-w-[clamp(62rem,calc(58.180rem+29.09vw),80rem)] 2xl:max-w-[1560px]">
           <Link
             href={"/"}
             className="flex flex-col justify-center pl-2 text-center"

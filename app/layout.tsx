@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     google: "m3YkuK-Y4S-R_8lvq_jMpg2khDcoUQJKPe0TmD0r9ms",
   },
   keywords: [
-    "Web development, freelance web developer , bahrain, front-end development, freelance, SEO, Web design, Reactjs",
+    "Web development, freelance web developer , Bahrain, front-end development, freelance, SEO, Web design, Reactjs",
   ],
   robots: {
     index: true,

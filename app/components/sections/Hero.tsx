@@ -4,7 +4,7 @@ import React from "react";
 import { useTransform, motion, MotionValue } from "framer-motion";
 
 import Link from "next/link";
-import AnimatedText, { MotionText, SlideP } from "../ui/MotionText";
+import { AnimatedTitle, MotionText, SlideP } from "../ui/MotionText";
 import { MotionDiv, MotionP } from "../ui/Motion";
 import { useLoader } from "@/app/utils/LoaderContext";
 
@@ -25,11 +25,11 @@ function Hero({ scrollYProgress }: props) {
           style={{ scale, opacity }}
           className="text-primary sticky top-16 flex h-[90vh] w-full flex-col justify-end bg-backgroundw"
         >
-          <div className="mx-auto w-full max-w-5xl flex-col justify-end px-4 pb-16 md:px-6 lg:pb-10 xl:max-w-6xl 2xl:max-w-8xl 2xl:pb-24">
+          <div className="mx-auto w-full flex-col justify-end px-4 pb-16 md:px-6 lg:max-w-[clamp(62rem,calc(58.180rem+29.09vw),75rem)] lg:pb-10 2xl:max-w-8xl 2xl:pb-24">
             {" "}
-            <AnimatedText
+            <AnimatedTitle
               className={
-                "dark:backgroundb overflow-hidden text-left text-[28px] font-medium leading-7 text-backgroundb max-md:tracking-[0.015em] sm:text-balance sm:text-3xl sm:leading-4 md:w-[95%] md:text-4xl md:leading-3 lg:text-5xl lg:leading-3 xl:w-[80%] xl:tracking-wide 2xl:text-[56px] 2xl:tracking-wide"
+                "overflow-hidden text-left text-[28px] font-medium leading-7 text-backgroundb max-md:tracking-[0.015em] sm:text-balance sm:text-3xl sm:leading-4 md:w-[95%] md:text-4xl md:leading-3 lg:text-5xl lg:leading-3 xl:w-[80%] xl:tracking-wide 2xl:text-[56px] 2xl:tracking-wide"
               }
               text={`Hello! I’m Joshua, a web developer focused on creating modern, 
  user friendly websites.`}

@@ -1,11 +1,9 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-
 import Lenis from "lenis";
 import Hero from "./components/sections/Hero";
 import ToolBox from "./components/sections/ToolBox";
 import Service from "./components/sections/Service";
-import CTA from "./components/sections/CTA";
 import { useScroll } from "framer-motion";
 import WorksStickyScroll from "./components/sections/WorksStickyScroll";
 
@@ -17,10 +15,6 @@ export default function Home() {
     offset: ["start start", "end end"],
   });
 
-  {
-    /**
-     */
-  }
   useEffect(() => {
     const lenis = new Lenis();
     const raf = (time: number) => {
@@ -36,16 +30,13 @@ export default function Home() {
       <Service />
       <WorksStickyScroll />
       <ToolBox />
-
-      {/*       <CTA /> */}
     </main>
   );
 }
 
 {
   /**FIXES
-   *  Add clamp to more stuff maybe to Project 01 etc
-   *  Accessability and remve redundant code
+   * 
    * 
 
 

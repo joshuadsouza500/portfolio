@@ -1,6 +1,6 @@
 import { cn } from "@/app/utils/cn";
 import { Motionh1, MotionP, MotionSpan } from "./Motion";
-import { Children } from "react";
+import React, { Children } from "react";
 
 //React.FC (Functional Component):Enforces typing for component props and children (though no children are used here).
 interface MotionTextProps {
@@ -103,7 +103,12 @@ export default function AnimatedText({
   STAGGER,
 }: AnimatedTextProps) {
   return (
-    <div className={cn("leading-tight", className)}>
+    <div
+      className={cn(
+        "mt-2 w-[65%] place-self-end text-balance text-xs font-medium leading-3 text-backgroundw/70 sm:mt-3 sm:w-[50%] sm:text-sm sm:leading-none md:place-self-center lg:text-lg lg:leading-tight 2xl:text-xl 2xl:leading-tight",
+        className,
+      )}
+    >
       {text.split(" ").map((word, index) => (
         <span
           key={index}
@@ -126,3 +131,36 @@ export default function AnimatedText({
     </div>
   );
 }
+
+export const AnimatedTitle: React.FC<AnimatedTextProps> = ({
+  text,
+  className,
+  delay = 0.1,
+  duration = 0.4,
+  Y,
+  STAGGER,
+}) => {
+  return (
+    <div className={cn("leading-tight", className)}>
+      {text.split(" ").map((word, index) => (
+        <span
+          key={index}
+          className="mr-1 inline-block overflow-hidden leading-tight lg:px-[2px]"
+        >
+          <MotionSpan
+            className="inline-block font-medium leading-tight"
+            initial={{ y: Y || "100%", opacity: 0.1 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{
+              delay: delay + index * (STAGGER || 0.05),
+              duration: duration,
+            }}
+            viewport={{ once: true }}
+          >
+            {word}
+          </MotionSpan>
+        </span>
+      ))}
+    </div>
+  );
+};
