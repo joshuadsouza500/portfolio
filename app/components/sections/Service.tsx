@@ -65,7 +65,7 @@ function Service() {
         <AnimatedText
           text={`Here’s why partnering with me can make a significant difference in reaching your objectives and setting your brand apart in a competitive market.`}
           className={
-            "ml-[30%] hidden w-[50%] bg-red-800 max-xl:ml-[20%] md:block"
+            "ml-[30%] hidden w-[50%]  max-xl:ml-[20%] md:block"
           }
         />
       </div>
