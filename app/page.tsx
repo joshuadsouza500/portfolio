@@ -36,7 +36,7 @@ export default function Home() {
 
 {
   /**FIXES
-   *  Remove email from hero and add a down arrow indication
+   * And fix the loader issue
    * 
 
 

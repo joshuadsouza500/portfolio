@@ -21,6 +21,22 @@ const config: Config = {
       maxWidth: {
         "8xl": "1440px",
       },
+      keyframes: {
+        chevronScroll: {
+          "0%": { opacity: "1", transform: "translateY(0)" },
+
+          "100%": { opacity: "0", top: "100%" },
+        },
+        chevronScroll2: {
+          "0%": { opacity: "1", transform: "translateY(0)" },
+
+          "100%": { opacity: "0", transform: "translateY(50%)", top: "50%" },
+        },
+      },
+      animation: {
+        chevronScroll: "chevronScroll 2s infinite",
+        chevronScroll2: "chevronScroll2 2s infinite ",
+      },
     },
   },
   plugins: [],

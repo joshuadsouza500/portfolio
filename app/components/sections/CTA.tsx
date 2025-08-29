@@ -58,7 +58,7 @@ function CTA() {
             >
               <AnimatedTitle
                 className={
-                  "text-6xl md:text-8xl lg:font-semibold xl:text-[128px]"
+                  "text-6xl font-medium md:text-8xl lg:font-semibold xl:text-[128px]"
                 }
                 text={`Let's Talk`}
                 delay={0.3}

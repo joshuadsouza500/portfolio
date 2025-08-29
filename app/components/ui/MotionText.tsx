@@ -145,10 +145,10 @@ export const AnimatedTitle: React.FC<AnimatedTextProps> = ({
       {text.split(" ").map((word, index) => (
         <span
           key={index}
-          className="mr-1 inline-block overflow-hidden leading-tight lg:px-[2px]"
+          className="mr-1 inline-block overflow-hidden leading-tight lg:px-[2px] lg:leading-[1.16]"
         >
           <MotionSpan
-            className="inline-block font-medium leading-tight"
+            className="inline-block leading-none"
             initial={{ y: Y || "100%", opacity: 0.1 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{
