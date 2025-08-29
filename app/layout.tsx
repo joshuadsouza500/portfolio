@@ -12,9 +12,7 @@ export const metadata: Metadata = {
   },
   description:
     "Hey, I am Joshua, a Web developer with a passion for creating dynamic and responsive websites that enhance user experience. Based in bahrain  ",
-  verification: {
-    google: "m3YkuK-Y4S-R_8lvq_jMpg2khDcoUQJKPe0TmD0r9ms",
-  },
+
   keywords: [
     "Web development, freelance web developer , Bahrain, front-end development, freelance, SEO, Web design, Reactjs",
   ],
@@ -35,7 +33,7 @@ export const metadata: Metadata = {
     images: "/OpenGraph2.jpeg",
   },
 
-  metadataBase: new URL("https://joshuads.vercel.app/"),
+  metadataBase: new URL("https://joshuads.dev/"),
 };
 
 export default function RootLayout({
@@ -45,10 +43,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <meta
-        name="google-site-verification"
-        content="m3YkuK-Y4S-R_8lvq_jMpg2khDcoUQJKPe0TmD0r9ms"
-      />
       <meta name="twitter:image" content="/OpenGraph2.jpeg" />
       <meta name="author" content="Joshua Dsouza" />
       <meta name="application-name" content="Joshua Dsouza Portfolio" />
