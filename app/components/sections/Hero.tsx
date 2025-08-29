@@ -17,7 +17,7 @@ type props = {
 function Hero({ scrollYProgress }: props) {
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0]);
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0.5]);
-  const rotate = useTransform(scrollYProgress, [0, 0.4], [0, 360]);
+  /*   const rotate = useTransform(scrollYProgress, [0, 0.4], [0, 360]); */
   const { isLoading } = useLoader();
   return (
     <>
@@ -28,7 +28,7 @@ function Hero({ scrollYProgress }: props) {
           style={{ scale, opacity }}
           className="text-primary sticky top-16 flex h-[90vh] w-full flex-col justify-end bg-backgroundw"
         >
-          <div className="flex h-full w-full items-center justify-center sm:hidden">
+          {/*   <div className="flex h-full w-full items-center justify-center sm:hidden">
             <MotionSpan style={{ rotate }} className="transition-transform">
               <Image
                 src={"/flower.png"}
@@ -37,7 +37,7 @@ function Hero({ scrollYProgress }: props) {
                 alt="Flower"
               />
             </MotionSpan>
-          </div>
+          </div> */}
           <div className="mx-auto w-full flex-col justify-end px-4 pb-16 md:px-6 lg:max-w-[clamp(62rem,calc(58.180rem+29.09vw),75rem)] lg:pb-10 2xl:max-w-8xl 2xl:pb-24">
             {" "}
             <AnimatedTitle
